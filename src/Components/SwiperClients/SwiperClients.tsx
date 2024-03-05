@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 import './styles.css';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import { Box, Typography } from '@mui/material';
 
 const images = [
-    'casinha.png',
+    'viqua.png',
     'DB.png',
     'delicada.png',
+    'casinha.png',
     'fluxo.png',
     'jana.png',
     'prado.png',
@@ -89,12 +91,16 @@ const SwiperClients: React.FC = () => {
                     slidesPerView={itemsToShow}
                     spaceBetween={40}
                     pagination={{ clickable: true }}
-                    modules={[Pagination]}
+                    autoplay={{
+                        delay: 3000, 
+                        disableOnInteraction: false, 
+                    }}
+                    modules={[Pagination, Autoplay]}
                     loop={true}
                 >
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <Box width={'100%'} height={'120px'}>
+                            <Box width={'90%'} height={'120px'}>
                                 <img src={image} alt={`Slide ${index}`} />
                             </Box>
                         </SwiperSlide>

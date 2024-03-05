@@ -41,11 +41,10 @@ const SectionAbout: React.FC = () => {
 
                 <Typography 
                     fontSize={'1.8rem'} 
-                    fontWeight={500}
+                    fontWeight={400}
                     sx={{
                         '@media (max-width: 1000px)': {
-                            fontSize: '1.6rem',
-                            fontWeight: '400'
+                            fontSize: '1.6rem'
                         },
                     }}
                 >
@@ -55,12 +54,11 @@ const SectionAbout: React.FC = () => {
                     mas superam as expectativas de nossos clientes.
                 </Typography>
                 <Typography
-                    fontWeight={500}
+                    fontWeight={400}
                     fontSize={'1.8rem'}
                     sx={{
                         '@media (max-width: 1000px)': {
-                            fontSize: '1.6rem',
-                            fontWeight: '400'
+                            fontSize: '1.6rem'
                         },
                     }}
                 >
