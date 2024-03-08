@@ -1,4 +1,4 @@
-import { Box, Card, Typography } from '@mui/material';
+import { Box, ButtonBase, Card, Typography } from '@mui/material';
 import React from 'react';
 
 interface CardStepProps {
@@ -11,52 +11,44 @@ interface CardStepProps {
 const CardStep: React.FC<CardStepProps> = ({title, content, icon, button}) => {
     return (
         <Card sx={{ 
-            bgcolor: '#E7BCBC',
-            padding: '3rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            bgcolor: '#E4E4E4',
+            padding: '2rem',
             width: '100%',
             height: '100%',
             borderRadius: '1rem',
             boxSizing: 'border-box',
             transition: 'transform 0.2s ease-in-out',
+            boxShadow: '0 3px 9px 0 rgba(0, 0, 0, 0.1)',
             cursor: 'grab',
             '&:hover': {
-                transform: 'scale(1.05)', // Aumenta o tamanho do card em 5% ao passar o mouse
+                transform: 'scale(1.03)',
             },
         }}>
-            <Box mb={'2.5rem'}>
+            <Box mb={'1rem'}>
                 <img src={icon}/>
             </Box>
-            <Typography 
-                fontSize={'1.8rem'} 
-                fontWeight={600} 
-                mb={'1rem'}
-                sx={{
-                    '@media (max-width: 1540px)': {
-                        fontSize: '1.6rem',
-                        fontWeight: 500
-                    },
-                    '@media (max-width: 482px)': {
-                        fontSize: '1.4rem',
-                        fontWeight: 500
-                    },
-                }}
-            > 
-                {title} 
-            </Typography>
-
-            <Typography 
-                fontSize={'1.5rem'}
-                sx={{
-                    '@media (max-width: 1540px)': {
-                        fontSize: '1.4rem',
-                    },
-                    '@media (max-width: 482px)': {
-                        fontSize: '1.2rem',
-                    },
-                }}
-            > 
-                {content}
-            </Typography>
+                <Typography fontSize={'1.8rem'} fontWeight={600} mb={'1rem'}> 
+                    {title} 
+                </Typography>
+                <Typography fontSize={'14px'} textAlign={'center'}> 
+                    {content}
+                </Typography>
+                { button && (
+                    <ButtonBase sx={{
+                        padding: '1rem',
+                        bgcolor: '#B7B7B7',
+                        borderRadius: '.5rem',
+                        width: '100%',
+                        font: 'Sora',
+                        fontSize: '15px',
+                        mt: '1rem'
+                     }}>
+                        Entrar em contato
+                     </ButtonBase>
+                )}
         </Card>
     )
 }
