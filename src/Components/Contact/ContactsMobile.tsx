@@ -10,10 +10,10 @@ const ContactsMobile: React.FC = () => {
     return (
         <Box sx={{
             display: 'none',
-            '@media (max-width:505px)': {
+            '@media (max-width:750px)': {
                 display: 'flex',
                 flexDirection: 'column',
-                padding: '5rem 1rem',
+                padding: '1rem 1rem',
                 alignItems: 'center'
             },
         }}>

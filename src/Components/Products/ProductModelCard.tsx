@@ -10,7 +10,7 @@ interface ProductCardProps {
 const ProductModelCard: React.FC<ProductCardProps> = ({ title, content, img }) => {
     return (
         <Card sx={{
-            bgcolor: '#FFD1D1',
+            bgcolor: '#E4E4E4',
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',

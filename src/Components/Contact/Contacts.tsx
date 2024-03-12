@@ -41,7 +41,7 @@ const Contacts: React.FC = () => {
                     gap: 2,
                     alignItems: 'center'
                 },
-                '@media (max-width:505px)': {
+                '@media (max-width:750px)': {
                     display: 'none'
                 },
             }}

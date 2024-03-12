@@ -24,8 +24,11 @@ const images = [
 const aboutTexBox = {
     display: 'flex',
     flexDirection: 'column',
-    padding: '5rem',
     gap: 5,
+    padding: '5rem 0rem',
+    paddingTop: '10rem',
+    justifyContent: 'center',
+    alignItems: 'center',
     '@media (max-width: 715px)': {
         padding: '2rem',
         gap: 2,
@@ -100,7 +103,13 @@ const SwiperClients: React.FC = () => {
                 >
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <Box width={'90%'} height={'120px'}>
+                            <Box sx={{
+                                width: '90%',
+                                height: '100px',
+                                '@media (max-width: 500px)': {
+                                    width: '100%',
+                                },
+                            }}>
                                 <img src={image} alt={`Slide ${index}`} />
                             </Box>
                         </SwiperSlide>

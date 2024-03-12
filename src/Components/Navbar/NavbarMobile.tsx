@@ -16,13 +16,16 @@ const NavBarMobile: React.FC = () => {
 
     return (
         <Box sx={{
-            padding: '1rem 0rem',
+            display: 'none',
             justifyContent: 'space-between',
             alignItems: 'center',
-            display: 'none',
             bgcolor: 'transparent',
-            position: 'static',
-            boxShadow: '0 6px 9px 0 rgba(0, 0, 0, 0.1)',
+            padding: '5rem 10%',
+            position: 'absolute', // Alterado de 'static' para 'fixed'
+            width: '100%', // Garante que o NavBar ocupe a largura total
+            top: 0, // Posiciona o NavBar no topo da página
+            left: 0, // Alinha o NavBar à esquerda da página
+            zIndex: 1000, // Garante que o NavBar fique sobre outros elementos
             '@media (max-width: 850px)': {
                 display: 'flex',
             },
@@ -39,7 +42,9 @@ const NavBarMobile: React.FC = () => {
                 onClick={handleClick}
                 sx={{ color: '#black' }}
             >
-                <List size={44} />
+                <Box width={'4rem'} sx={{ cursor: 'pointer' }}>
+                    <img src={'icons8-menu-64.png'} alt="imagem menu" style={{ width: '100%' }} />
+                </Box>
             </IconButton>
             <Menu
                 id="basic-menu"

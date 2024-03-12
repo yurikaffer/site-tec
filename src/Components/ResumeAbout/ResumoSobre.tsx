@@ -30,7 +30,7 @@ const ResumoSobre: React.FC = () => {
             display={'flex'}
             bgcolor={'#E4E4E4'}
             justifyContent={'space-between'}
-            padding={'5rem 15rem 5rem 15rem'}
+            padding={'5rem 10%'}
             sx={{
                 '@media (max-width: 1000px)': {
                     padding: '5rem 5rem 5rem 5rem'

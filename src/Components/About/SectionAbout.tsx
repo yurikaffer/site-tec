@@ -5,7 +5,7 @@ const aboutTexBox = {
     display: 'flex',
     flexDirection: 'column',
     gap: 2,
-    padding: '5rem',
+    padding: '5rem 10%',
     maxWidth: '110rem',
     '@media (max-width: 715px)': {
         padding: '2rem',
@@ -24,8 +24,8 @@ const imgStyle = {
 
 const SectionAbout: React.FC = () => {
     return (
-        <Box id='container-about' display={'flex'} >
-            <Box id='about-text' sx={aboutTexBox} >
+        <Box display={'flex'} >
+            <Box sx={aboutTexBox} >
                 <Typography 
                     fontSize={'2.4rem'} 
                     fontWeight={700}
