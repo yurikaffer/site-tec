@@ -5,9 +5,9 @@ const Banner: React.FC = () => {
     return (
         <Box
             sx={{
-                height: '100vh', // Altura total da viewport
+                height: '120vh', // Altura total da viewport
                 width: '100%', // Largura total da viewport
-                background: "url('/FundoSiteTeste2.png') no-repeat center center fixed", // Ajuste o caminho conforme necessário
+                background: "url('/sacola-plastic-tec.png') no-repeat center center fixed", // Ajuste o caminho conforme necessário
                 backgroundSize: 'cover', // Garante que a imagem de fundo cubra todo o espaço disponível
             }}
         >
@@ -24,6 +24,7 @@ const Banner: React.FC = () => {
                 <Typography sx={{
                     fontSize: '18px',
                     fontWeight: '500',
+                    color: '#252525',
                     '@media (max-width:900px)': {
                         fontSize: '16px',
                     },
@@ -33,13 +34,23 @@ const Banner: React.FC = () => {
 
                 <Typography sx={{
                     fontSize: '40px',
-                    fontWeight: '600',
+                    fontWeight: '500',
+                    color: '#252525',
                     '@media (max-width:900px)': {
                         fontSize: '34px',
                     },
                 }}>
                     Deixe a Sua Marca no Mundo.
                 </Typography>
+            </Box>
+
+            <Box sx={{
+                position: 'absolute',
+                bottom: -200,
+                left: 0,
+                width: '100%',
+                }}>
+                <img src='wave.svg' alt="Onda decorativa" style={{ width: '100%', objectFit: 'cover', height: 'auto' }} />
             </Box>
         </Box>
     )

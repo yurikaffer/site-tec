@@ -16,7 +16,16 @@ const aboutTexBox = {
 
 const SectionProducts: React.FC = () => {
     return (
-        <>
+        <Box sx={{
+            //background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
+            //backgroundSize: 'cover',
+            bgcolor: '#FCF6F6',
+            pt: '5rem',
+            pb: '10rem',
+            boxShadow:  `inset 0 -4px 10px 0 rgba(0, 0, 0, 0.1)`,
+
+
+        }}>
             <Box sx={aboutTexBox}>
                 <Typography 
                     fontSize={'2.4rem'} 
@@ -89,7 +98,7 @@ const SectionProducts: React.FC = () => {
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
                 />
             </Box>
-        </>
+        </Box>
     );
 }
 

@@ -28,10 +28,12 @@ const ResumoSobre: React.FC = () => {
     return (
         <Box id='about-resume'
             display={'flex'}
-            bgcolor={'#E4E4E4'}
             justifyContent={'space-between'}
             padding={'5rem 10%'}
             sx={{
+                background: "url('/fundo-textura-creme.png') no-repeat center center fixed",
+                backgroundSize: 'cover', 
+                boxShadow:  `inset 0 8px 10px 0 rgba(0, 0, 0, 0.1), inset 0 -8px 10px 0 rgba(0, 0, 0, 0.1)`,
                 '@media (max-width: 1000px)': {
                     padding: '5rem 5rem 5rem 5rem'
                 },
@@ -42,7 +44,7 @@ const ResumoSobre: React.FC = () => {
         >
             <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
                 <Box sx={imgStyle}>
-                    <img src="/almoco-foguete.png" alt="imagem foguete" style={{ width: '100%' }}/>
+                    <img src="/almoco-foguete.png" alt="imagem foguete" style={{ width: '100%' }} />
                 </Box>
                 <Typography sx={typographyBold}>+28 anos</Typography>
                 <Typography sx={typography}>no mercado</Typography>

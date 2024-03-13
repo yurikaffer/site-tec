@@ -1,7 +1,25 @@
 import React from 'react';
-import { Typography, Box, IconButton } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 
-const iconStyle = { borderRadius: '.5rem', color: 'black', marginLeft: '1rem' }
+const iconStyle = {
+    marginLeft: '3rem',
+    cursor: 'pointer',
+    position: 'relative', 
+    '&:hover::after': {
+        width: '100%' 
+    },
+    '::after': {
+        content: '""',
+        position: 'absolute', 
+        bottom: '3px', 
+        marginLeft: '1px',
+        display: 'block',
+        width: '15px', 
+        borderBottom: '2px solid #F7ADAF', 
+        transition: 'width .3s ease-in-out', 
+    }
+}
+
 
 const NavBar: React.FC = () => {
     return (
@@ -20,35 +38,35 @@ const NavBar: React.FC = () => {
                 display: 'none'
             },
         }}>
-            <Box width={'20rem'} sx={{ cursor: 'pointer' }}>
+            <Box width={'30rem'} sx={{ cursor: 'pointer' }}>
                 <img src={'Tec logo 2024.png'} alt="imagem Logo" style={{ width: '100%' }} />
             </Box>
             <Box display={'flex'} position={'relative'}>
-                <IconButton sx={iconStyle}>
-                    <Typography fontSize={'22px'}>
+                <Box sx={iconStyle}>
+                    <Typography fontSize={'20px'}>
                         Home
                     </Typography>
-                </IconButton>
-                <IconButton sx={iconStyle}>
-                    <Typography fontSize={'22px'}>
-                        Sobre a Tec
+                </Box>
+                <Box sx={iconStyle}>
+                    <Typography fontSize={'20px'}>
+                        Sobre
                     </Typography>
-                </IconButton>
-                <IconButton sx={iconStyle}>
-                    <Typography fontSize={'22px'}>
+                </Box>
+                <Box sx={iconStyle}>
+                    <Typography fontSize={'20px'}>
                         Produtos
                     </Typography>
-                </IconButton>
-                <IconButton sx={iconStyle}>
-                    <Typography fontSize={'22px'}>
+                </Box>
+                <Box sx={iconStyle}>
+                    <Typography fontSize={'20px'}>
                         Clientes
                     </Typography>
-                </IconButton>
-                <IconButton sx={iconStyle}>
-                    <Typography fontSize={'22px'}>
+                </Box>
+                <Box sx={iconStyle}>
+                    <Typography fontSize={'20px'}>
                         Contatos
                     </Typography>
-                </IconButton>
+                </Box>
             </Box>
         </Box>
     );

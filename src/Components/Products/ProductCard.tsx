@@ -10,18 +10,18 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ title, content, img }) => {
     return (
         <Card sx={{
-            bgcolor: '#FFF',
+            bgcolor: '#FCF6F6',
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             gap: 1,
-            borderRadius: '.5rem',
+            borderRadius: '1rem',
             maxWidth: '35rem',
             width: '100%',
             height: '100%',
             transition: 'transform 0.2s ease-in-out',
-            boxShadow: '0 6px 9px 0 rgba(0, 0, 0, 0.1)',
+            boxShadow: '0 3px 6px 0 rgba(0, 0, 0, 0.2)',
             '&:hover': {
                 transform: 'scale(1.03)',
             },
@@ -32,13 +32,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, content, img }) => {
             <Typography fontSize={'18px'} fontWeight={600} mt={'1rem'}>{title}</Typography>
             <Typography fontSize={'15px'} textAlign={'center'}>{content}</Typography>
             <ButtonBase sx={{
-                padding: '1rem',
-                bgcolor: '#E4E4E4',
-                borderRadius: '.5rem',
                 width: '100%',
-                font: 'Sora',
-                fontSize: '15px',
-                mt: '1rem'
+                bgcolor: '#FFC9C9',
+                boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
             }}>
                 Ver modelos ➜
             </ButtonBase>

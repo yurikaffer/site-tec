@@ -7,10 +7,16 @@ const aboutTexBox = {
     gap: 2,
     padding: '5rem 10%',
     maxWidth: '110rem',
+    // Adiciona o efeito de ondulação na parte superior
+
     '@media (max-width: 715px)': {
         padding: '2rem',
+        // Adapta o clip-path para telas menores, se necessário
     },
 }
+
+// Componente SectionAbout continua igual
+
 
 const imgStyle = {
     width: '35rem',
@@ -24,10 +30,15 @@ const imgStyle = {
 
 const SectionAbout: React.FC = () => {
     return (
-        <Box display={'flex'} >
+        <Box display={'flex'} sx={{
+            //background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
+            //backgroundSize: 'cover',
+            bgcolor: '#FCF6F6',
+            padding: '4rem 0'
+        }}>
             <Box sx={aboutTexBox} >
-                <Typography 
-                    fontSize={'2.4rem'} 
+                <Typography
+                    fontSize={'2.4rem'}
                     fontWeight={700}
                     sx={{
                         '@media (max-width: 1000px)': {
@@ -39,8 +50,8 @@ const SectionAbout: React.FC = () => {
                     Sobre nós?
                 </Typography>
 
-                <Typography 
-                    fontSize={'1.8rem'} 
+                <Typography
+                    fontSize={'1.8rem'}
                     fontWeight={400}
                     sx={{
                         '@media (max-width: 1000px)': {
@@ -75,7 +86,7 @@ const SectionAbout: React.FC = () => {
                 alignItems={'center'}
                 sx={{
                     '@media (max-width: 1000px)': {
-                        
+
                     },
                 }}
             >

@@ -47,13 +47,15 @@ function App() {
         <Banner/>
 
         
-        <WhatsappComponent />
+        
         <SectionAbout />
         <ResumoSobre />
         <SectionProducts />
+        
         <SectionStepper />
         <SwiperClients />
         <SectionContacts />
+        <WhatsappComponent />
     </ThemeProvider>
   );
 }

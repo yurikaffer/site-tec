@@ -109,7 +109,8 @@ const Stepper = () => {
 
     return (
         <Box sx={{
-            display: 'flex', alignItems: 'center',
+            display: 'flex', 
+            alignItems: 'center',
             '@media (max-width: 750px)': {
                 display: 'none',
             }
@@ -128,7 +129,7 @@ const Stepper = () => {
                     overflowX: 'hidden',
                     gap: '30px',
                     width: `${(3 * width) + (2 * 30) + 30}px`,
-                    padding: '1rem',
+                    padding: '5rem 1rem',
                     boxSizing: 'border-box',
                     '-ms-overflow-style': 'none', // IE and Edge
                     'scrollbar-width': 'none', // Firefox

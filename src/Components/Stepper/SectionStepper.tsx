@@ -8,7 +8,7 @@ const aboutTexBox = {
     flexDirection: 'column',
     gap: 2,
     padding: '5rem 15%',
-    paddingTop: '10rem',
+    pt: '10rem',
     justifyContent: 'center',
     alignItems: 'center',
     '@media (max-width: 715px)': {
@@ -19,7 +19,12 @@ const aboutTexBox = {
 
 const SectionStepper: React.FC = () => {
     return (
-        <>
+        <Box sx={{
+            //background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
+            //backgroundSize: 'cover', 
+            bgcolor: '#FFF6F6',
+            pb: '10rem'
+        }}>
             <Box sx={aboutTexBox}>
                 <Typography
                     textAlign={'center'}
@@ -41,7 +46,7 @@ const SectionStepper: React.FC = () => {
             </Box>
             <Stepper />
             <StepperMobile />
-        </>
+        </Box>
     )
 }
 
