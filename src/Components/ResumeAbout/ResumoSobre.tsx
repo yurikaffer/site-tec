@@ -33,7 +33,7 @@ const ResumoSobre: React.FC = () => {
             sx={{
                 background: "url('/fundo-textura-creme.png') no-repeat center center fixed",
                 backgroundSize: 'cover', 
-                boxShadow:  `inset 0 8px 10px 0 rgba(0, 0, 0, 0.1), inset 0 -8px 10px 0 rgba(0, 0, 0, 0.1)`,
+                boxShadow: `inset 0 2px 7px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 7px 0 rgba(0, 0, 0, 0.1)`,
                 '@media (max-width: 1000px)': {
                     padding: '5rem 5rem 5rem 5rem'
                 },

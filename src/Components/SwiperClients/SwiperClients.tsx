@@ -25,7 +25,6 @@ const aboutTexBox = {
     display: 'flex',
     flexDirection: 'column',
     gap: 5,
-    padding: '5rem 0rem',
     paddingTop: '10rem',
     justifyContent: 'center',
     alignItems: 'center',
@@ -63,7 +62,7 @@ const SwiperClients: React.FC = () => {
         <Box sx={aboutTexBox}>
             <Typography
                 fontSize={'2.4rem'}
-                fontWeight={700}
+                fontWeight={600}
                 sx={{
                     '@media (max-width: 1000px)': {
                         fontSize: '1.8rem',

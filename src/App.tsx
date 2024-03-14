@@ -3,7 +3,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import SectionAbout from "./Components/About/SectionAbout";
 import ResumoSobre from "./Components/ResumeAbout/ResumoSobre";
 import SwiperClients from "./Components/SwiperClients/SwiperClients";
-import SectionContacts from "./Components/Contact/SectionContact";
 import SectionStepper from "./Components/Stepper/SectionStepper";
 import SectionProducts from "./Components/Products/SectionProducts";
 import PaperBagsModel from "./Components/Products/PaperBagsModel";
@@ -14,6 +13,8 @@ import NavBar from "./Components/Navbar/Navbar";
 import { TabelaMedidas } from "./Components/Tabela/Tabela";
 import { Box, CssBaseline } from "@mui/material";
 import Banner from "./Components/Banner/Banner";
+import FaixaVantagens from "./Components/FaixaVantagens/FaixaVantagens";
+import { Contacts } from "@mui/icons-material";
 
 const rows = [
   { altura: '16cm', largura: '10cm', lateral: '5cm' },
@@ -51,10 +52,11 @@ function App() {
         <SectionAbout />
         <ResumoSobre />
         <SectionProducts />
+        <FaixaVantagens />
         
         <SectionStepper />
         <SwiperClients />
-        <SectionContacts />
+        <Contacts/>
         <WhatsappComponent />
     </ThemeProvider>
   );

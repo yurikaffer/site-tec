@@ -20,9 +20,8 @@ const aboutTexBox = {
 const SectionStepper: React.FC = () => {
     return (
         <Box sx={{
-            //background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
-            //backgroundSize: 'cover', 
-            bgcolor: '#FFF6F6',
+            boxShadow: `inset 0 -2px 7px 0 rgba(0, 0, 0, 0.1)`,
+            bgcolor: '#FCF6F6',
             pb: '10rem'
         }}>
             <Box sx={aboutTexBox}>

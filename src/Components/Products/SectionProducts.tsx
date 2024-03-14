@@ -17,14 +17,8 @@ const aboutTexBox = {
 const SectionProducts: React.FC = () => {
     return (
         <Box sx={{
-            //background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
-            //backgroundSize: 'cover',
             bgcolor: '#FCF6F6',
             pt: '5rem',
-            pb: '10rem',
-            boxShadow:  `inset 0 -4px 10px 0 rgba(0, 0, 0, 0.1)`,
-
-
         }}>
             <Box sx={aboutTexBox}>
                 <Typography 
@@ -52,7 +46,8 @@ const SectionProducts: React.FC = () => {
                 width: '100%',
                 gridTemplateColumns: 'repeat(4, 35rem)',
                 gap: '3rem',
-                padding: '1rem 10%',
+                paddingX: '10%',
+                pb: '10rem',
                 justifyContent: 'center',
                 alignItems: 'center',
                 '@media (max-width: 1690px)': {
