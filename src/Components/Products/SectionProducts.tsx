@@ -74,22 +74,22 @@ const SectionProducts: React.FC = () => {
             }}>
                 <ProductCard
                     title='Sacolas de Papel'
-                    img='C2-600x600.webp'
+                    img='sacola-pape-modelo.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
                 />
                 <ProductCard
                     title='Sacolas de Plástico'
-                    img='C2-600x600.webp'
+                    img='bag-modelo-produtos.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
                 />
                 <ProductCard
                     title='Cartões e Tags'
-                    img='C2-600x600.webp'
+                    img='cartoes-produto.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
                 />
                 <ProductCard
                     title='Placas de PVC'
-                    img='C2-600x600.webp'
+                    img='bag-modelo-produtos.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
                 />
             </Box>

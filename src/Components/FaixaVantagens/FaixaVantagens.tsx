@@ -23,9 +23,10 @@ const FaixaVantagens: React.FC = () => {
             alignItems: 'center',
             padding: '5rem',
             gap: '5rem',
-            background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
-            backgroundSize: 'cover',
-            boxShadow: `inset 0 2px 7px 0 rgba(0, 0, 0, 0.1), inset 0 -2px 7px 0 rgba(0, 0, 0, 0.1)`,
+            //background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
+            //backgroundSize: 'cover',
+            bgcolor: '#F6F1F1',
+            boxShadow: `inset 0 1px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 3px 0 rgba(0, 0, 0, 0.1)`,
             '@media (max-width: 715px)': {
                 flexDirection: 'column',
                 gap: '3rem',

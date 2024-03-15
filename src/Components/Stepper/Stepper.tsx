@@ -7,21 +7,25 @@ const steps = [
         title: '1. Tamanho',
         content: 'Qual o tipo e a gramatura do papel a ser utilizado na Caixa ou na Sacola? Dentre os mais comuns para embalagens, temos o Kraft, Duplex, Triplex e Offset. Gramatura é a grossura do material e pode variar de 90 até 400g. Quanto menor mais fino e maleável, quanto maior mais grosso e resistente',
         icon: 'ruler.svg',
+        background: '/blob-scene-haikei (5).png'
     },
     {
         title: '2. Material',
         content: 'Embalagens, na maioria dos casos, são tridimensionais, ou seja, têm Altura, Largura e Profundidade. Tenha em mãos essas três medidas ou, para designers e pessoas mais experientes, método de fechamento da caixa, a medida da "faca" ou desenho aberto.',
         icon: 'bag.svg',
+        background: 'blob-scene-haikei (8).png'
     },
     {
         title: '3. Cores',
         content: 'O número de cores interfere diretamente no preço da embalagem e varia de 1 até 4 cores, que é o número de cores utilizados para impressão de fotos ou imagens complexas. As tinta utilizada pode ser padrão Pantone, que é uma codificação universal, ou Cromia com a combinação da cores Ciano, Magenta, Amarelo e Preto.',
         icon: 'palette.svg',
+        background: 'blob-scene-haikei (7).png'
     },
     {
         title: '4. Ficou na dúvida?',
         content: 'Se você ficar em dúvida, estamos aqui para ajudá-lo. Envie seu logotipo, foto ou design e nós vamos auxiliar você. Não tem um design? Fale com a gente. Ainda não sabe por onde começar? Entre em contato agora mesmo!',
         icon: 'question.svg',
+        background: 'blob-scene-haikei (6).png',
         button: true
     },
 ]
