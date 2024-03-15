@@ -22,14 +22,16 @@ const images = [
 ];
 
 const aboutTexBox = {
+    bgcolor: '#FAFAFA',
+    boxShadow: `inset 0 1px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 3px 0 rgba(0, 0, 0, 0.1)`,
     display: 'flex',
     flexDirection: 'column',
     gap: 5,
-    paddingTop: '10rem',
+    paddingY: '3rem',
     justifyContent: 'center',
     alignItems: 'center',
     '@media (max-width: 715px)': {
-        padding: '2rem',
+        paddingY: '2rem',
         gap: 2,
     },
 }

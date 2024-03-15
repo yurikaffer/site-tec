@@ -2,6 +2,7 @@ import { Box, Card, Typography } from '@mui/material';
 import React from 'react';
 import { PhoneIncoming, EnvelopeSimple, MapPin } from "@phosphor-icons/react";
 import ContactsMobile from './ContactsMobile';
+import MapsComponent from '../Maps/MapsComponent';
 
 const fontStyle = {
     fontSize: '15px',
@@ -15,7 +16,6 @@ const cardStyle = {
     bgcolor: 'transparent',
     width: '32rem',
     gap: '0.5rem',
-    marginBottom: 'auto',
     '@media (max-width: 715px)': {
         padding: ' 0 3rem',
         width: '90%',
@@ -25,12 +25,29 @@ const cardStyle = {
 const Contacts: React.FC = () => {
     return (
         <Box sx={{
-            paddingTop: '10rem',
-            paddingBottom: '15rem',
+            bgcolor: '#FCFCFC',
+            paddingTop: '7rem',
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
+            position: 'relative',
+            paddingBottom: '25rem'
         }} >
+                <Typography
+                    textAlign={'center'}
+                    fontSize={'2.4rem'}
+                    fontWeight={600}
+                    marginBottom={'4rem'}
+                    sx={{
+                        '@media (max-width: 1000px)': {
+                            fontSize: '1.8rem',
+                            fontWeight: '700'
+                        },
+                    }}
+                >
+                    Fale conosco!
+                </Typography>
+
             <Box sx={{
                     display: 'flex',
                     '@media (max-width:975px)': {
@@ -40,7 +57,7 @@ const Contacts: React.FC = () => {
             >
                 <Box sx={cardStyle}>
                     <PhoneIncoming size={50} />
-                    <Typography fontSize={'18px'} fontWeight={600} mb={'1rem'}>Ligue para nós</Typography>
+                    <Typography fontSize={'18px'} fontWeight={600} mb={'0.2rem'}>Ligue para nós</Typography>
                     <Box>
                         <Box display={'flex'}>
                             <Typography sx={fontStyle} fontWeight={600}>Telefone:&nbsp;</Typography>
@@ -64,17 +81,29 @@ const Contacts: React.FC = () => {
                 </Box>
 
                 <Box sx={cardStyle}>
-                    <MapPin size={50} />
-                    <Typography fontSize={'18px'} fontWeight={600}>Faça uma visita</Typography>
 
+                        <MapPin size={50} />
+
+                    <Typography fontSize={'18px'} fontWeight={600}>Faça uma visita</Typography>
                         <Box display={'flex'}>
                             <Typography textAlign={'center'} sx={fontStyle}>R. Servidão Santa Matilde, 135 - João Costa, Joinville - SC, 89209-050</Typography>
                         </Box>
-
                 </Box>
             </Box>
+            
+            <Box paddingTop={'5rem'}>
+                <ContactsMobile/>
+            </Box>
 
-            <ContactsMobile/>
+            <MapsComponent/>
+
+            <Box sx={{
+                position: 'absolute',
+                bottom: -2,
+                width: '100%',
+                }}>
+                <img src='wave-haikei.svg' alt="Onda decorativa" style={{ width: '100%', objectFit: 'cover', height: 'auto'}} />
+            </Box>
         </Box>
     )
 }

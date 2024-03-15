@@ -14,7 +14,8 @@ import { TabelaMedidas } from "./Components/Tabela/Tabela";
 import { Box, CssBaseline } from "@mui/material";
 import Banner from "./Components/Banner/Banner";
 import FaixaVantagens from "./Components/FaixaVantagens/FaixaVantagens";
-import { Contacts } from "@mui/icons-material";
+import Contacts from "./Components/Contact/Contacts";
+import Rodape from "./Components/Rodape/Rodape";
 
 const rows = [
   { altura: '16cm', largura: '10cm', lateral: '5cm' },
@@ -58,6 +59,7 @@ function App() {
         <SwiperClients />
         <Contacts/>
         <WhatsappComponent />
+        <Rodape/>
     </ThemeProvider>
   );
 }

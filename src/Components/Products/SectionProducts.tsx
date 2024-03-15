@@ -17,7 +17,7 @@ const aboutTexBox = {
 const SectionProducts: React.FC = () => {
     return (
         <Box sx={{
-            bgcolor: '#FCF6F6',
+            bgcolor: '#FCFCFC',
             pt: '5rem',
         }}>
             <Box sx={aboutTexBox}>

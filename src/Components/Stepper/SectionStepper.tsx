@@ -7,8 +7,7 @@ const aboutTexBox = {
     display: 'flex',
     flexDirection: 'column',
     gap: 2,
-    padding: '5rem 15%',
-    pt: '10rem',
+    paddingX: '12%',
     justifyContent: 'center',
     alignItems: 'center',
     '@media (max-width: 715px)': {
@@ -20,19 +19,18 @@ const aboutTexBox = {
 const SectionStepper: React.FC = () => {
     return (
         <Box sx={{
-            boxShadow: `inset 0 -2px 7px 0 rgba(0, 0, 0, 0.1)`,
-            bgcolor: '#FCF6F6',
-            pb: '10rem'
+            bgcolor: '#FCFCFC',
+            paddingY: '7rem',
         }}>
             <Box sx={aboutTexBox}>
                 <Typography
                     textAlign={'center'}
                     fontSize={'2.4rem'}
-                    fontWeight={700}
+                    fontWeight={600}
                     sx={{
                         '@media (max-width: 1000px)': {
                             fontSize: '1.8rem',
-                            fontWeight: '700'
+                            fontWeight: '600'
                         },
                     }}
                 >

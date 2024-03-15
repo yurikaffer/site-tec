@@ -31,9 +31,7 @@ const imgStyle = {
 const SectionAbout: React.FC = () => {
     return (
         <Box display={'flex'} sx={{
-            //background: "url('/fundo-textura-claro.png') no-repeat center center fixed",
-            //backgroundSize: 'cover',
-            bgcolor: '#FCF6F6',
+            bgcolor: '#FCFCFC',
             padding: '4rem 0'
         }}>
             <Box sx={aboutTexBox} >
