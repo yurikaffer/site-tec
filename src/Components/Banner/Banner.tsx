@@ -5,10 +5,10 @@ const Banner: React.FC = () => {
     return (
         <Box
             sx={{
-                height: '120vh', // Altura total da viewport
-                width: '100%', // Largura total da viewport
-                background: "url('/sacola-plastic-tec.png') no-repeat center center fixed", // Ajuste o caminho conforme necessário
-                backgroundSize: 'cover', // Garante que a imagem de fundo cubra todo o espaço disponível
+                height: '120vh',
+                width: '100%',
+                background: "url('/sacola-plastic-tec.png') no-repeat center center fixed",
+                backgroundSize: 'cover',
             }}
         >
             <Box sx={{padding: '40rem 10%',
@@ -40,7 +40,7 @@ const Banner: React.FC = () => {
                         fontSize: '34px',
                     },
                 }}>
-                    Deixe a Sua Marca no Mundo.
+                    Deixe sua marca no mundo.
                 </Typography>
             </Box>
 
@@ -50,8 +50,12 @@ const Banner: React.FC = () => {
                 left: 0,
                 width: '100%',
                 }}>
+                
                 <img src='wave.svg' alt="Onda decorativa" style={{ width: '100%', objectFit: 'cover', height: 'auto' }} />
+                
+                
             </Box>
+            <div id="about-anchor"></div>
         </Box>
     )
 }

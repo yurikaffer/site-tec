@@ -27,17 +27,17 @@ const PaperBagsModel: React.FC = () => {
             }}>
                 <ProductModelCard
                     title='Sacola Offset'
-                    img='C2-600x600.webp'
+                    img='bag-modelo-produtos.png'
                     content={'Os modelos de sacola fabricado com papel offset são bonitas, resistentes e tem ótimo custo benefício.'}
                 />
                 <ProductModelCard
                     title='Sacola Duplex'
-                    img='C2-600x600.webp'
+                    img='bag-modelo-produtos.png'
                     content={'A sacola de papel duplex é mais grossinha e ainda mais resistência. Ideal para roupas grandes que precisam de mais espaço.'}
                 />
                 <ProductModelCard
                     title='Sacola Kraft'
-                    img='C2-600x600.webp'
+                    img='bag-modelo-produtos.png'
                     content={'A sacola kraft pode ser produzida com a alça em nylon ou em papel kraft. Além disso, possui modelos coloridos e diversos tamanhos.'}
                 />
 

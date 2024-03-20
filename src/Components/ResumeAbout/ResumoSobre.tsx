@@ -1,71 +1,48 @@
-import { Box, Typography } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import React from 'react';
-
-const typographyBold = {
-    fontSize: '2.0rem',
-    fontWeight: '700',
-    marginTop: '2.0rem',
-    '@media (max-width: 715px)': {
-        fontSize: '1.6rem',
-    },
-}
-
-const typography = {
-    fontSize: '2.0rem',
-    '@media (max-width: 715px)': {
-        fontSize: '1.4rem',
-    },
-}
-
-const imgStyle = {
-    width: '8rem',
-    '@media (max-width: 555px)': {
-        width: '5rem',
-    },
-}
+import ResumeItem from './ResumeItem';
 
 const ResumoSobre: React.FC = () => {
+    const theme = useTheme();
+
     return (
         <Box id='about-resume'
             display={'flex'}
-            justifyContent={'space-between'}
+            justifyContent={'center'}
+            gap={'15%'}
             padding={'5rem 10%'}
             sx={{
-                //background: "url('/fundo-textura-creme.png') no-repeat center center fixed",
-                //backgroundSize: 'cover', 
-                bgcolor: '#F9E9D3',
+                bgcolor: '#F3F3F3',
                 boxShadow: `inset 0 1px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 3px 0 rgba(0, 0, 0, 0.1)`,
-                '@media (max-width: 1000px)': {
-                    padding: '5rem 5rem 5rem 5rem'
+                [theme.breakpoints.down(1000)]: {
+                    padding: '5rem',
+                    gap: '5%',
                 },
-                '@media (max-width: 555px)': {
-                    padding: '3rem 1rem 3rem 1rem'
+                [theme.breakpoints.down(555)]: {
+                    padding: '3rem 1rem',
                 },
             }}
         >
-            <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
-                <Box sx={imgStyle}>
-                    <img src="/almoco-foguete.png" alt="imagem foguete" style={{ width: '100%' }} />
-                </Box>
-                <Typography sx={typographyBold}>+28 anos</Typography>
-                <Typography sx={typography}>no mercado</Typography>
-            </Box>
-            <Box display={'flex'} flexDirection={'column'} alignItems={'center'} >
-                <Box sx={imgStyle}>
-                    <img src="/gema.png" alt="imagem diamante" style={{ width: '100%' }} />
-                </Box>
-                <Typography sx={typographyBold}>Impressão</Typography>
-                <Typography sx={typography}>alta qualidade</Typography>
-            </Box>
-            <Box display={'flex'} flexDirection={'column'} alignItems={'center'} >
-                <Box sx={imgStyle}>
-                    <img src="/aperto-de-mao.png" alt="imagem aperto de mão" style={{ width: '100%' }} />
-                </Box>
-                <Typography sx={typographyBold}>Profissionais</Typography>
-                <Typography sx={typography}>qualificados</Typography>
-            </Box>
+            <ResumeItem 
+              imgSrc="/almoco-foguete.png" 
+              imgAlt="imagem foguete" 
+              title="+28 anos" 
+              description="no mercado" 
+            />
+            <ResumeItem 
+              imgSrc="/gema.png" 
+              imgAlt="imagem diamante" 
+              title="Impressão" 
+              description="alta qualidade" 
+            />
+            <ResumeItem 
+              imgSrc="/aperto-de-mao.png" 
+              imgAlt="imagem aperto de mão" 
+              title="Profissionais" 
+              description="qualificados" 
+            />
         </Box>
-    )
+    );
 }
 
-export default ResumoSobre
+export default ResumoSobre;

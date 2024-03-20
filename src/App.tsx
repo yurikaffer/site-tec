@@ -1,65 +1,46 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import theme from "./Theme/Theme";
 import { ThemeProvider } from '@mui/material/styles';
-import SectionAbout from "./Components/About/SectionAbout";
-import ResumoSobre from "./Components/ResumeAbout/ResumoSobre";
-import SwiperClients from "./Components/SwiperClients/SwiperClients";
-import SectionStepper from "./Components/Stepper/SectionStepper";
-import SectionProducts from "./Components/Products/SectionProducts";
-import PaperBagsModel from "./Components/Products/PaperBagsModel";
-import PlasticBagsModel from "./Components/Products/PlasticBagsModel";
-import WhatsappComponent from "./Components/Whats/Whatsapp";
-import NavBarMobile from "./Components/Navbar/NavbarMobile";
-import NavBar from "./Components/Navbar/Navbar";
-import { TabelaMedidas } from "./Components/Tabela/Tabela";
-import { Box, CssBaseline } from "@mui/material";
-import Banner from "./Components/Banner/Banner";
-import FaixaVantagens from "./Components/FaixaVantagens/FaixaVantagens";
-import Contacts from "./Components/Contact/Contacts";
-import Rodape from "./Components/Rodape/Rodape";
-
-const rows = [
-  { altura: '16cm', largura: '10cm', lateral: '5cm' },
-  { altura: '15cm', largura: '13cm', lateral: '7cm' },
-  { altura: '23cm', largura: '16cm', lateral: '9cm' },
-  { altura: '20cm', largura: '24cm', lateral: '7cm' },
-  { altura: '25cm', largura: '21cm', lateral: '9cm' },
-  { altura: '25cm', largura: '35cm', lateral: '10cm' },
-  { altura: '29cm', largura: '35cm', lateral: '10cm' },
-  { altura: '35cm', largura: '25cm', lateral: '10cm' },
-  { altura: '35cm', largura: '40cm', lateral: '13cm' },
-  { altura: '44cm', largura: '31cm', lateral: '11cm' },
-];
-
-const sacolaHdAlcaCamiseta = [
-  { altura: '30cm', largura: '40cm', lateral: '0,4cm' },
-  { altura: '40cm', largura: '50cm', lateral: '0,4cm' },
-  { altura: '45cm', largura: '60cm', lateral: '0,4cm' },
-  { altura: '50cm', largura: '70cm', lateral: '0,6cm' },
-  { altura: '60cm', largura: '80cm', lateral: '0,7cm' },
-  { altura: '70cm', largura: '90cm', lateral: '0,7cm' },
-  { altura: '90cm', largura: '100cm', lateral: '0,9cm' },
-
-];
+import Home from "./pages/Home";
+import ProductsPage from "./pages/ProductsPage";
+import BagOffsetPage from "./pages/ProductPages/BagOffsetPage";
+import { CategoryProvider } from "./Context/CategoryContext";
+import BagDuplexPage from "./pages/ProductPages/BagDuplexPage";
+import BagKraftPage from "./pages/ProductPages/BagKraftPage";
+import BagTShirtPage from "./pages/ProductPages/BagTShirtPage";
+import BagPlasticLeaked from "./pages/ProductPages/BagPlasticLeaked";
+import BagPlasticTape from "./pages/ProductPages/BagPlasticTape";
+import BusinessCardPage from "./pages/ProductPages/BusinessCardPage";
+import TagPage from "./pages/ProductPages/TagPage";
+import PvcBoardPage from "./pages/ProductPages/PvcBoardPage";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-        <NavBar/>
-        <NavBarMobile />
-        <Banner/>
+      <CategoryProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Produtos" element={<ProductsPage />} />
 
-        
-        
-        <SectionAbout />
-        <ResumoSobre />
-        <SectionProducts />
-        <FaixaVantagens />
-        
-        <SectionStepper />
-        <SwiperClients />
-        <Contacts/>
-        <WhatsappComponent />
-        <Rodape/>
+
+            <Route path="/Sobre" element={<Home />} />
+            <Route path="/Clientes" element={<Home />} />
+            <Route path="/Contatos" element={<Home />} />
+
+            <Route path="/sacolas-offset" element={<BagOffsetPage />} />
+            <Route path="/sacolas-duplex" element={<BagDuplexPage />} />
+            <Route path="/sacolas-Kraft" element={<BagKraftPage />} />
+            <Route path="/sacolas-camiseta" element={<BagTShirtPage />} />
+            <Route path="/sacolas-vazada" element={<BagPlasticLeaked />} />
+            <Route path="/sacolas-fita" element={<BagPlasticTape />} />
+            <Route path="/cartoes" element={<BusinessCardPage />} />
+            <Route path="/tags" element={<TagPage />} />
+            <Route path="/pvc" element={<PvcBoardPage />} />
+          </Routes>
+        </Router>
+      </CategoryProvider>
     </ThemeProvider>
   );
 }

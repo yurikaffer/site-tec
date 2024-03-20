@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import React from 'react';
+import React, { useRef } from 'react';
 import ProductCard from './ProductCard';
+import { useNavigate } from 'react-router-dom';
 
 const aboutTexBox = {
     display: 'flex',
@@ -15,14 +16,20 @@ const aboutTexBox = {
 }
 
 const SectionProducts: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleNavigation = (path: string) => {
+        navigate(path, { replace: false });
+        window.scrollTo(0, 0);
+    };
+
     return (
         <Box sx={{
             bgcolor: '#FCFCFC',
-            pt: '5rem',
         }}>
             <Box sx={aboutTexBox}>
-                <Typography 
-                    fontSize={'2.4rem'} 
+                <Typography
+                    fontSize={'2.4rem'}
                     fontWeight={700}
                     sx={{
                         '@media (max-width: 1000px)': {
@@ -33,10 +40,10 @@ const SectionProducts: React.FC = () => {
                 >
                     Conheça nossos produtos
                 </Typography>
-                <Typography fontSize={'16px'}  textAlign={'center'}>
-                    Embalagens personalizadas influenciam significativamente a decisão de compra. Uma embalagem atraente pode não só chamar a atenção dos 
-                    consumidores, mas também transmitir a qualidade do produto e os valores da marca, contribuindo para a 
-                    decisão de compra. De acordo com algumas pesquisas, a embalagem pode influenciar a decisão de compra de 
+                <Typography fontSize={'16px'} textAlign={'center'}>
+                    Embalagens personalizadas influenciam significativamente a decisão de compra. Uma embalagem atraente pode não só chamar a atenção dos
+                    consumidores, mas também transmitir a qualidade do produto e os valores da marca, contribuindo para a
+                    decisão de compra. De acordo com algumas pesquisas, a embalagem pode influenciar a decisão de compra de
                     até 70% dos consumidores em pontos de venda.
                 </Typography>
             </Box>
@@ -76,21 +83,25 @@ const SectionProducts: React.FC = () => {
                     title='Sacolas de Papel'
                     img='sacola-pape-modelo.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    onClick={() => handleNavigation('/Produtos')}
                 />
                 <ProductCard
                     title='Sacolas de Plástico'
                     img='bag-modelo-produtos.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    onClick={() => handleNavigation('/Produtos')}
                 />
                 <ProductCard
                     title='Cartões e Tags'
                     img='cartoes-produto.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    onClick={() => handleNavigation('/Produtos')}
                 />
                 <ProductCard
                     title='Placas de PVC'
                     img='bag-modelo-produtos.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    onClick={() => handleNavigation('/Produtos')}
                 />
             </Box>
         </Box>

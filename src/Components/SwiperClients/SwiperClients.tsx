@@ -101,6 +101,7 @@ const SwiperClients: React.FC = () => {
                     }}
                     modules={[Pagination, Autoplay]}
                     loop={true}
+
                 >
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>

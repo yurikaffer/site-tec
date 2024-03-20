@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoogleMap, LoadScript, Marker  } from '@react-google-maps/api';
+import { GoogleMap, Marker, useJsApiLoader   } from '@react-google-maps/api';
 import '../../styles.css';
 
 const containerStyle = {
@@ -19,9 +19,17 @@ const options = {
 };
 
 const MapsComponent: React.FC = () => {
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: ""
+    });
+
+    if (!isLoaded) {
+        return <div>Loading...</div>;
+    }
+    
     return (
         <div className="mapContainer">
-            <LoadScript googleMapsApiKey='' >
                 <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}
@@ -29,12 +37,10 @@ const MapsComponent: React.FC = () => {
                     options={options}
                 >
 
-                    <Marker position={center} />
+                    <Marker animation={window.google.maps.Animation.DROP} position={center} />
                 </GoogleMap>
-            </LoadScript>
         </div>
     )
 }
 
-export default MapsComponent
-
+export default React.memo(MapsComponent)

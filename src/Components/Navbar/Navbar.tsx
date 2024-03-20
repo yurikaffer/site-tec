@@ -1,73 +1,65 @@
-import React from 'react';
-import { Typography, Box } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, ButtonBase, Drawer, IconButton, useMediaQuery, useTheme } from '@mui/material';
+import ButtonNavbar from './ButtonNavbar/ButtonNavbar';
+import { useNavigate } from 'react-router-dom';
 
-const iconStyle = {
-    marginLeft: '3rem',
-    cursor: 'pointer',
-    position: 'relative', 
-    '&:hover::after': {
-        width: '100%' 
-    },
-    '::after': {
-        content: '""',
-        position: 'absolute', 
-        bottom: '3px', 
-        marginLeft: '1px',
-        display: 'block',
-        width: '15px', 
-        borderBottom: '2px solid #F7ADAF', 
-        transition: 'width .3s ease-in-out', 
-    }
+interface NavBarProps {
+    boxStyle: object;
+    img: string;
+    heightImg: string;
 }
 
+const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg }) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down(1015));
+    const navigate = useNavigate();
 
-const NavBar: React.FC = () => {
+    const toggleMenu = () => setIsMenuOpen(prev => !prev);
+
+    const renderMenuItens = () => {
+        return (
+            <>
+                <ButtonNavbar name='Home' onClick={() => { navigate('/', { replace: false  }) }} />
+                <ButtonNavbar name='Sobre' onClick={() => { navigate('/Sobre', { replace: false  }) }} />
+                <ButtonNavbar name='Produtos' onClick={() => { navigate('/Produtos', { replace: false  }) }} />
+                <ButtonNavbar name='Orçamento' onClick={() => { navigate('/Clientes', { replace: false  }) }} />
+                <ButtonNavbar name='Contatos' onClick={() => { navigate('/Contatos', { replace: false  }) }} />
+            </>
+        )
+    }
+
     return (
         <Box sx={{
+            ...boxStyle,
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            bgcolor: 'transparent',
-            padding: '5rem 10%',
-            position: 'absolute', // Alterado de 'static' para 'fixed'
-            width: '100%', // Garante que o NavBar ocupe a largura total
-            top: 0, // Posiciona o NavBar no topo da página
-            left: 0, // Alinha o NavBar à esquerda da página
-            zIndex: 1000, // Garante que o NavBar fique sobre outros elementos
-            '@media (max-width: 850px)': {
-                display: 'none'
-            },
+            width: '100%',
+            top: 0,
+            left: 0,
+            zIndex: 1000,
         }}>
-            <Box width={'30rem'} sx={{ cursor: 'pointer' }}>
-                <img src={'Tec logo 2024.png'} alt="imagem Logo" style={{ width: '100%' }} />
-            </Box>
-            <Box display={'flex'} position={'relative'}>
-                <Box sx={iconStyle}>
-                    <Typography fontSize={'20px'}>
-                        Home
-                    </Typography>
+            <ButtonBase disableRipple sx={{ padding: 0 }} onClick={() => { navigate('/') }}>
+                <Box sx={{ cursor: 'pointer', height: heightImg }}>
+                    <img src={img} alt="Logo" style={{ width: '100%', height: '100%' }} />
                 </Box>
-                <Box sx={iconStyle}>
-                    <Typography fontSize={'20px'}>
-                        Sobre
-                    </Typography>
+            </ButtonBase>
+            {!isMobile && (
+                <Box sx={{ display: 'flex', position: 'relative' }}>
+                    {renderMenuItens()}
                 </Box>
-                <Box sx={iconStyle}>
-                    <Typography fontSize={'20px'}>
-                        Produtos
-                    </Typography>
+            )}
+            {isMobile && (
+                <IconButton onClick={toggleMenu} sx={{ display: 'flex', position: 'relative' }}>
+                    <img src="icons8-menu-64.png" alt="Menu" style={{ width: '4rem', cursor: 'pointer' }} />
+                </IconButton>
+            )}
+            <Drawer anchor="right" open={isMenuOpen} onClose={toggleMenu}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '2rem', width: '25rem' }}>
+                    {renderMenuItens()}
                 </Box>
-                <Box sx={iconStyle}>
-                    <Typography fontSize={'20px'}>
-                        Clientes
-                    </Typography>
-                </Box>
-                <Box sx={iconStyle}>
-                    <Typography fontSize={'20px'}>
-                        Contatos
-                    </Typography>
-                </Box>
-            </Box>
+            </Drawer>
         </Box>
     );
 };

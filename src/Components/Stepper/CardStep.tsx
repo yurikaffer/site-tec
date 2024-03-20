@@ -14,7 +14,6 @@ const CardStep: React.FC<CardStepProps> = ({title, content, icon, button, backgr
         <Card sx={{ 
             background: `url('${background}') center center`,
             backgroundSize: 'cover',
-            //bgcolor: '#F6F1F1',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -41,7 +40,7 @@ const CardStep: React.FC<CardStepProps> = ({title, content, icon, button, backgr
                 </Typography>
                 { button && (
                     <ButtonBase sx={{
-                        bgcolor: '#F8B5B5',
+                        bgcolor: '#FFC9C9',
                         width: '100%',
                         boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
                         borderRadius: '50rem'

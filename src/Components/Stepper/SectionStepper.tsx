@@ -1,7 +1,7 @@
 import React from 'react';
 import StepperMobile from './StepperMobile';
 import Stepper from './Stepper';
-import { Box, Typography } from '@mui/material';
+import { Box, ButtonBase, Typography } from '@mui/material';
 
 const aboutTexBox = {
     display: 'flex',
@@ -21,6 +21,9 @@ const SectionStepper: React.FC = () => {
         <Box sx={{
             bgcolor: '#FCFCFC',
             paddingY: '7rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignContent: 'center'
         }}>
             <Box sx={aboutTexBox}>
                 <Typography
@@ -40,9 +43,17 @@ const SectionStepper: React.FC = () => {
                     Criamos um passo a passo para que você consiga se orientar e entender as informações necessárias para
                     realizar um orçamento conosco, e lembre-se, qualquer dúvida, não hesite em nos chamar!
                 </Typography>
+                <Stepper />
+                <StepperMobile />
+                <ButtonBase sx={{
+                    bgcolor: '#FFC9C9',
+                    width: '25rem',
+                    boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
+                    borderRadius: '50rem'
+                }}>
+                    Realizar orçamento
+                </ButtonBase>
             </Box>
-            <Stepper />
-            <StepperMobile />
         </Box>
     )
 }

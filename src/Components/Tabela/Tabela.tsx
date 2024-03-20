@@ -25,8 +25,8 @@ export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows }) => {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        boxShadow: '0 3px 9px 0 rgba(0, 0, 0, 0.1)',
-        width: '30rem',
+        boxShadow: '0 1px 9px 0 rgba(0, 0, 0, 0.1)',
+        width: '100%',
     };
 
     return (

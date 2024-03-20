@@ -31,7 +31,7 @@ const Contacts: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             position: 'relative',
-            paddingBottom: '25rem'
+            paddingBottom: '10rem'
         }} >
                 <Typography
                     textAlign={'center'}
@@ -96,14 +96,6 @@ const Contacts: React.FC = () => {
             </Box>
 
             <MapsComponent/>
-
-            <Box sx={{
-                position: 'absolute',
-                bottom: -2,
-                width: '100%',
-                }}>
-                <img src='wave-haikei.svg' alt="Onda decorativa" style={{ width: '100%', objectFit: 'cover', height: 'auto'}} />
-            </Box>
         </Box>
     )
 }
