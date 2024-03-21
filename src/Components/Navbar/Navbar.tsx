@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import { Box, ButtonBase, Drawer, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import ButtonNavbar from './ButtonNavbar/ButtonNavbar';
 import { useNavigate } from 'react-router-dom';
+import SmButtonNavbar from './ButtonNavbar/SmButtonNavbar';
 
 interface NavBarProps {
     boxStyle: object;
     img: string;
     heightImg: string;
+    smButtons?: boolean;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg }) => {
+const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down(1015));
@@ -23,8 +25,20 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg }) => {
                 <ButtonNavbar name='Home' onClick={() => { navigate('/', { replace: false  }) }} />
                 <ButtonNavbar name='Sobre' onClick={() => { navigate('/Sobre', { replace: false  }) }} />
                 <ButtonNavbar name='Produtos' onClick={() => { navigate('/Produtos', { replace: false  }) }} />
-                <ButtonNavbar name='Orçamento' onClick={() => { navigate('/Clientes', { replace: false  }) }} />
                 <ButtonNavbar name='Contatos' onClick={() => { navigate('/Contatos', { replace: false  }) }} />
+                <ButtonNavbar name='Orçamento' onClick={() => { navigate('/Orcamento', { replace: false  }) }} />
+            </>
+        )
+    }
+
+    const renderMenuItensSmall = () => {
+        return (
+            <>
+                <SmButtonNavbar name='Home' onClick={() => { navigate('/', { replace: false  }) }} />
+                <SmButtonNavbar name='Sobre' onClick={() => { navigate('/Sobre', { replace: false  }) }} />
+                <SmButtonNavbar name='Produtos' onClick={() => { navigate('/Produtos', { replace: false  }) }} />
+                <SmButtonNavbar name='Contatos' onClick={() => { navigate('/Contatos', { replace: false  }) }} />
+                <SmButtonNavbar name='Orçamento' onClick={() => { navigate('/Orcamento', { replace: false  }) }} />
             </>
         )
     }
@@ -47,7 +61,7 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg }) => {
             </ButtonBase>
             {!isMobile && (
                 <Box sx={{ display: 'flex', position: 'relative' }}>
-                    {renderMenuItens()}
+                    {smButtons ? renderMenuItensSmall() : renderMenuItens()}
                 </Box>
             )}
             {isMobile && (
@@ -57,7 +71,7 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg }) => {
             )}
             <Drawer anchor="right" open={isMenuOpen} onClose={toggleMenu}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: '2rem', width: '25rem' }}>
-                    {renderMenuItens()}
+                    {smButtons ? renderMenuItensSmall() : renderMenuItens()}
                 </Box>
             </Drawer>
         </Box>

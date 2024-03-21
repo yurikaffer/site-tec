@@ -31,10 +31,10 @@ const ProductsCategory: React.FC = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            paddingTop: '13rem',
-            paddingX: '2rem',
+            paddingTop: '10rem',
+            paddingX: '10%',
             gap: '3rem',
-            position: 'relative'
+            position: 'relative',
         }}>
             <Card sx={{
                 display: 'flex',
@@ -66,7 +66,7 @@ const ProductsCategory: React.FC = () => {
                 </Box>
             </Card>
 
-            <Box display={'flex'} flexDirection={'column'} gap={'3rem'} pb={'20rem'}>
+            <Box display={'flex'} flexDirection={'column'} gap={'3rem'} pb={'20rem'} width={'100%'}>
                 {selectedCategory === '' &&
                     <>
                         <PaperCategory />

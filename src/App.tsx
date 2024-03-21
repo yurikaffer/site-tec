@@ -14,6 +14,9 @@ import BagPlasticTape from "./pages/ProductPages/BagPlasticTape";
 import BusinessCardPage from "./pages/ProductPages/BusinessCardPage";
 import TagPage from "./pages/ProductPages/TagPage";
 import PvcBoardPage from "./pages/ProductPages/PvcBoardPage";
+import AboutPage from "./pages/AboutPage";
+import ContactsPage from "./pages/ContactsPage";
+import BudgetPage from "./pages/BudgetPage";
 
 function App() {
   return (
@@ -23,11 +26,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Produtos" element={<ProductsPage />} />
-
-
-            <Route path="/Sobre" element={<Home />} />
-            <Route path="/Clientes" element={<Home />} />
-            <Route path="/Contatos" element={<Home />} />
+            <Route path="/Sobre" element={<AboutPage />} />
+            <Route path="/Contatos" element={<ContactsPage />} /> 
+            <Route path="/Orcamento" element={<BudgetPage />} /> 
 
             <Route path="/sacolas-offset" element={<BagOffsetPage />} />
             <Route path="/sacolas-duplex" element={<BagDuplexPage />} />

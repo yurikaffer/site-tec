@@ -26,12 +26,10 @@ const Contacts: React.FC = () => {
     return (
         <Box sx={{
             bgcolor: '#FCFCFC',
-            paddingTop: '7rem',
             alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
             position: 'relative',
-            paddingBottom: '10rem'
         }} >
                 <Typography
                     textAlign={'center'}

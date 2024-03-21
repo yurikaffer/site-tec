@@ -36,7 +36,6 @@ const MapsComponent: React.FC = () => {
                     zoom={12}
                     options={options}
                 >
-
                     <Marker animation={window.google.maps.Animation.DROP} position={center} />
                 </GoogleMap>
         </div>
