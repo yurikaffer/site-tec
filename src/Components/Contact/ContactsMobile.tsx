@@ -14,7 +14,8 @@ const ContactsMobile: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 padding: '1rem 1rem',
-                alignItems: 'center'
+                alignItems: 'center',
+                paddingBottom: '5rem'
             },
         }}>
             <Box display={'flex'} flexDirection={'column'} gap={3}>

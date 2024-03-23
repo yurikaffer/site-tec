@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, ButtonBase, Drawer, IconButton, useMediaQuery, useTheme } from '@mui/material';
+import { Box, ButtonBase, Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
 import ButtonNavbar from './ButtonNavbar/ButtonNavbar';
 import { useNavigate } from 'react-router-dom';
 import SmButtonNavbar from './ButtonNavbar/SmButtonNavbar';
@@ -10,6 +10,8 @@ interface NavBarProps {
     heightImg: string;
     smButtons?: boolean;
 }
+
+//<SmButtonNavbar name='Realizar orçamento ➜' onClick={() => { navigate('/Orcamento', { replace: false }) }} />
 
 const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +24,10 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
     const renderMenuItens = () => {
         return (
             <>
-                <ButtonNavbar name='Home' onClick={() => { navigate('/', { replace: false  }) }} />
-                <ButtonNavbar name='Sobre' onClick={() => { navigate('/Sobre', { replace: false  }) }} />
-                <ButtonNavbar name='Produtos' onClick={() => { navigate('/Produtos', { replace: false  }) }} />
-                <ButtonNavbar name='Contatos' onClick={() => { navigate('/Contatos', { replace: false  }) }} />
-                <ButtonNavbar name='Orçamento' onClick={() => { navigate('/Orcamento', { replace: false  }) }} />
+                <ButtonNavbar name='Home' onClick={() => { navigate('/', { replace: false }) }} />
+                <ButtonNavbar name='Sobre' onClick={() => { navigate('/Sobre', { replace: false }) }} />
+                <ButtonNavbar name='Produtos' onClick={() => { navigate('/Produtos', { replace: false }) }} />
+                <ButtonNavbar name='Contatos' onClick={() => { navigate('/Contatos', { replace: false }) }} />
             </>
         )
     }
@@ -34,11 +35,10 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
     const renderMenuItensSmall = () => {
         return (
             <>
-                <SmButtonNavbar name='Home' onClick={() => { navigate('/', { replace: false  }) }} />
-                <SmButtonNavbar name='Sobre' onClick={() => { navigate('/Sobre', { replace: false  }) }} />
-                <SmButtonNavbar name='Produtos' onClick={() => { navigate('/Produtos', { replace: false  }) }} />
-                <SmButtonNavbar name='Contatos' onClick={() => { navigate('/Contatos', { replace: false  }) }} />
-                <SmButtonNavbar name='Orçamento' onClick={() => { navigate('/Orcamento', { replace: false  }) }} />
+                <SmButtonNavbar name='Home' onClick={() => { navigate('/', { replace: false }) }} />
+                <SmButtonNavbar name='Sobre' onClick={() => { navigate('/Sobre', { replace: false }) }} />
+                <SmButtonNavbar name='Produtos' onClick={() => { navigate('/Produtos', { replace: false }) }} />
+                <SmButtonNavbar name='Contatos' onClick={() => { navigate('/Contatos', { replace: false }) }} />
             </>
         )
     }
@@ -60,9 +60,20 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
                 </Box>
             </ButtonBase>
             {!isMobile && (
-                <Box sx={{ display: 'flex', position: 'relative' }}>
-                    {smButtons ? renderMenuItensSmall() : renderMenuItens()}
-                </Box>
+                <>
+                    <Box sx={{ display: 'flex', position: 'relative' }}>
+                        {smButtons ? renderMenuItensSmall() : renderMenuItens()}
+                    </Box>
+                    <ButtonBase sx={{
+                        bgcolor: '#FFC9C9',
+                        paddingX: '3rem',
+                        borderRadius: '50rem'
+                    }} onClick={() => { }}>
+                        <Typography fontSize={'15px'}>
+                            Realizar orçamento ➜
+                        </Typography>
+                    </ButtonBase>
+                </>
             )}
             {isMobile && (
                 <IconButton onClick={toggleMenu} sx={{ display: 'flex', position: 'relative' }}>

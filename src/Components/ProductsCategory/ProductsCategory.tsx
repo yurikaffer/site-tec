@@ -31,10 +31,16 @@ const ProductsCategory: React.FC = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            paddingTop: '10rem',
-            paddingX: '10%',
+            paddingLeft: '10%',
             gap: '3rem',
             position: 'relative',
+            marginRight: 'auto',
+            '@media (max-width: 800px)': {
+                flexDirection: 'column',
+                alignItems: 'center',
+                marginRight: 0,
+                paddingX: '5%',
+            }
         }}>
             <Card sx={{
                 display: 'flex',
@@ -46,8 +52,19 @@ const ProductsCategory: React.FC = () => {
                 gap: '0.1rem',
                 marginBottom: 'auto',
                 boxShadow: '0 1px 6px 0 rgba(0, 0, 0, 0.2)',
+                '@media (max-width: 800px)': {
+                    width: '100%',
+                }
             }}>
-                <Typography fontSize={'18px'} fontWeight={500} pb={'1.5rem'} pl={'1rem'}>Categorias dos produtos</Typography>
+                <Typography 
+                    fontSize={'18px'} 
+                    fontWeight={500} 
+                    pb={'1.5rem'} 
+                    pl={'1rem'} 
+                    margin={'auto'}
+                >
+                    Categorias dos produtos
+                </Typography>
 
                 <Box component={'button'} sx={buttonStyle('')} onClick={() => handleSelectCategory('')}>
                     <Typography fontSize={'15px'} textAlign={'start'}>Todos</Typography>
@@ -66,7 +83,12 @@ const ProductsCategory: React.FC = () => {
                 </Box>
             </Card>
 
-            <Box display={'flex'} flexDirection={'column'} gap={'3rem'} pb={'20rem'} width={'100%'}>
+            <Box 
+                display={'flex'} 
+                flexDirection={'column'} 
+                gap={'3rem'} pb={'20rem'} 
+                width={'100%'}
+            >
                 {selectedCategory === '' &&
                     <>
                         <PaperCategory />

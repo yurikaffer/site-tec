@@ -12,7 +12,7 @@ const aboutTexBox = {
     alignItems: 'center',
     '@media (max-width: 715px)': {
         padding: '1rem',
-        paddingTop: '10rem',
+
     },
 }
 

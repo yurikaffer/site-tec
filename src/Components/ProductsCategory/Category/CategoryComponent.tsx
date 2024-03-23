@@ -9,7 +9,7 @@ interface CategoryComponentProp {
 const CategoryComponent: React.FC<CategoryComponentProp> = ({ children, title }) => {
     return (
         <Box display={'flex'} flexDirection={'column'} gap={'1rem'} width={'100%'}>
-            <Typography fontSize={'20px'} fontWeight={500} pt={'1rem'}>{title}</Typography>
+            <Typography fontSize={'20px'} fontWeight={500} pt={'1rem'} margin={'auto'}>{title}</Typography>
             <Divider />
             <Box display={'flex'} alignItems={'center'} justifyContent={'start'} pt={'1rem'} gap={'2rem'}>
                 {children}

@@ -12,9 +12,7 @@ const AboutPage: React.FC = () => {
         <Box padding={'10rem 0rem 10rem 10%'} >
             <SectionAbout page={true}/>
         </Box>
-        <Box pb={'5rem'}>
-            <ResumoSobre />
-        </Box>
+
         
         <Rodape/>
         <WhatsappComponent />

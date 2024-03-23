@@ -16,10 +16,6 @@ const cardStyle = {
     bgcolor: 'transparent',
     width: '32rem',
     gap: '0.5rem',
-    '@media (max-width: 715px)': {
-        padding: ' 0 3rem',
-        width: '90%',
-    },
 }
 
 const Contacts: React.FC = () => {
@@ -48,6 +44,7 @@ const Contacts: React.FC = () => {
 
             <Box sx={{
                     display: 'flex',
+                    paddingBottom: '5rem',
                     '@media (max-width:975px)': {
                         display: 'none'
                     },
@@ -89,9 +86,7 @@ const Contacts: React.FC = () => {
                 </Box>
             </Box>
             
-            <Box paddingTop={'5rem'}>
-                <ContactsMobile/>
-            </Box>
+            <ContactsMobile/>
 
             <MapsComponent/>
         </Box>

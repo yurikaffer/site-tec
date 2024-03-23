@@ -23,5 +23,6 @@ body {
 @media (max-width: 1070px) {
   .mapContainer {
     width: 95%;
+    height: 25rem;
   }
 }

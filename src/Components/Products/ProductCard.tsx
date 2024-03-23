@@ -27,6 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, content, img, textButt
             '&:hover': {
                 transform: 'scale(1.03)',
             },
+            maxHeight: '50rem'
         }}>
             <img src={img} alt="imagem produto" style={{ width: '100%', objectFit: 'cover', borderRadius: '.5rem' }} />
 
