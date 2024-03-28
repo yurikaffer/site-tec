@@ -1,6 +1,7 @@
 import { Box, Divider, IconButton, Typography } from '@mui/material';
 import { Clock, EnvelopeSimple, InstagramLogo, MapPinLine, Phone, WhatsappLogo } from '@phosphor-icons/react';
 import React from 'react';
+import ArrowIcon from '../ArrowIcon/ArrowIcon';
 
 const textStyle = {
     fontSize: '16px',
@@ -29,13 +30,16 @@ const Rodape: React.FC = () => {
                 bgcolor={'#FAB6B6'} 
                 color={'#252525'} 
                 paddingX={'10%'} 
-                paddingTop={'10rem'}
+                paddingTop={'4rem'}
                 sx={{
                     '@media (max-width: 450px)': {
                         paddingX: '2rem'
                     },
                 }}
             >
+                <Box display={'flex'} pb={'5rem'} justifyContent={'center'}>
+                    <ArrowIcon/>
+                </Box>
                 <Box sx={{
                     display: 'flex',
                     justifyContent: 'space-between',
