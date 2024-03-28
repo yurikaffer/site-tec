@@ -29,7 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, content, img, textButt
             },
             maxHeight: '50rem'
         }}>
-            <img src={img} alt="imagem produto" style={{ width: '100%', objectFit: 'cover', borderRadius: '.5rem' }} />
+            <img src={img} alt="imagem produto" style={{ width: '100%',  objectFit: 'cover', maxHeight: '21rem', borderRadius: '.5rem' }} />
 
             <Typography fontSize={'18px'} fontWeight={600} mt={'1rem'}>{title}</Typography>
             <Typography fontSize={'15px'} textAlign={'center'}>{content}</Typography>

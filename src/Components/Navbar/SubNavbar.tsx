@@ -15,7 +15,7 @@ const SubNavbar: React.FC = () => {
                 padding: '1rem 10%',
                 position: 'fixed',
                 boxShadow: '0 1px 0px 0 rgba(0, 0, 0, 0.1)',
-            }} img='tec-logo-cut.png' heightImg='3rem' smButtons={true}
+            }} img='logo-nav.png' heightImg='3.5rem' smButtons={true}
             />
         </Box>
     );

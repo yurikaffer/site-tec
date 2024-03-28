@@ -5,7 +5,7 @@ import ProductPageComponent from "../../Components/Products/ProductPageComponent
 const PvcBoardPage: React.FC = () => {
     return (
         <ProductPageComponent>
-            <ImgZoom img="bag-modelo-produtos.png" />
+            <ImgZoom img="placa-pvc-sf.png" />
 
             <ProductDescription
                 mainTitle="Placas de PVC"

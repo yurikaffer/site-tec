@@ -14,7 +14,7 @@ const rows = [
 const BagPlasticLeaked: React.FC = () => {
     return (
         <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de plástico com alça vazada'}>
-            <ImgZoom img="bag-modelo-produtos.png" />
+            <ImgZoom img="Sacola-plastico-vazada-sem-fundo.png" />
 
             <ProductDescription
                 mainTitle="Sacola de Plástico com Alça Vazada"

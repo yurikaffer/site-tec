@@ -88,7 +88,7 @@ const SectionProducts: React.FC = () => {
                 />
                 <ProductCard
                     title='Sacolas de Plástico'
-                    img='bag-modelo-produtos.png'
+                    img='sacola-tec.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
                     onClick={() => handleNavigation('/Produtos')}
                 />
@@ -100,7 +100,7 @@ const SectionProducts: React.FC = () => {
                 />
                 <ProductCard
                     title='Placas de PVC'
-                    img='bag-modelo-produtos.png'
+                    img='placa-pvc.png'
                     content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
                     onClick={() => handleNavigation('/Produtos')}
                 />

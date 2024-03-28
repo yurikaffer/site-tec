@@ -36,21 +36,21 @@ const PlasticCategory: React.FC = () => {
 
                 <ProductCard
                     title='Sacola alça camiseta'
-                    img='sacola-pape-modelo.png'
+                    img='sacola plástico cam.png'
                     content={'São extremamente comuns em uma variedade de estabelecimentos comerciais, desde supermercados até lojas de varejo e boutiques.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-camiseta')}
                 />
                 <ProductCard
                     title='Sacola alça vazada'
-                    img='bag-modelo-produtos.png'
+                    img='Sacola-plastico-vazada.png'
                     content={'Para produtos de alto valor, estas sacolas adicionam um toque de sofisticação e classe, enriquecendo a experiência geral do cliente.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-vazada')}
                 />
                 <ProductCard
                     title='Sacola alça fita'
-                    img='cartoes-produto.png'
+                    img='sacola-tec.png'
                     content={'Perfeitas para itens que são dados como presentes, as sacolas adicionam um toque especial à entrega do produto.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-fita')}

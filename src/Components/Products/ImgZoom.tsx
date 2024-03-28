@@ -28,18 +28,29 @@ const ImgZoom: React.FC<ComponentProp> = ({ img }) => {
             sx={{ overflow: 'hidden', cursor: 'zoom-in', width: '50rem', height: '50rem', }}
         >
             <Box
-                component="img"
-                src={img}
-                alt='imagem produto'
                 sx={{
-                    width: '100%',
+                    width: '100%', 
                     height: '100%',
-                    transition: 'transform .5s ease',
-                    transformOrigin: `${position.x}% ${position.y}%`,
-                    transform: zoom ? 'scale(2)' : 'scale(1)',
-                    objectFit: 'cover'
+                    backgroundColor: '#FCFCFC',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
                 }}
-            />
+            >
+                <Box
+                    component="img"
+                    src={img}
+                    alt='imagem produto'
+                    sx={{
+                        width: '100%',
+                        height: '100%',
+                        transition: 'transform .5s ease',
+                        transformOrigin: `${position.x}% ${position.y}%`,
+                        transform: zoom ? 'scale(2)' : 'scale(1)',
+                        objectFit: 'cover',
+                    }}
+                />
+            </Box>
         </Paper>
 
     )

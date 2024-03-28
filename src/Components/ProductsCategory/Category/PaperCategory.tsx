@@ -20,11 +20,11 @@ const PaperCategory: React.FC = () => {
                 gap: '3rem',
                 '@media (max-width: 1640px)': {
                     gridTemplateColumns: 'repeat(2, 35rem)',
-                    gridTemplateRows: 'repeat(2, 43rem)',
+                    gridTemplateRows: 'repeat(2, 45rem)',
                 },
                 '@media (max-width: 1210px)': {
                     gridTemplateColumns: 'repeat(1, 35rem)',
-                    gridTemplateRows: 'repeat(3, 43rem)',
+                    gridTemplateRows: 'repeat(3, 45rem)',
                 },
                 '@media (max-width: 400px)': {
                     gridTemplateColumns: 'repeat(1, 100%)',
@@ -34,22 +34,22 @@ const PaperCategory: React.FC = () => {
                 },
             }}>
                 <ProductCard
-                    title='Sacola de papel Offset'
-                    img='sacola-pape-modelo.png'
-                    content={'Para embalar produtos de maneira elegante, oferecendo aos clientes uma experiência de compra premium.'}
-                    textButton='Mais detalhes ➜'
-                    onClick={() => handleNavigation('/sacolas-offset')}
-                />
-                <ProductCard
                     title='Sacola de papel Duplex'
-                    img='bag-modelo-produtos.png'
+                    img='sacola-pape-modelo.png'
                     content={'As sacolas de papel Duplex são perfeitas para embalar produtos de moda, joias, cosméticos e muito mais.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-duplex')}
                 />
                 <ProductCard
+                    title='Sacola de papel Offset'
+                    img='sac offset.png'
+                    content={'Para embalar produtos de maneira elegante, oferecendo aos clientes uma experiência de compra premium.'}
+                    textButton='Mais detalhes ➜'
+                    onClick={() => handleNavigation('/sacolas-offset')}
+                />
+                <ProductCard
                     title='Sacola de papel Kraft'
-                    img='cartoes-produto.png'
+                    img='KRAFT.png'
                     content={'Perfeitas para embalar produtos alimentícios, devido à sua resistência e à percepção de naturalidade.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-kraft')}

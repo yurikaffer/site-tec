@@ -8,7 +8,7 @@ const SectionAbout: React.FC<{page?: boolean}> = ({page}) => {
         display: 'flex',
         flexDirection: 'column',
         gap: 2,
-        maxWidth: '110rem',
+        maxWidth: '90rem',
         [theme.breakpoints.down(715)]: {
             padding: '2rem',
         },
@@ -77,9 +77,13 @@ const SectionAbout: React.FC<{page?: boolean}> = ({page}) => {
                 display={'flex'}
                 marginLeft={'auto'}
                 alignItems={'center'}
+                gap={'2rem'}
             >
                 <Box sx={imgStyle}>
-                    <img src="/img-exemple.png" alt="imagem sacola" style={{ width: '100%' }} />
+                    <img src="/arte-sobre.png" alt="imagem sacola" style={{ width: '100%' }} />
+                </Box>
+                <Box sx={imgStyle}>
+                    <img src="/arte-sobre 1.png" alt="imagem sacola" style={{ width: '100%' }} />
                 </Box>
             </Box>
         </Box>

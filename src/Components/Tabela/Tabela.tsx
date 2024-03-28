@@ -42,7 +42,7 @@ export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows }) => {
                                 <Typography fontSize={'16px'} fontWeight={600}>Largura</Typography>
                             </TableCell>
                             <TableCell align="center">
-                                <Typography fontSize={'16px'} fontWeight={600}>Lateral</Typography>
+                                <Typography fontSize={'16px'} fontWeight={600}>Profundidade</Typography>
                             </TableCell>
                         </TableRow>
                     </TableHead>

@@ -34,12 +34,11 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
                         <Box sx={{ display: 'flex', gap: '5rem', justifyContent: 'center', paddingX: '2rem' }}>
                             <Box
                                 component="img"
-                                src='BOX-Dimensions-2-1.webp'
+                                src='medidas-sacolas.png'
                                 alt='imagem produto'
                                 sx={{
                                     width: '50rem',
-                                    height: '30rem',
-                                    borderRadius: '1rem'
+                                    height: '35rem',
                                 }}
                             />
                             <Box width={'35rem'}>

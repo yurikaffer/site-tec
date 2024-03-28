@@ -5,7 +5,7 @@ import ProductPageComponent from "../../Components/Products/ProductPageComponent
 const TagPage: React.FC = () => {
     return (
         <ProductPageComponent>
-            <ImgZoom img="bag-modelo-produtos.png" />
+            <ImgZoom img="tag sf.png" />
 
             <ProductDescription
                 mainTitle="Tags personalizadas"

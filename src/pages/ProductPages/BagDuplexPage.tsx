@@ -18,7 +18,7 @@ const rows = [
 const BagDuplexPage: React.FC = () => {
     return (
         <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de papel Duplex'}>
-            <ImgZoom img="bag-modelo-produtos.png" />
+            <ImgZoom img="Sacola-Tec-Duplex.png" />
 
             <ProductDescription
                 mainTitle="Sacola de papel Duplex"

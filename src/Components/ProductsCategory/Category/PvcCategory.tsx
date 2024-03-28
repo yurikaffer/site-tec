@@ -21,7 +21,7 @@ const PvcCategory: React.FC = () => {
             }}>
                 <ProductCard
                     title='Placas de PVC'
-                    img='sacola-pape-modelo.png'
+                    img='placa-pvc.png'
                     content={'Oferece uma excelente plataforma para sinalização, decoração, construção e aplicações industriais, adaptando-se facilmente a necessidades específicas de projetos.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/pvc')}

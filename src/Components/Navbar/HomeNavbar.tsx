@@ -11,7 +11,7 @@ const HomeNavbar: React.FC = () => {
                 '@media (max-width: 1150px)': {
                     padding: '5rem 5%',
                 },
-            }} img='Tec logo 2024.png' heightImg='8rem' />
+            }} img='tec-logo-cut.png' heightImg='6rem' />
         </>
     )
 }

@@ -7,7 +7,7 @@ const Banner: React.FC = () => {
             sx={{
                 height: '120vh',
                 width: '100%',
-                background: "url('/sacola-plastic-tec.png') no-repeat center center fixed",
+                background: "url('/fundo-novo-tec.png') no-repeat center center fixed",
                 backgroundSize: 'cover',
             }}
         >
