@@ -11,8 +11,6 @@ interface NavBarProps {
     smButtons?: boolean;
 }
 
-//<SmButtonNavbar name='Realizar orçamento ➜' onClick={() => { navigate('/Orcamento', { replace: false }) }} />
-
 const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const theme = useTheme();
