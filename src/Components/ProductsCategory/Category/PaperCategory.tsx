@@ -42,7 +42,7 @@ const PaperCategory: React.FC = () => {
                 />
                 <ProductCard
                     title='Sacola de papel Offset'
-                    img='sac offset.png'
+                    img='sac offset-2.png'
                     content={'Para embalar produtos de maneira elegante, oferecendo aos clientes uma experiência de compra premium.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-offset')}
