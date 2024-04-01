@@ -23,15 +23,49 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
         <>
             <SubNavbar/>
             <Box sx={{ position: 'relative' }}>
-                <Box sx={{ display: 'flex', gap: '5rem', justifyContent: 'center', padding: '10rem', pt: '15rem' }}>
+                <Box sx={{ 
+                        display: 'flex', 
+                        gap: '5rem', 
+                        justifyContent: 'center', 
+                        padding: '10%', 
+                        pt: '15rem',
+                        '@media (max-width: 1390px)': {
+                            flexDirection: 'column',
+                            alignItems: 'center'
+                        },
+                        '@media (max-width: 600px)': {
+                            padding: '10% 2rem', 
+                        },
+                    }}>
                     {children}
                 </Box>
 
                 {rows && (
                     <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '3rem' }}>
-                        <Typography fontSize={'22px'} fontWeight={600} >{titleTable}</Typography>
+                        <Typography 
+                            padding={'0 2rem'}
+                            fontSize={'22px'} 
+                            fontWeight={600} 
+                            sx={{
+                                '@media (max-width: 600px)': {
+                                    fontSize: '18px',
+                                    textAlign: 'center'
+                                },
+                            }}
+                        >
+                                {titleTable}
+                        </Typography>
 
-                        <Box sx={{ display: 'flex', gap: '5rem', justifyContent: 'center', paddingX: '2rem' }}>
+                        <Box sx={{ 
+                                display: 'flex', 
+                                gap: '5rem', 
+                                justifyContent: 'center', 
+                                paddingX: '2rem',
+                                '@media (max-width: 950px)': {
+                                    flexDirection: 'column' ,
+                                    alignItems: 'center'
+                                },
+                            }}>
                             <Box
                                 component="img"
                                 src='medidas-sacolas.png'
@@ -39,11 +73,15 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
                                 sx={{
                                     width: '50rem',
                                     height: '35rem',
+                                    '@media (max-width: 560px)': {
+                                        width: '100%',
+                                        height: '100%',
+                                    },
                                 }}
                             />
-                            <Box width={'35rem'}>
-                                <TabelaMedidas rows={rows} />
-                            </Box>
+
+                            <TabelaMedidas rows={rows} />
+
                         </Box>
                     </Box>
                 )}

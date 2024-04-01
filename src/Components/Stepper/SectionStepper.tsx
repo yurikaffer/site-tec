@@ -2,6 +2,7 @@ import React from 'react';
 import StepperMobile from './StepperMobile';
 import Stepper from './Stepper';
 import { Box, ButtonBase, Typography } from '@mui/material';
+import { whatsMessage } from '../../utils';
 
 const aboutTexBox = {
     display: 'flex',
@@ -45,12 +46,14 @@ const SectionStepper: React.FC = () => {
                 </Typography>
                 <Stepper />
                 <StepperMobile />
-                <ButtonBase sx={{
-                    bgcolor: '#FFC9C9',
-                    width: '25rem',
-                    boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
-                    borderRadius: '50rem'
-                }}>
+                <ButtonBase onClick={() => {whatsMessage()}} 
+                    sx={{
+                        bgcolor: '#FFC9C9',
+                        width: '25rem',
+                        boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
+                        borderRadius: '50rem'
+                    }}
+                >
                     Realizar orçamento
                 </ButtonBase>
             </Box>

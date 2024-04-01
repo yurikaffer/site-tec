@@ -36,13 +36,13 @@ export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows }) => {
                     <TableHead>
                         <TableRow>
                             <TableCell align="center">
-                                <Typography fontSize={'16px'} fontWeight={600}>Altura</Typography>
+                                <Typography fontSize={'14px'} fontWeight={600}>Altura</Typography>
                             </TableCell>
                             <TableCell align="center">
-                                <Typography fontSize={'16px'} fontWeight={600}>Largura</Typography>
+                                <Typography fontSize={'14px'} fontWeight={600}>Largura</Typography>
                             </TableCell>
                             <TableCell align="center">
-                                <Typography fontSize={'16px'} fontWeight={600}>Profundidade</Typography>
+                                <Typography fontSize={'14px'} fontWeight={600}>Profundidade</Typography>
                             </TableCell>
                         </TableRow>
                     </TableHead>
@@ -50,13 +50,13 @@ export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows }) => {
                         {rows.map((row, index) => (
                             <TableRow key={index} >
                                 <TableCell align="center">
-                                    <Typography fontSize={'16px'}>{row.altura}</Typography>
+                                    <Typography fontSize={'14px'}>{row.altura}</Typography>
                                 </TableCell>
                                 <TableCell align="center">
-                                    <Typography fontSize={'16px'}>{row.largura}</Typography>
+                                    <Typography fontSize={'14px'}>{row.largura}</Typography>
                                 </TableCell>
                                 <TableCell align="center">
-                                    <Typography fontSize={'16px'}>{row.lateral}</Typography>
+                                    <Typography fontSize={'14px'}>{row.lateral}</Typography>
                                 </TableCell>
                             </TableRow>
                         ))}

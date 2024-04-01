@@ -42,6 +42,11 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
         )
     }
 
+    const handleClick = () => {
+        navigate('/', { replace: false });
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
     return (
         <Box sx={{
             ...boxStyle,
@@ -54,9 +59,11 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
             zIndex: 1000,
         }}>
 
-            <Box sx={{ cursor: 'pointer', height: heightImg }}>
-                <img src={img} alt="Logo" style={{ width: '100%', height: '100%' }} />
-            </Box>
+            <ButtonBase  sx={{ padding: 0 }} onClick={handleClick}>
+                <Box sx={{ cursor: 'pointer', height: heightImg }}>
+                    <img src={img} alt="Logo" style={{ width: '100%', height: '100%' }} />
+                </Box>
+            </ButtonBase>
 
             {!isMobile && (
                 <>

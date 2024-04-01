@@ -48,6 +48,10 @@ const ImgZoom: React.FC<ComponentProp> = ({ img }) => {
                         transformOrigin: `${position.x}% ${position.y}%`,
                         transform: zoom ? 'scale(2)' : 'scale(1)',
                         objectFit: 'cover',
+                        '@media (max-width: 500px)': {
+                            width: '80%',
+                            height: '80%',
+                        },
                     }}
                 />
             </Box>

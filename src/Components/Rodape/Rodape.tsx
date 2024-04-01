@@ -106,10 +106,10 @@ const Rodape: React.FC = () => {
                                 <Typography fontSize={'13px'} >R. Servidão Santa Matilde, 135 - João Costa, Joinville - SC, 89209-050</Typography>
                             </Box>
                             <Box display={'flex'} alignSelf={'center'}>
-                                <IconButton>
+                                <IconButton onClick={() => {window.open('https://www.instagram.com/tecembalagens/', '_blank')}}>
                                     <InstagramLogo size={30} color='#252525' />
                                 </IconButton>
-                                <IconButton>
+                                <IconButton onClick={() => {whatsMessage()}}>
                                     <WhatsappLogo size={30} color='#252525' />
                                 </IconButton>
                             </Box>

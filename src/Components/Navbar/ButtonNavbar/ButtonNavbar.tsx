@@ -28,8 +28,8 @@ const Style = {
 const ButtonNavbar: React.FC<ButtonNavbarProps> = ({ name, onClick }) => {
 
     const handleClick = () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
         onClick();
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
     return (

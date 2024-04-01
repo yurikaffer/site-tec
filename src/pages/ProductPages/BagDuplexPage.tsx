@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import ImgZoom from "../../Components/Products/ImgZoom";
 import ProductDescription from "../../Components/Products/ProductDescription";
 import ProductPageComponent from "../../Components/Products/ProductPageComponent";
@@ -18,28 +19,28 @@ const rows = [
 const BagDuplexPage: React.FC = () => {
     return (
         <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de papel Duplex'}>
-            <ImgZoom img="Sacola-Tec-Duplex.png" />
+                <ImgZoom img="Sacola-Tec-Duplex.png" />
 
-            <ProductDescription
-                mainTitle="Sacola de papel Duplex"
-                description="As sacolas de papel Duplex são outro tipo importante no mundo das embalagens personalizadas. 
-                            O papel Duplex é um material robusto, frequentemente utilizado para criar sacolas que não apenas têm uma 
-                            ótima aparência, mas também são capazes de suportar pesos relativamente altos."
-                applications={[
-                    {
-                        title: 'Lojas de Alto Padrão e Boutiques: ',
-                        description: `Ideal para marcas que desejam transmitir uma imagem de luxo e exclusividade, as sacolas de papel Duplex são perfeitas para embalar produtos de moda, joias, e cosméticos.`
-                    },
-                    {
-                        title: 'Lançamentos de Produtos e Edições Limitadas: ',
-                        description: `A qualidade e a estética destas sacolas as tornam escolhas ideais para o lançamento de produtos especiais ou edições limitadas, onde a primeira impressão é crucial.`
-                    },
-                    {
-                        title: 'Eventos Corporativos e Promoções: ',
-                        description: `Para empresas que desejam se destacar em eventos ou campanhas promocionais, oferecendo produtos ou materiais informativos em uma embalagem que fala volumes sobre a qualidade da marca.`
-                    }
-                ]}
-            />
+                <ProductDescription
+                    mainTitle="Sacola de papel Duplex"
+                    description="As sacolas de papel Duplex são outro tipo importante no mundo das embalagens personalizadas. 
+                                O papel Duplex é um material robusto, frequentemente utilizado para criar sacolas que não apenas têm uma 
+                                ótima aparência, mas também são capazes de suportar pesos relativamente altos."
+                    applications={[
+                        {
+                            title: 'Lojas de Alto Padrão e Boutiques: ',
+                            description: `Ideal para marcas que desejam transmitir uma imagem de luxo e exclusividade, as sacolas de papel Duplex são perfeitas para embalar produtos de moda, joias, e cosméticos.`
+                        },
+                        {
+                            title: 'Lançamentos de Produtos e Edições Limitadas: ',
+                            description: `A qualidade e a estética destas sacolas as tornam escolhas ideais para o lançamento de produtos especiais ou edições limitadas, onde a primeira impressão é crucial.`
+                        },
+                        {
+                            title: 'Eventos Corporativos e Promoções: ',
+                            description: `Para empresas que desejam se destacar em eventos ou campanhas promocionais, oferecendo produtos ou materiais informativos em uma embalagem que fala volumes sobre a qualidade da marca.`
+                        }
+                    ]}
+                />
         </ProductPageComponent>
     );
 }

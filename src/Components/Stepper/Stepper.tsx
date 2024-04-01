@@ -137,7 +137,7 @@ const Stepper = () => {
                     boxSizing: 'border-box',
                     '-ms-overflow-style': 'none', // IE and Edge
                     'scrollbar-width': 'none', // Firefox
-                    '&::-webkit-scrollbar': { // Oculta a scrollbar no Webkit/Blink browsers
+                    '&::-webkit-scrollbar': { 
                         display: 'none',
                     },
                     '@media (max-width: 1100px)': {
