@@ -3,6 +3,7 @@ import { Box, ButtonBase, Drawer, IconButton, Typography, useMediaQuery, useThem
 import ButtonNavbar from './ButtonNavbar/ButtonNavbar';
 import { useNavigate } from 'react-router-dom';
 import SmButtonNavbar from './ButtonNavbar/SmButtonNavbar';
+import { whatsMessage } from '../../utils';
 
 interface NavBarProps {
     boxStyle: object;
@@ -14,7 +15,7 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down(1015));
+    const isMobile = useMediaQuery(theme.breakpoints.down(1060));
     const navigate = useNavigate();
 
     const toggleMenu = () => setIsMenuOpen(prev => !prev);
@@ -52,11 +53,11 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
             left: 0,
             zIndex: 1000,
         }}>
-            <ButtonBase disableRipple sx={{ padding: 0 }} onClick={() => { navigate('/') }}>
-                <Box sx={{ cursor: 'pointer', height: heightImg }}>
-                    <img src={img} alt="Logo" style={{ width: '100%', height: '100%' }} />
-                </Box>
-            </ButtonBase>
+
+            <Box sx={{ cursor: 'pointer', height: heightImg }}>
+                <img src={img} alt="Logo" style={{ width: '100%', height: '100%' }} />
+            </Box>
+
             {!isMobile && (
                 <>
                     <Box sx={{ display: 'flex', position: 'relative' }}>
@@ -66,7 +67,7 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
                         bgcolor: '#FFC9C9',
                         paddingX: '3rem',
                         borderRadius: '50rem'
-                    }} onClick={() => { }}>
+                    }} onClick={() => {whatsMessage()}}>
                         <Typography fontSize={'15px'}>
                             Realizar orçamento ➜
                         </Typography>

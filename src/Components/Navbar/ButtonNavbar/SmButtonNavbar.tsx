@@ -26,8 +26,14 @@ const Style = {
 }
 
 const SmButtonNavbar: React.FC<SmButtonNavbarProps> = ({ name, onClick }) => {
+
+    const handleClick = () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        onClick();
+    }
+
     return (
-        <ButtonBase disableRipple onClick={onClick}>
+        <ButtonBase disableRipple onClick={handleClick}>
             <Box sx={Style} >
                 <Typography fontSize={'16px'}>
                     {name}

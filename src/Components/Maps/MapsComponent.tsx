@@ -19,9 +19,11 @@ const options = {
 };
 
 const MapsComponent: React.FC = () => {
+    const apiKey = process.env.REACT_APP_API_KEY || ''
+    
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: ""
+        googleMapsApiKey: apiKey
     });
 
     if (!isLoaded) {

@@ -8,28 +8,26 @@ const SectionAbout: React.FC<{page?: boolean}> = ({page}) => {
         display: 'flex',
         flexDirection: 'column',
         gap: 2,
-        maxWidth: '90rem',
-        [theme.breakpoints.down(715)]: {
-            padding: '2rem',
-        },
+        padding: '10rem 5rem 10rem 10%'
     };
 
     const textStyle = (fontSize: string, fontWeight: number, overrideStyles = {}) => ({
         fontSize: fontSize,
         fontWeight: fontWeight,
+        
         ...overrideStyles,
-        [theme.breakpoints.down(1000)]: {
+        [theme.breakpoints.down(1200)]: {
             fontSize: fontSize === '2.4rem' ? '1.8rem' : '1.6rem',
             fontWeight: fontSize === '2.4rem' ? 600 : fontWeight,
+        },
+        [theme.breakpoints.down(800)]: {
+            textAlign: 'justify',
         },
     });
 
     const imgStyle = {
         width: '35rem',
         [theme.breakpoints.down(1000)]: {
-            width: '25rem',
-        },
-        [theme.breakpoints.down(715)]: {
             display: 'none',
         },
     };
@@ -79,7 +77,7 @@ const SectionAbout: React.FC<{page?: boolean}> = ({page}) => {
                 alignItems={'center'}
                 gap={'2rem'}
             >
-                <Box sx={imgStyle}>
+                <Box sx={{ width: '35rem', [theme.breakpoints.down(1660)]: {display: 'none'}}}>
                     <img src="/arte-sobre.png" alt="imagem sacola" style={{ width: '100%' }} />
                 </Box>
                 <Box sx={imgStyle}>

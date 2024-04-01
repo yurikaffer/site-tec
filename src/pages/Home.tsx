@@ -16,9 +16,7 @@ const Home: React.FC = () => {
     <>
         <HomeNavbar/>
         <Banner/>
-        <Box paddingY={'10rem'} pl={'10%'}>
-            <SectionAbout />
-        </Box>
+        <SectionAbout />
         <ResumoSobre />
         <SectionProducts />
         <FaixaVantagens />

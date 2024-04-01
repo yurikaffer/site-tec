@@ -8,10 +8,10 @@ const HomeNavbar: React.FC = () => {
                 bgcolor: 'transparent',
                 padding: '5rem 10%',
                 position: 'absolute',
-                '@media (max-width: 1150px)': {
+                '@media (max-width: 1250px)': {
                     padding: '5rem 5%',
                 },
-            }} img='tec-logo-cut.png' heightImg='6rem' />
+            }} img='Tec logo 2024.png' heightImg='7rem' />
         </>
     )
 }

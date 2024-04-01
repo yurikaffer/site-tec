@@ -62,7 +62,7 @@ const SectionProducts: React.FC = () => {
                 },
                 '@media (max-width: 1460px)': {
                     gridTemplateColumns: 'repeat(3, 30rem)',
-                    gridTemplateRows: 'repeat(2, 40rem)',
+                    gridTemplateRows: 'repeat(2, 42rem)',
                 },
                 '@media (max-width: 1100px)': {
                     gridTemplateColumns: 'repeat(2, 30rem)',
@@ -73,7 +73,7 @@ const SectionProducts: React.FC = () => {
                 },
                 '@media (max-width: 680px)': {
                     gridTemplateColumns: 'repeat(1, 30rem)',
-                    gridTemplateRows: 'repeat(4, 40rem)',
+                    gridTemplateRows: 'repeat(4, 42rem)',
                     paddingBottom: '5rem'
                 },
                 '@media (max-width: 340px)': {

@@ -1,12 +1,13 @@
 import { Box, IconButton } from '@mui/material';
 import React from 'react';
+import { whatsMessage } from '../../utils';
 
 const WhatsappComponent: React.FC = () => {
     return (
         <Box sx={{
             bgcolor: '#39D674',
-            width: '8rem',
-            height: '8rem',
+            width: '6rem',
+            height: '6rem',
             borderRadius: '50%',
             position: 'fixed',
             bottom: '2rem',
@@ -15,10 +16,6 @@ const WhatsappComponent: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            '@media (max-width: 440px)': {
-                width: '7rem',
-                height: '7rem',
-            },
             animation: 'jump 1.5s infinite',
             '&:hover': {
                 animationPlayState: 'paused',
@@ -28,7 +25,7 @@ const WhatsappComponent: React.FC = () => {
                 '50%': { transform: 'translateY(-20px)' },
             }
         }}>
-            <IconButton sx={{ padding: '1.5rem', width: '100%' }}>
+            <IconButton sx={{ padding: '1.5rem', width: '100%' }} onClick={() => {whatsMessage()}}>
                 <img src={'LogoWhatsApp.png'} alt="imagem Whatsapp" style={{ width: '100%' }} />
             </IconButton>
         </Box>

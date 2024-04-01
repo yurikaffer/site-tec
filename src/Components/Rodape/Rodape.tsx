@@ -1,7 +1,10 @@
-import { Box, Divider, IconButton, Typography } from '@mui/material';
+import { Box, ButtonBase, Divider, IconButton, Typography } from '@mui/material';
 import { Clock, EnvelopeSimple, InstagramLogo, MapPinLine, Phone, WhatsappLogo } from '@phosphor-icons/react';
 import React from 'react';
 import ArrowIcon from '../ArrowIcon/ArrowIcon';
+import { useNavigate } from 'react-router-dom';
+import FooterButton from './FooterButton';
+import { whatsMessage } from '../../utils';
 
 const textStyle = {
     fontSize: '16px',
@@ -22,6 +25,8 @@ const imgStyle = {
 }
 
 const Rodape: React.FC = () => {
+    const navigate = useNavigate();
+    
     return (
         <>
             <Box component={'img'} src='wave-haikei.svg' alt="Onda decorativa" sx={imgStyle} />
@@ -71,12 +76,11 @@ const Rodape: React.FC = () => {
                             }}
                         >
                             <Typography sx={{ fontSize: '16px' }} fontWeight={500} mb={'1rem'}>LINKS RÁPIDOS</Typography>
-                            <Typography sx={textStyle}>Home</Typography>
-                            <Typography sx={textStyle}>Sobre nós</Typography>
-                            <Typography sx={textStyle}>Clientes</Typography>
-                            <Typography sx={textStyle}>Contatos</Typography>
-                            <Typography sx={textStyle}>Fale conosco!</Typography>
-                            <Typography sx={textStyle}>Solicitar orçamento</Typography>
+                            <FooterButton name='Home'  onClick={() => { navigate('/', { replace: false }) }}/>
+                            <FooterButton name='Sobre nós'  onClick={() => { navigate('/Sobre', { replace: false }) }}/>
+                            <FooterButton name='Produtos'  onClick={() => { navigate('/Produtos', { replace: false }) }}/>
+                            <FooterButton name='Contatos'  onClick={() => { navigate('/Contatos', { replace: false }) }}/>
+                            <FooterButton name='Solicitar orçamento'  onClick={() => {whatsMessage()}}/>
                         </Box>
                         <Box display={'flex'} flexDirection={'column'} maxWidth={'35rem'} gap={'0.5rem'}>
                             <Typography fontSize={'16px'} fontWeight={500} mb={'1rem'} >NOSSA MISSÃO</Typography>
