@@ -1,5 +1,5 @@
 import SectionAbout from "../Components/About/SectionAbout";
-import Rodape from "../Components/Rodape/Rodape";
+import Rodape from "../Components/Footer/Footer";
 import WhatsappComponent from "../Components/Whats/Whatsapp";
 import SubNavbar from "../Components/Navbar/SubNavbar";
 

@@ -6,6 +6,7 @@ const HomeNavbar: React.FC = () => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down(1060));
     const imgHeight = isSmallScreen ? '5rem' : '7rem';
+    const maxWidthImg = useMediaQuery(theme.breakpoints.down(660)) ? '20rem' : '100%'
 
     return (
         <>
@@ -16,7 +17,7 @@ const HomeNavbar: React.FC = () => {
                 '@media (max-width: 1250px)': {
                     padding: '5rem 5%',
                 },
-            }} img='Tec logo 2024.png' heightImg={imgHeight} />
+            }} img='Tec logo 2024.png' heightImg={imgHeight} maxWidthImg={maxWidthImg}/>
         </>
     )
 }

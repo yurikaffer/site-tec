@@ -20,9 +20,6 @@ const SectionAbout: React.FC<{page?: boolean}> = ({page}) => {
             fontSize: fontSize === '2.4rem' ? '1.8rem' : '1.6rem',
             fontWeight: fontSize === '2.4rem' ? 600 : fontWeight,
         },
-        [theme.breakpoints.down(800)]: {
-            textAlign: 'justify',
-        },
     });
 
     const imgStyle = {

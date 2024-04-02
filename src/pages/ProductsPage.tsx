@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import ProductsCategory from "../Components/ProductsCategory/ProductsCategory";
-import Rodape from "../Components/Rodape/Rodape";
+import Rodape from "../Components/Footer/Footer";
 import SubNavbar from "../Components/Navbar/SubNavbar";
 
 const ProductsPage: React.FC = () => {
@@ -11,7 +11,7 @@ const ProductsPage: React.FC = () => {
             position: 'relative'
         }}>
             <SubNavbar/>
-            <Box sx={{paddingX: '10%', pt: '7rem', pb: '5rem'}}>
+            <Box sx={{paddingX: '10%', pt: '10rem', pb: '5rem'}}>
                 <Typography fontSize={'14px'} fontWeight={500} pb={'0.5rem'}>
                     Dica: Sacola Instagramavel!
                 </Typography>

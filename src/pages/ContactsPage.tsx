@@ -1,4 +1,4 @@
-import Rodape from "../Components/Rodape/Rodape";
+import Rodape from "../Components/Footer/Footer";
 import WhatsappComponent from "../Components/Whats/Whatsapp";
 import Contacts from "../Components/Contact/Contacts";
 import { Box } from "@mui/material";

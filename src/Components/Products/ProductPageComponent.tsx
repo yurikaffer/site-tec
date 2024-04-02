@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { ReactNode } from "react";
-import { TabelaMedidas } from "../Tabela/Tabela";
+import { TabelaMedidas } from "../SizeTable/SizeTable";
 import SectionStepper from "../Stepper/SectionStepper";
-import Rodape from "../Rodape/Rodape";
+import Rodape from "../Footer/Footer";
 import WhatsappComponent from "../Whats/Whatsapp";
 import SubNavbar from "../Navbar/SubNavbar";
 

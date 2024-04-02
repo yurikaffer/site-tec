@@ -27,7 +27,6 @@ function App() {
             <Route path="/Produtos" element={<ProductsPage />} />
             <Route path="/Sobre" element={<AboutPage />} />
             <Route path="/Contatos" element={<ContactsPage />} /> 
-
             <Route path="/sacolas-offset" element={<BagOffsetPage />} />
             <Route path="/sacolas-duplex" element={<BagDuplexPage />} />
             <Route path="/sacolas-Kraft" element={<BagKraftPage />} />

@@ -10,9 +10,10 @@ interface NavBarProps {
     img: string;
     heightImg: string;
     smButtons?: boolean;
+    maxWidthImg: string
 }
 
-const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) => {
+const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons, maxWidthImg }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down(1060));
@@ -61,7 +62,7 @@ const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons }) 
 
             <ButtonBase  sx={{ padding: 0 }} onClick={handleClick}>
                 <Box sx={{ cursor: 'pointer', height: heightImg }}>
-                    <img src={img} alt="Logo" style={{ width: '100%', height: '100%' }} />
+                    <img src={img} alt="Logo" style={{ width: '100%', height: '100%', maxWidth: maxWidthImg }} />
                 </Box>
             </ButtonBase>
 
