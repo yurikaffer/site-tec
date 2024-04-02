@@ -1,4 +1,4 @@
-import { Box, ButtonBase, Divider, IconButton, Typography } from '@mui/material';
+import { Box, Divider, IconButton, Typography } from '@mui/material';
 import { Clock, EnvelopeSimple, InstagramLogo, MapPinLine, Phone, WhatsappLogo } from '@phosphor-icons/react';
 import React from 'react';
 import ArrowIcon from '../ArrowIcon/ArrowIcon';
@@ -6,29 +6,18 @@ import { useNavigate } from 'react-router-dom';
 import FooterButton from './FooterButton';
 import { whatsMessage } from '../../utils';
 
-const textStyle = {
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'transform 0.1s ease-in-out',
-    '&:hover': {
-        transform: 'scale(1.05)',
-    },
-}
-
 const imgStyle = {
     width: '100%',
     objectFit: 'cover',
     height: 'auto',
     display: 'block',
-    verticalAlign: 'bottom',
-
 }
 
 const Rodape: React.FC = () => {
     const navigate = useNavigate();
     
     return (
-        <>
+        <Box display={'flex'} flexDirection={'column'}>
             <Box component={'img'} src='wave-haikei.svg' alt="Onda decorativa" sx={imgStyle} />
 
             <Box 
@@ -137,7 +126,7 @@ const Rodape: React.FC = () => {
                     <Typography fontSize={'12px'} > Desenvolvido com 💗 by Yuri Kaffer :) </Typography>
                 </Box>
             </Box>
-        </>
+        </Box>
     )
 }
 

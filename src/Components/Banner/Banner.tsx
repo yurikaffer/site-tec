@@ -9,6 +9,14 @@ const Banner: React.FC = () => {
                 width: '100%',
                 background: "url('/fundo-novo-tec.png') no-repeat center center fixed",
                 backgroundSize: 'cover',
+                '@media (max-width: 1260px)': {
+                    background: "url('/banner-ms.png') no-repeat center center fixed",
+                    backgroundSize: 'cover',
+                },
+                '@media (max-width: 660px)': {
+                    background: "url('/banner-mobile.png') no-repeat center center fixed",
+                    backgroundSize: 'cover',
+                },
             }}
         >
             <Box sx={{padding: '40rem 10%',
@@ -20,6 +28,9 @@ const Banner: React.FC = () => {
                         alignItems: 'center',
                         textAlign: 'center'
                     },
+                    '@media (max-width: 660px)': {
+                        padding: '17rem 10%',
+                    },
                 }}>
                 <Typography sx={{
                     fontSize: '18px',
@@ -28,6 +39,7 @@ const Banner: React.FC = () => {
                     '@media (max-width:900px)': {
                         fontSize: '16px',
                     },
+                    
                 }}>
                     Transforme, crie, personalize. 
                 </Typography>
@@ -39,21 +51,34 @@ const Banner: React.FC = () => {
                     '@media (max-width:900px)': {
                         fontSize: '34px',
                     },
+                    '@media (max-width:440px)': {
+                        fontSize: '28px',
+                    },
                 }}>
                     Deixe sua marca no mundo.
                 </Typography>
             </Box>
 
             <Box sx={{
-                position: 'absolute',
-                bottom: -200,
-                left: 0,
-                width: '100%',
-                }}>
-                
+                    position: 'absolute',
+                    bottom: -200,
+                    left: 0,
+                    width: '100%',
+                    '@media (max-width: 900px)': {
+                        bottom: -260,
+                    },
+                    '@media (max-width: 770px)': {
+                        bottom: -200,
+                    },
+                    '@media (max-width: 500px)': {
+                        bottom: -170,
+                    },
+                    '@media (max-width: 350px)': {
+                        bottom: -120,
+                    },
+                }}
+            >
                 <img src='wave.svg' alt="Onda decorativa" style={{ width: '100%', objectFit: 'cover', height: 'auto' }} />
-                
-                
             </Box>
             <div id="about-anchor"></div>
         </Box>
