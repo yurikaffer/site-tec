@@ -16,10 +16,12 @@ import TagPage from "./pages/ProductPages/TagPage";
 import PvcBoardPage from "./pages/ProductPages/PvcBoardPage";
 import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <SpeedInsights />
       <CategoryProvider>
         <Router>
           <Routes>

@@ -1,22 +1,25 @@
-import { Box } from "@mui/material";
-import SectionAbout from "../Components/About/SectionAbout";
-import Banner from "../Components/Banner/Banner";
-import Contacts from "../Components/Contact/Contacts";
-import FaixaVantagens from "../Components/MoreAbout/MoreAbout";
-import SectionProducts from "../Components/Products/SectionProducts";
-import ResumoSobre from "../Components/ResumeAbout/ResumeAbout";
-
-import SectionStepper from "../Components/Stepper/SectionStepper";
-import SwiperClients from "../Components/SwiperClients/SwiperClients";
-import WhatsappComponent from "../Components/Whats/Whatsapp";
+import React, { Suspense } from 'react';
+import { Box, CircularProgress } from "@mui/material";
 import HomeNavbar from "../Components/Navbar/HomeNavbar";
-import Footer from "../Components/Footer/Footer";
+import Banner from "../Components/Banner/Banner";
+
+// Importação Lazy para os outros componentes
+const SectionAbout = React.lazy(() => import("../Components/About/SectionAbout"));
+const Contacts = React.lazy(() => import("../Components/Contact/Contacts"));
+const FaixaVantagens = React.lazy(() => import("../Components/MoreAbout/MoreAbout"));
+const SectionProducts = React.lazy(() => import("../Components/Products/SectionProducts"));
+const ResumoSobre = React.lazy(() => import("../Components/ResumeAbout/ResumeAbout"));
+const SectionStepper = React.lazy(() => import("../Components/Stepper/SectionStepper"));
+const SwiperClients = React.lazy(() => import("../Components/SwiperClients/SwiperClients"));
+const WhatsappComponent = React.lazy(() => import("../Components/Whats/Whatsapp"));
+const Footer = React.lazy(() => import("../Components/Footer/Footer"));
 
 const Home: React.FC = () => {
   return (
     <>
-        <HomeNavbar/>
-        <Banner/>
+      <HomeNavbar />
+      <Banner />
+      <Suspense fallback={<Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}><CircularProgress /></Box>}>
         <SectionAbout />
         <ResumoSobre />
         <SectionProducts />
@@ -24,10 +27,11 @@ const Home: React.FC = () => {
         <SectionStepper />
         <SwiperClients />
         <Box pt={'5rem'} pb={'10rem'}>
-            <Contacts/>
+            <Contacts />
         </Box>
-        <Footer/>
+        <Footer />
         <WhatsappComponent />
+      </Suspense>
     </>
   );
 }
