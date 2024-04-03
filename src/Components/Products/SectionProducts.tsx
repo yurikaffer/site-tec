@@ -83,25 +83,25 @@ const SectionProducts: React.FC = () => {
                 <ProductCard
                     title='Sacolas de Papel'
                     img='sacola-pape-modelo.png'
-                    content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    content={'Sacolas de papel personalizadas são perfeitas para embalar suas compras, presentes e lembrancinhas.'}
                     onClick={() => handleNavigation('/Produtos')}
                 />
                 <ProductCard
                     title='Sacolas de Plástico'
                     img='sacola-tec.png'
-                    content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    content={'São extremamente comuns em uma variedade de estabelecimentos comerciais, desde supermercados até lojas de varejo e boutiques.'}
                     onClick={() => handleNavigation('/Produtos')}
                 />
                 <ProductCard
                     title='Cartões e Tags'
                     img='cartoes-produto.png'
-                    content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    content={'Cartões e Tags são utilizadas em uma ampla gama de aplicações para adicionar valor, informação e identidade aos produtos e serviços.'}
                     onClick={() => handleNavigation('/Produtos')}
                 />
                 <ProductCard
                     title='Placas de PVC'
                     img='placa-pvc.png'
-                    content={'colas de papel personalizadas são perfeitas para embalagens de compras, presentes e lembrancinhas.'}
+                    content={'Usadas para sinalização, decoração e aplicações industriais, adaptando-se facilmente a necessidades específicas de projetos.'}
                     onClick={() => handleNavigation('/Produtos')}
                 />
             </Box>

@@ -3,17 +3,15 @@ import ProductDescription from "../../Components/Products/ProductDescription";
 import ProductPageComponent from "../../Components/Products/ProductPageComponent";
 
 const rows = [
-    { altura: '16cm', largura: '20cm', lateral: '0,12cm' },
-    { altura: '20cm', largura: '30cm', lateral: '0,12cm' },
-    { altura: '25cm', largura: '35cm', lateral: '0,12cm' },
-    { altura: '30cm', largura: '40cm', lateral: '0,12cm' },
-    { altura: '36cm', largura: '48cm', lateral: '0,12cm' },
-    { altura: '40cm', largura: '50cm', lateral: '0,13cm' },
+    { altura: '27cm', largura: '40cm', lateral: '0,15cm' },
+    { altura: '30cm', largura: '45cm', lateral: '0,15cm' },
+    { altura: '40cm', largura: '50cm', lateral: '0,15cm' },
+    { altura: '45cm', largura: '55cm', lateral: '0,15cm' },
 ];
 
 const BagPlasticTape: React.FC = () => {
     return (
-        <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de plástico com alça fita'}>
+        <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de plástico com alça fita'} plasticBag={true}>
             <ImgZoom img="sacola-tec-semfundo.png" />
 
             <ProductDescription

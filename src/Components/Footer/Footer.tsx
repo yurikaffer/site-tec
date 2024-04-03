@@ -74,9 +74,11 @@ const Rodape: React.FC = () => {
                         <Box display={'flex'} flexDirection={'column'} maxWidth={'35rem'} gap={'0.5rem'}>
                             <Typography fontSize={'16px'} fontWeight={500} mb={'1rem'} >NOSSA MISSÃO</Typography>
                             <Typography fontSize={'13px'} mb={'1rem'}>
-                                Embalagens Personalizadas Produtos que fazem sua marca se destacar.
-                                A Tec ajuda empresas a criar embalagens próprias com preço mínimo baixo e competitivo.
-                                Embalagens personalizadas, caixas para presente, sacolas para joias e sacolas de papel.
+                                    Desenvolver embalagens que não apenas garantam a segurança e a integridade dos produtos, 
+                                    mas também comuniquem efetivamente a essência e os valores da marca de nossos clientes. 
+                                    Comprometemo-nos a utilizar nossa expertise em design, sustentabilidade e tecnologia 
+                                    para desenvolver soluções de embalagens que elevem o reconhecimento da marca, engajem 
+                                    o consumidor e amplifiquem o impacto no ponto de venda.
                             </Typography>
                             <Box display={'flex'} alignItems={'center'} gap={'0.5rem'}>
                                 <Clock size={24} />

@@ -23,14 +23,10 @@ const BagKraftPage: React.FC = () => {
             <ProductDescription
                 mainTitle="Sacola de papel Kraft"
                 description="As sacolas de papel Kraft são uma escolha popular tanto para empresas quanto para consumidores, 
-                            devido à sua combinação de resistência, versatilidade e sustentabilidade. Elas são feitas a partir 
-                            de papel Kraft, que é conhecido pela sua cor marrom natural, embora também possa ser branqueado 
-                            para um visual mais limpo e brilhante."
+                            devido à sua combinação de resistência, versatilidade e sustentabilidade. Elas são feitas a partir de 
+                            papel Kraft, que é conhecido pela sua cor marrom natural, embora também possa ser branqueado para um 
+                            visual mais limpo e brilhante.."
                 applications={[
-                    {
-                        title: 'Supermercados e Lojas de Alimentos: ',
-                        description: `Perfeitas para embalar produtos alimentícios, devido à sua resistência e à percepção de naturalidade.`
-                    },
                     {
                         title: 'Lojas de Varejo e Boutiques: ',
                         description: `Muitas lojas escolhem sacolas de papel Kraft para uma abordagem de embalagem mais sustentável e consciente.`

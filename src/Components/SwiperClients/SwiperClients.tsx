@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
+import 'swiper/css/autoplay'; 
 import './styles.css';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay} from 'swiper/modules';
 import { Box, Typography } from '@mui/material';
 
 const images = [
@@ -19,6 +19,12 @@ const images = [
     'star-case.png',
     'zhana.png',
     'toninho.png',
+    'inplave.png',
+    'fave.png',
+    'divina.png',
+    'denk.png',
+    'I Love Joias.png',
+    'BV.png'
 ];
 
 const aboutTexBox = {
@@ -96,10 +102,11 @@ const SwiperClients: React.FC = () => {
                     spaceBetween={40}
                     pagination={{ clickable: true }}
                     autoplay={{
-                        delay: 3000, 
+                        delay: 2500,
                         disableOnInteraction: false, 
                     }}
                     modules={[Pagination, Autoplay]}
+                    freeMode={true}
                     loop={true}
 
                 >

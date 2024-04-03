@@ -2,22 +2,27 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Box, IconButton } from '@mui/material';
 import CardStep from './CardStep';
 
+
+
 const steps = [
     {
         title: '1. Tamanho',
-        content: 'Qual o tipo e a gramatura do papel a ser utilizado na Caixa ou na Sacola? Dentre os mais comuns para embalagens, temos o Kraft, Duplex, Triplex e Offset. Gramatura é a grossura do material e pode variar de 90 até 400g. Quanto menor mais fino e maleável, quanto maior mais grosso e resistente',
+        content: `A página do produto que você deseja em nosso site possui a tabela de medidas específica do produto, 
+                consulte a página para obter essas informações e defina a que melhor se encaixa às suas necessidades.`,
         icon: 'ruler.svg',
         background: '/blob-scene-haikei (5).png'
     },
     {
         title: '2. Material',
-        content: 'Embalagens, na maioria dos casos, são tridimensionais, ou seja, têm Altura, Largura e Profundidade. Tenha em mãos essas três medidas ou, para designers e pessoas mais experientes, método de fechamento da caixa, a medida da "faca" ou desenho aberto.',
+        content: `Você encontra as especificações do material da embalagem na página do produto escolhido, pode 
+                navegar entre as categorias de produtos para encontrar o que mais se encaixa às suas expectativas. 
+                Tenha em mãos essas informações na hora de realizar o orçamento.`,
         icon: 'bag.svg',
         background: 'blob-scene-haikei (8).png'
     },
     {
         title: '3. Cores',
-        content: 'O número de cores interfere diretamente no preço da embalagem e varia de 1 até 4 cores, que é o número de cores utilizados para impressão de fotos ou imagens complexas. As tinta utilizada pode ser padrão Pantone, que é uma codificação universal, ou Cromia com a combinação da cores Ciano, Magenta, Amarelo e Preto.',
+        content: 'O número de cores interfere diretamente no preço da embalagem e varia de 1 até 4 cores, que é o número de cores utilizados para impressão. As tintas utilizadas podem ser padrão Pantone, que é uma codificação universal, ou Cromia com a combinação da cores Ciano, Magenta, Amarelo e Preto.',
         icon: 'palette.svg',
         background: 'blob-scene-haikei (7).png'
     },

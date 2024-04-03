@@ -16,9 +16,10 @@ interface ProductPageComponentProps {
     children: ReactNode;
     rows?: table[];
     titleTable?: string;
+    plasticBag?: boolean;
 }
 
-const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, rows, titleTable }) => {
+const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, rows, titleTable, plasticBag }) => {
     return (
         <>
             <SubNavbar/>
@@ -68,7 +69,7 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
                             }}>
                             <Box
                                 component="img"
-                                src='medidas-sacolas.png'
+                                src={plasticBag ? 'medidas-plastico.png' : 'medidas-sacolas.png'}
                                 alt='imagem produto'
                                 sx={{
                                     width: '50rem',
@@ -80,7 +81,7 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
                                 }}
                             />
 
-                            <TabelaMedidas rows={rows} />
+                            <TabelaMedidas rows={rows} columnName={plasticBag ? 'Espessura' : 'Profundidade'}/>
 
                         </Box>
                     </Box>

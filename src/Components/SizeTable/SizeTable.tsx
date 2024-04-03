@@ -16,9 +16,10 @@ interface DataRow {
 
 interface TabelaMedidasProps {
     rows: DataRow[];
+    columnName?: string;
 }
 
-export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows }) => {
+export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows, columnName }) => {
     const cardStyle = {
         borderRadius: '1rem',
         display: 'flex',
@@ -42,7 +43,7 @@ export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows }) => {
                                 <Typography fontSize={'14px'} fontWeight={600}>Largura</Typography>
                             </TableCell>
                             <TableCell align="center">
-                                <Typography fontSize={'14px'} fontWeight={600}>Profundidade</Typography>
+                                <Typography fontSize={'14px'} fontWeight={600}>{columnName}</Typography>
                             </TableCell>
                         </TableRow>
                     </TableHead>

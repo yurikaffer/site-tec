@@ -3,21 +3,18 @@ import ProductDescription from "../../Components/Products/ProductDescription";
 import ProductPageComponent from "../../Components/Products/ProductPageComponent";
 
 const rows = [
-    { altura: '16cm', largura: '10cm', lateral: '5cm' },
-    { altura: '15cm', largura: '13cm', lateral: '7cm' },
-    { altura: '23cm', largura: '16cm', lateral: '9cm' },
-    { altura: '20cm', largura: '24cm', lateral: '7cm' },
-    { altura: '25cm', largura: '21cm', lateral: '9cm' },
-    { altura: '25cm', largura: '35cm', lateral: '10cm' },
-    { altura: '29cm', largura: '35cm', lateral: '10cm' },
-    { altura: '35cm', largura: '25cm', lateral: '10cm' },
-    { altura: '35cm', largura: '40cm', lateral: '13cm' },
-    { altura: '44cm', largura: '31cm', lateral: '11cm' },
+    { altura: '30cm', largura: '40cm', lateral: '0,4cm' },
+    { altura: '40cm', largura: '50cm', lateral: '0,4cm' },
+    { altura: '45cm', largura: '60cm', lateral: '0,4cm' },
+    { altura: '50cm', largura: '70cm', lateral: '0,6cm' },
+    { altura: '60cm', largura: '80cm', lateral: '0,7cm' },
+    { altura: '70cm', largura: '90cm', lateral: '0,7cm' },
+    { altura: '90cm', largura: '100cm', lateral: '0,9cm' },
 ];
 
 const BagTShirtPage: React.FC = () => {
     return (
-        <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de plástico com alça camiseta'}>
+        <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de plástico com alça camiseta'} plasticBag={true}>
             <ImgZoom img="sacola plástico cam sf.png" />
 
             <ProductDescription

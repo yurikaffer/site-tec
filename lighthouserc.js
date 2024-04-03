@@ -2,7 +2,7 @@ module.exports = {
     ci: {
       collect: {
         // Substitua 'http://localhost/' pelo URL onde seu app é servido localmente
-        url: ['http://localhost/'],
+        url: ['http://192.168.1.6:3000/'],
         // Aumentar para obter uma média mais estável se os recursos permitirem
         numberOfRuns: 3,
       },
