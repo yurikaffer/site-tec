@@ -1,6 +1,28 @@
 {
-  "short_name": "Sacolas Personalizadas Joinville",
+  "short_name": "Tec Embalagens",
   "name": "Sacolas Personalizadas Joinville",
+  "icons": [
+    {
+      "src": "shopping-bag.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "Tec logo 2024.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Tec logo 2024.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
   "start_url": ".",
-  "display": "standalone"
+  "background_color": "#FCFCFC",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FCFCFC",
+  "description": "Encontre as melhores sacolas personalizadas em Joinville.",
+  "orientation": "portrait-primary"
 }
