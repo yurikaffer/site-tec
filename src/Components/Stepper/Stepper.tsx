@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Box, IconButton } from '@mui/material';
 import CardStep from './CardStep';
 
-
-
 const steps = [
     {
         title: '1. Tamanho',

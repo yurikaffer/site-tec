@@ -19,6 +19,17 @@ const cardStyle = {
 }
 
 const Contacts: React.FC = () => {
+
+    function EmailLink() {
+        return (
+            <Typography component="p" textAlign={'center'} sx={fontStyle}>
+                <a href="mailto:tecserigrafia@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    tecserigrafia@gmail.com
+                </a>
+            </Typography>
+        );
+    }
+
     return (
         <Box sx={{
             bgcolor: '#FCFCFC',
@@ -70,7 +81,7 @@ const Contacts: React.FC = () => {
                     <EnvelopeSimple size={50} />
                     <Typography component="h2" fontSize={'18px'} fontWeight={600}>Envie um e-mail</Typography>
                     <Box display={'flex'} justifyContent={'start'}>
-                        <Typography component="p" textAlign={'center'} sx={fontStyle}>tecserigrafia@gmail.com</Typography>
+                        {EmailLink()}
                     </Box>
                 </Box>
 

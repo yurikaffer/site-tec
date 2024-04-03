@@ -26,10 +26,8 @@ const StepperMobile: React.FC = () => {
                         <Typography fontSize={'18px'} fontWeight={600}>1. Tamanho</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
                             <Typography sx={fontStyle}>
-                                Qual o tipo e a gramatura do papel a ser utilizado na Caixa ou 
-                                na Sacola? Dentre os mais comuns para embalagens, temos o Kraft, Duplex, Triplex e Offset. 
-                                Gramatura é a grossura do material e pode variar de 90 até 400g. Quanto menor mais fino e 
-                                maleável, quanto maior mais grosso e resistente.
+                                A página do produto que você deseja em nosso site possui a tabela de medidas específica do produto, 
+                                consulte a página para obter essas informações e defina a que melhor se encaixa às suas necessidades.
                             </Typography>
                         </Box>
                     </Box>
@@ -43,9 +41,9 @@ const StepperMobile: React.FC = () => {
                         <Typography fontSize={'18px'} fontWeight={600}>2. Material</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
                             <Typography sx={fontStyle}>
-                                Embalagens, na maioria dos casos, são tridimensionais, ou seja, têm Altura, Largura e 
-                                Profundidade. Tenha em mãos essas três medidas ou, para designers e pessoas mais 
-                                experientes, método de fechamento da caixa, a medida da "faca" ou desenho aberto.
+                                Você encontra as especificações do material da embalagem na página do produto escolhido, pode 
+                                navegar entre as categorias de produtos para encontrar o que mais se encaixa às suas expectativas. 
+                                Tenha em mãos essas informações na hora de realizar o orçamento.
                             </Typography>
                         </Box>
                     </Box>

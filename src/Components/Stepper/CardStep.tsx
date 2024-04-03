@@ -1,5 +1,6 @@
 import { Box, ButtonBase, Card, Typography } from '@mui/material';
 import React from 'react';
+import { whatsMessage } from '../../utils';
 
 interface CardStepProps {
     title: string;
@@ -39,7 +40,7 @@ const CardStep: React.FC<CardStepProps> = ({title, content, icon, button, backgr
                     {content}
                 </Typography>
                 { button && (
-                    <ButtonBase sx={{
+                    <ButtonBase onClick={() => {whatsMessage()}} sx={{
                         bgcolor: '#FFC9C9',
                         width: '100%',
                         boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
