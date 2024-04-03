@@ -31,8 +31,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, content, img, textButt
         }}>
             <img src={img} alt="imagem produto" style={{ width: '100%',  objectFit: 'cover', maxHeight: '21rem', borderRadius: '.5rem' }} />
 
-            <Typography fontSize={'18px'} fontWeight={600} mt={'1rem'}>{title}</Typography>
-            <Typography fontSize={'15px'} textAlign={'center'}>{content}</Typography>
+            <Typography component="h3" fontSize={'18px'} fontWeight={600} mt={'1rem'}>{title}</Typography>
+            <Typography component="p" fontSize={'15px'} textAlign={'center'}>{content}</Typography>
             <ButtonBase onClick={onClick}  sx={{
                 width: '100%',
                 bgcolor: '#FFC9C9',

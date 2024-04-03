@@ -35,11 +35,11 @@ const FaixaVantagens: React.FC = () => {
 
             <Box sx={cardStyle}>
                 <CheckSquare size={34} />
-                <Typography fontSize={'18px'} fontWeight={600}>Comece com pouco</Typography>
+                <Typography component="h3" fontSize={'18px'} fontWeight={600}>Comece com pouco</Typography>
                 <Box>
                     <Box display={'flex'} justifyContent={'start'}>
-                        <Typography sx={{ fontSize: '14px' }}>
-                            A quantidade mínima de pedido de embalagens impressas personalizadas no atacado é de 300-500 unidades.
+                        <Typography component="p" sx={{ fontSize: '14px' }}>
+                            A quantidade mínima de pedido de embalagens impressas personalizadas é de 250 unidades no papel e 500 unidades no plástico.
                         </Typography>
                     </Box>
                 </Box>

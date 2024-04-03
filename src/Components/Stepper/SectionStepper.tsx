@@ -28,6 +28,7 @@ const SectionStepper: React.FC = () => {
         }}>
             <Box sx={aboutTexBox}>
                 <Typography
+                    component="h1"
                     textAlign={'center'}
                     fontSize={'2.4rem'}
                     fontWeight={600}
@@ -40,7 +41,7 @@ const SectionStepper: React.FC = () => {
                 >
                     Ainda não sabe como realizar um orçamento?
                 </Typography>
-                <Typography fontSize={'16px'} textAlign={'center'}>
+                <Typography fontSize={'16px'} textAlign={'center'} component="p">
                     Criamos um passo a passo para que você consiga se orientar e entender as informações necessárias para
                     realizar um orçamento conosco, e lembre-se, qualquer dúvida, não hesite em nos chamar!
                 </Typography>

@@ -69,6 +69,7 @@ const SwiperClients: React.FC = () => {
     return (
         <Box sx={aboutTexBox}>
             <Typography
+                component="h1"
                 fontSize={'2.4rem'}
                 fontWeight={600}
                 sx={{

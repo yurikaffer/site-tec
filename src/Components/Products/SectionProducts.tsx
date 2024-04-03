@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React, { useRef } from 'react';
+import React from 'react';
 import ProductCard from './ProductCard';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ const SectionProducts: React.FC = () => {
             bgcolor: '#FCFCFC',
         }}>
             <Box sx={aboutTexBox}>
-                <Typography
+                <Typography component="h1"
                     fontSize={'2.4rem'}
                     fontWeight={700}
                     sx={{
@@ -40,7 +40,7 @@ const SectionProducts: React.FC = () => {
                 >
                     Conheça nossos produtos
                 </Typography>
-                <Typography fontSize={'16px'} textAlign={'center'}>
+                <Typography component="p" fontSize={'16px'} textAlign={'center'}>
                     Embalagens personalizadas influenciam significativamente a decisão de compra. Uma embalagem atraente pode não só chamar a atenção dos
                     consumidores, mas também transmitir a qualidade do produto e os valores da marca, contribuindo para a
                     decisão de compra. De acordo com algumas pesquisas, a embalagem pode influenciar a decisão de compra de

@@ -72,8 +72,8 @@ const Rodape: React.FC = () => {
                             <FooterButton name='Solicitar orçamento'  onClick={() => {whatsMessage()}}/>
                         </Box>
                         <Box display={'flex'} flexDirection={'column'} maxWidth={'35rem'} gap={'0.5rem'}>
-                            <Typography fontSize={'16px'} fontWeight={500} mb={'1rem'} >NOSSA MISSÃO</Typography>
-                            <Typography fontSize={'13px'} mb={'1rem'}>
+                            <Typography component="h3" fontSize={'16px'} fontWeight={500} mb={'1rem'} >NOSSA MISSÃO</Typography>
+                            <Typography component="p" fontSize={'13px'} mb={'1rem'}>
                                     Desenvolver embalagens que não apenas garantam a segurança e a integridade dos produtos, 
                                     mas também comuniquem efetivamente a essência e os valores da marca de nossos clientes. 
                                     Comprometemo-nos a utilizar nossa expertise em design, sustentabilidade e tecnologia 
@@ -82,19 +82,19 @@ const Rodape: React.FC = () => {
                             </Typography>
                             <Box display={'flex'} alignItems={'center'} gap={'0.5rem'}>
                                 <Clock size={24} />
-                                <Typography fontSize={'13px'}>Segunda a sexta, das 07:30 às 18:00</Typography>
+                                <Typography component="p" fontSize={'13px'}>Segunda a sexta, das 08:00 às 17:00</Typography>
                             </Box>
                             <Box display={'flex'} alignItems={'center'} gap={'0.5rem'}>
                                 <Phone size={24} />
-                                <Typography fontSize={'13px'}>(+55) 47 99999-9999</Typography>
+                                <Typography component="p" fontSize={'13px'}>(+55) 47 98822-4259</Typography>
                             </Box>
                             <Box display={'flex'} alignItems={'center'} gap={'0.5rem'}>
                                 <EnvelopeSimple size={24} />
-                                <Typography fontSize={'13px'} >tecserigrafia@gmail.com</Typography>
+                                <Typography component="p" fontSize={'13px'} >tecserigrafia@gmail.com</Typography>
                             </Box>
                             <Box display={'flex'} alignItems={'center'} gap={'0.5rem'}>
                                 <MapPinLine size={38} />
-                                <Typography fontSize={'13px'} >R. Servidão Santa Matilde, 135 - João Costa, Joinville - SC, 89209-050</Typography>
+                                <Typography component="p" fontSize={'13px'} >R. Servidão Santa Matilde, 135 - João Costa, Joinville - SC, 89209-050</Typography>
                             </Box>
                             <Box display={'flex'} alignSelf={'center'}>
                                 <IconButton onClick={() => {window.open('https://www.instagram.com/tecembalagens/', '_blank')}}>
@@ -124,8 +124,8 @@ const Rodape: React.FC = () => {
                         paddingTop: '1rem'
                     },
                 }} >
-                    <Typography fontSize={'12px'}> ©2024 Tec Embalagens - Todos os direitos reservados. </Typography>
-                    <Typography fontSize={'12px'} > Desenvolvido com 💗 by Yuri Kaffer :) </Typography>
+                    <Typography component="p" fontSize={'12px'}> ©2024 Tec Embalagens - Todos os direitos reservados. </Typography>
+                    <Typography component="p" fontSize={'12px'} > Desenvolvido com 💗 by Yuri Kaffer :) </Typography>
                 </Box>
             </Box>
         </Box>

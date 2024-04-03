@@ -38,8 +38,8 @@ const ResumeItem: React.FC<ResumeItemProps> = ({ imgSrc, imgAlt, title, descript
             <Box sx={imgStyle}>
                 <img src={imgSrc} alt={imgAlt} style={{ width: '100%' }} />
             </Box>
-            <Typography sx={typographyBold}>{title}</Typography>
-            <Typography sx={typography}>{description}</Typography>
+            <Typography component="h3" sx={typographyBold}>{title}</Typography>
+            <Typography component="p" sx={typography}>{description}</Typography>
         </Box>
     );
 };

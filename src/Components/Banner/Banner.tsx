@@ -36,7 +36,7 @@ const Banner: React.FC = () => {
                     },
 
                 }}>
-                <Typography sx={{
+                <Typography component="h1" sx={{
                     fontSize: '18px',
                     fontWeight: '500',
                     color: '#252525',
@@ -48,7 +48,7 @@ const Banner: React.FC = () => {
                     Transforme, crie, personalize. 
                 </Typography>
 
-                <Typography sx={{
+                <Typography component="h1" sx={{
                     fontSize: '40px',
                     fontWeight: '500',
                     color: '#252525',

@@ -63,6 +63,7 @@ const ProductsCategory: React.FC = () => {
                 }
             }}>
                 <Typography 
+                    component="h3"
                     fontSize={'18px'} 
                     fontWeight={500} 
                     pb={'1.5rem'} 
@@ -73,19 +74,19 @@ const ProductsCategory: React.FC = () => {
                 </Typography>
 
                 <Box component={'button'} sx={buttonStyle('')} onClick={() => handleSelectCategory('')}>
-                    <Typography sx={textStyle}>Todos</Typography>
+                    <Typography component="p" sx={textStyle}>Todos</Typography>
                 </Box>
                 <Box component={'button'} sx={buttonStyle('Paper')} onClick={() => handleSelectCategory('Paper')}>
-                    <Typography sx={textStyle}>Sacolas de Papel</Typography>
+                    <Typography component="p" sx={textStyle}>Sacolas de Papel</Typography>
                 </Box>
                 <Box component={'button'} sx={buttonStyle('Plastic')} onClick={() => handleSelectCategory('Plastic')}>
-                    <Typography sx={textStyle}>Sacolas de Plástico</Typography>
+                    <Typography component="p" sx={textStyle}>Sacolas de Plástico</Typography>
                 </Box>
                 <Box component={'button'} sx={buttonStyle('CardsAndTags')} onClick={() => handleSelectCategory('CardsAndTags')}>
-                    <Typography sx={textStyle}>Cartões e Tags</Typography>
+                    <Typography component="p" sx={textStyle}>Cartões e Tags</Typography>
                 </Box>
                 <Box component={'button'} sx={buttonStyle('PVC')} onClick={() => handleSelectCategory('PVC')}>
-                    <Typography sx={textStyle}>Placas de PVC</Typography>
+                    <Typography component="p"sx={textStyle}>Placas de PVC</Typography>
                 </Box>
             </Card>
 

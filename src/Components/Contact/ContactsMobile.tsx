@@ -22,14 +22,14 @@ const ContactsMobile: React.FC = () => {
                 <Box display={'flex'} alignItems={'center'} gap={1}>
                     <PhoneIncoming size={45} />
                     <Box>
-                        <Typography fontSize={'18px'} fontWeight={600}>Ligue para nós</Typography>
+                        <Typography component="h2" fontSize={'18px'} fontWeight={600}>Ligue para nós</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
-                            <Typography sx={fontStyle} fontWeight={600}>Telefone:&nbsp;</Typography>
-                            <Typography sx={fontStyle}>(+55) 47 99999-9999</Typography>
+                            <Typography component="p" sx={fontStyle} fontWeight={600}>Telefone:&nbsp;</Typography>
+                            <Typography component="p" sx={fontStyle}>(+55) 47 3804-6694</Typography>
                         </Box>
                         <Box display={'flex'}>
-                            <Typography sx={fontStyle} fontWeight={600}>Whatsapp:&nbsp;</Typography>
-                            <Typography sx={fontStyle}>(+55) 47 99999-9999</Typography>
+                            <Typography component="p" sx={fontStyle} fontWeight={600}>Whatsapp:&nbsp;</Typography>
+                            <Typography component="p" sx={fontStyle}>(+55) 47 98822-4259</Typography>
                         </Box>
                     </Box>
                 </Box>
@@ -37,9 +37,9 @@ const ContactsMobile: React.FC = () => {
                 <Box display={'flex'} alignItems={'center'} gap={1} >
                     <EnvelopeSimple size={45} />
                     <Box>
-                        <Typography fontSize={'18px'} fontWeight={600}>Envie um e-mail</Typography>
+                        <Typography component="h2" fontSize={'18px'} fontWeight={600}>Envie um e-mail</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
-                            <Typography sx={fontStyle}>tecserigrafia@gmail.com</Typography>
+                            <Typography component="p" sx={fontStyle}>tecserigrafia@gmail.com</Typography>
                         </Box>
                     </Box>
                 </Box>
@@ -47,9 +47,9 @@ const ContactsMobile: React.FC = () => {
                 <Box display={'flex'} alignItems={'center'} gap={1} >
                     <MapPin size={45} />
                     <Box>
-                        <Typography fontSize={'18px'} fontWeight={600}>Faça uma visita</Typography>
+                        <Typography component="h2" fontSize={'18px'} fontWeight={600}>Faça uma visita</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
-                            <Typography sx={fontStyle}>Rua Servidão Santa Matilde, 135</Typography>
+                            <Typography component="p" sx={fontStyle}>Rua Servidão Santa Matilde, 135</Typography>
                         </Box>
                     </Box>
                 </Box>

@@ -32,18 +32,18 @@ const SectionAbout: React.FC<{page?: boolean}> = ({page}) => {
     return (
         <Box display={'flex'} sx={{ bgcolor: '#FCFCFC'}}>
             <Box sx={aboutTextStyles}>
-                <Typography sx={textStyle('2.4rem', 700)}>
+                <Typography component="h1" sx={textStyle('2.4rem', 700)}>
                     Sobre nós?
                 </Typography>
 
-                <Typography sx={textStyle('1.8rem', 400)}>
+                <Typography component="p" sx={textStyle('1.8rem', 400)}>
                     Com mais de 28 anos, a Traço e Cor nasceu a partir da crescente necessidade do mercado por 
                     embalagens de alta qualidade e ótimo custo benefício. Desde então, temos nos dedicado a inovar e 
                     aprimorar nossos processos e produtos, oferecendo soluções personalizadas que não apenas atendem, 
                     mas superam as expectativas de nossos clientes.
                 </Typography>
 
-                <Typography sx={textStyle('1.8rem', 400)}>
+                <Typography component="p" sx={textStyle('1.8rem', 400)}>
                     Aqui na Tec, acreditamos que uma embalagem vai muito além de um simples recipiente; ela é uma 
                     extensão da marca e uma ferramenta poderosa de comunicação. É por isso que trabalhamos lado a lado 
                     com nossos clientes para criar embalagens que contam sua história e conectam-se emocionalmente com 
@@ -53,10 +53,10 @@ const SectionAbout: React.FC<{page?: boolean}> = ({page}) => {
 
                 {page && (
                         <>
-                            <Typography sx={textStyle('2.4rem', 700)} pt={'1rem'}>
+                            <Typography component="h1" sx={textStyle('2.4rem', 700)} pt={'1rem'}>
                                 Nossa missão
                             </Typography>
-                            <Typography sx={textStyle('1.8rem', 400)}>
+                            <Typography component="p" sx={textStyle('1.8rem', 400)}>
                                 Desenvolver embalagens que não apenas garantam a segurança e a integridade dos 
                                 produtos, mas também comuniquem efetivamente a essência e os valores da marca de nossos 
                                 clientes. Comprometemo-nos a utilizar nossa expertise em design, sustentabilidade e 

@@ -44,6 +44,7 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
                 {rows && (
                     <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '3rem' }}>
                         <Typography 
+                            component="h1"
                             padding={'0 2rem'}
                             fontSize={'22px'} 
                             fontWeight={600} 
