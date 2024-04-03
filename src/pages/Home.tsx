@@ -27,7 +27,7 @@ const Home: React.FC = () => {
         <SectionStepper />
         <SwiperClients />
         <Box pt={'5rem'} pb={'10rem'}>
-            <Contacts />
+          <Contacts />
         </Box>
         <Footer />
         <WhatsappComponent />

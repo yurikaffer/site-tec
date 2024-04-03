@@ -14,22 +14,25 @@ const Banner: React.FC = () => {
                 height: isTabletOrLarger ? '120vh' : '105vh',
                 width: '100%',
                 background: isLargeDesktop
-                    ? "url('/fundo-novo-tec.png') no-repeat center center fixed"
+                    ? "url('/fundo-novo-tec.webp') no-repeat center center fixed"
                     : isTabletOrLarger
-                        ? "url('/banner-ms.png') no-repeat center center fixed"
-                        : "url('/banner-mobile.png') no-repeat center center",
+                        ? "url('/banner-ms.webp') no-repeat center center fixed"
+                        : "url('/banner-mobile.webp') no-repeat center center",
                 backgroundSize: 'cover',
             }}
         >
             <Box sx={{
-                padding: '40rem 10%',
-                '@media (max-width:1270px)': {
-                    padding: '17rem 10%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center',
+                padding: '17rem 10%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+                [theme.breakpoints.up('lg')]: { 
+                    padding: '40rem 10%',
+                    justifyContent: 'start',
+                    alignItems: 'start',
+                    textAlign: 'start',
                 },
             }}>
                 <Typography sx={{
