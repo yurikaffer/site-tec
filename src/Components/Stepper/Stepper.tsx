@@ -125,7 +125,7 @@ const Stepper = () => {
         >
             <IconButton onClick={() => scrollBy(-width)} sx={{ ml: 'auto', padding: 0 }} >
                 <Box width={'5rem'}>
-                    <img src='caret-left.svg' width={'100%'} />
+                    <img src='caret-left.svg' alt='seta esquerda' width={'100%'} />
                 </Box>
             </IconButton>
 
@@ -168,7 +168,7 @@ const Stepper = () => {
 
             <IconButton onClick={() => scrollBy(width)} sx={{ mr: 'auto', padding: 0 }}>
                 <Box width={'5rem'}>
-                    <img src='caret-right.svg' width={'100%'} />
+                    <img src='caret-right.svg' alt='seta direita' width={'100%'} />
                 </Box>
             </IconButton>
         </Box>

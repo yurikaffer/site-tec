@@ -31,7 +31,7 @@ const CardStep: React.FC<CardStepProps> = ({title, content, icon, button, backgr
             },
         }}>
             <Box mb={'1rem'}>
-                <img src={icon}/>
+                <img src={icon} alt='icone'/>
             </Box>
                 <Typography fontSize={'1.8rem'} fontWeight={600} mb={'1rem'}> 
                     {title} 
