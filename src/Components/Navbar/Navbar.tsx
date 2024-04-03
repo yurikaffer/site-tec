@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, ButtonBase, Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, ButtonBase, Drawer, IconButton, Typography, useMediaQuery } from '@mui/material';
 import ButtonNavbar from './ButtonNavbar/ButtonNavbar';
 import { useNavigate } from 'react-router-dom';
 import SmButtonNavbar from './ButtonNavbar/SmButtonNavbar';
@@ -14,10 +14,9 @@ interface NavBarProps {
 }
 
 const NavBar: React.FC<NavBarProps> = ({ boxStyle, img, heightImg, smButtons, maxWidthImg }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down(1060));
     const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const isMobile = useMediaQuery('(max-width:1060px)');
 
     const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
