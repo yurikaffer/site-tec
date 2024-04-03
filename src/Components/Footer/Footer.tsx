@@ -13,7 +13,7 @@ const imgStyle = {
     display: 'block',
 }
 
-const Rodape: React.FC = () => {
+const Footer: React.FC = () => {
     const navigate = useNavigate();
     
     return (
@@ -132,5 +132,5 @@ const Rodape: React.FC = () => {
     )
 }
 
-export default Rodape
+export default Footer
 

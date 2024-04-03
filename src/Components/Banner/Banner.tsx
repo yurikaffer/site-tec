@@ -1,59 +1,61 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Banner: React.FC = () => {
-    const isMedium = useMediaQuery('(max-width:960px)');
-    const isSmall = useMediaQuery('(max-width:600px)');
-    const isExtraSmall = useMediaQuery('(max-width:400px)');
+    const theme = useTheme();
+    const isTabletOrLarger = useMediaQuery(theme.breakpoints.up(661));
+    const isLargeDesktop = useMediaQuery(theme.breakpoints.up(1261));
 
     return (
         <Box
             sx={{
-                height: isSmall ? '105vh' : '120vh',
+                height: isTabletOrLarger ? '120vh' : '105vh',
                 width: '100%',
-                background: `url('${isSmall ? "/banner-mobile.png" : "/fundo-novo-tec.png"}') no-repeat center center fixed`,
+                background: isLargeDesktop
+                    ? "url('/fundo-novo-tec.png') no-repeat center center fixed"
+                    : isTabletOrLarger
+                        ? "url('/banner-ms.png') no-repeat center center fixed"
+                        : "url('/banner-mobile.png') no-repeat center center",
                 backgroundSize: 'cover',
             }}
         >
             <Box sx={{
-                padding: isMedium ? '17rem 10%' : '40rem 10%',
-                display: isMedium ? 'flex' : 'block',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: isMedium ? 'center' : 'left',
+                padding: '40rem 10%',
+                '@media (max-width:1270px)': {
+                    padding: '17rem 10%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                },
             }}>
-                <Typography
-                    component="h1"
-                    sx={{
-                        fontSize: isExtraSmall ? '16px' : isSmall ? '18px' : '18px',
-                        fontWeight: '500',
-                        color: '#252525',
-                    }}
-                >
+                <Typography sx={{
+                    fontSize: isTabletOrLarger ? '18px' : '16px',
+                    fontWeight: '500',
+                    color: '#252525',
+                }}>
                     Transforme, crie, personalize.
                 </Typography>
 
-                <Typography
-                    component="h1"
-                    sx={{
-                        fontSize: isExtraSmall ? '28px' : isSmall ? '34px' : '40px',
-                        fontWeight: '500',
-                        color: '#252525',
-                    }}
-                >
+                <Typography sx={{
+                    fontSize: isLargeDesktop ? '40px' : isTabletOrLarger ? '34px' : '28px',
+                    fontWeight: '500',
+                    color: '#252525',
+                }}>
                     Deixe sua marca no mundo.
                 </Typography>
             </Box>
 
-            {!isSmall && (
+            {isTabletOrLarger && (
                 <Box sx={{
-                        position: 'absolute',
-                        bottom: isMedium ? -260 : -200, 
-                        left: 0,
-                        width: '100%',
-                    }}
+                    position: 'absolute',
+                    bottom: isTabletOrLarger ? '-200px' : '-260px',
+                    left: 0,
+                    width: '100%',
+                }}
                 >
                     <img src='wave.svg' alt="Onda decorativa" style={{ width: '100%', objectFit: 'cover', height: 'auto' }} />
                 </Box>

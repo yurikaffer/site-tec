@@ -5,11 +5,12 @@ import Contacts from "../Components/Contact/Contacts";
 import FaixaVantagens from "../Components/MoreAbout/MoreAbout";
 import SectionProducts from "../Components/Products/SectionProducts";
 import ResumoSobre from "../Components/ResumeAbout/ResumeAbout";
-import Rodape from "../Components/Footer/Footer";
+
 import SectionStepper from "../Components/Stepper/SectionStepper";
 import SwiperClients from "../Components/SwiperClients/SwiperClients";
 import WhatsappComponent from "../Components/Whats/Whatsapp";
 import HomeNavbar from "../Components/Navbar/HomeNavbar";
+import Footer from "../Components/Footer/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const Home: React.FC = () => {
         <Box pt={'5rem'} pb={'10rem'}>
             <Contacts/>
         </Box>
-        <Rodape/>
+        <Footer/>
         <WhatsappComponent />
     </>
   );

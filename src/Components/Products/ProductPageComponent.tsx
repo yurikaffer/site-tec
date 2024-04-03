@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { ReactNode } from "react";
-import { TabelaMedidas } from "../SizeTable/SizeTable";
+import { SizeTable } from "../SizeTable/SizeTable";
 import SectionStepper from "../Stepper/SectionStepper";
 import Rodape from "../Footer/Footer";
 import WhatsappComponent from "../Whats/Whatsapp";
@@ -82,7 +82,7 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
                                 }}
                             />
 
-                            <TabelaMedidas rows={rows} columnName={plasticBag ? 'Espessura' : 'Profundidade'}/>
+                            <SizeTable rows={rows} columnName={plasticBag ? 'Espessura' : 'Profundidade'}/>
 
                         </Box>
                     </Box>

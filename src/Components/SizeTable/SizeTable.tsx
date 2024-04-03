@@ -14,12 +14,12 @@ interface DataRow {
     lateral: string;
 }
 
-interface TabelaMedidasProps {
+interface SizeTableProps {
     rows: DataRow[];
     columnName?: string;
 }
 
-export const TabelaMedidas: React.FC<TabelaMedidasProps> = ({ rows, columnName }) => {
+export const SizeTable: React.FC<SizeTableProps> = ({ rows, columnName }) => {
     const cardStyle = {
         borderRadius: '1rem',
         display: 'flex',

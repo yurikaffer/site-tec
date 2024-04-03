@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import ProductsCategory from "../Components/ProductsCategory/ProductsCategory";
-import Rodape from "../Components/Footer/Footer";
 import SubNavbar from "../Components/Navbar/SubNavbar";
+import Footer from "../Components/Footer/Footer";
 
 const ProductsPage: React.FC = () => {
     return (
@@ -22,7 +22,7 @@ const ProductsPage: React.FC = () => {
                 </Typography>
             </Box>
             <ProductsCategory/>
-            <Rodape/>
+            <Footer/>
         </Box>
     );
 }

@@ -1,14 +1,14 @@
 import SectionAbout from "../Components/About/SectionAbout";
-import Rodape from "../Components/Footer/Footer";
 import WhatsappComponent from "../Components/Whats/Whatsapp";
 import SubNavbar from "../Components/Navbar/SubNavbar";
+import Footer from "../Components/Footer/Footer";
 
 const AboutPage: React.FC = () => {
   return (
     <>
         <SubNavbar/>
         <SectionAbout page={true}/>
-        <Rodape/>
+        <Footer/>
         <WhatsappComponent />
     </>
   );
