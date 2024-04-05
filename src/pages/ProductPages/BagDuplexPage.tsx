@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import ImgZoom from "../../Components/Products/ImgZoom";
 import ProductDescription from "../../Components/Products/ProductDescription";
 import ProductPageComponent from "../../Components/Products/ProductPageComponent";
@@ -18,14 +17,15 @@ const rows = [
 
 const BagDuplexPage: React.FC = () => {
     return (
-        <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de papel Duplex'}>
+        <section>
+            <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de papel Duplex'}>
                 <ImgZoom img="Sacola-Tec-Duplex.webp" />
 
                 <ProductDescription
                     mainTitle="Sacola de papel Duplex"
                     description="As sacolas de papel Duplex são outro tipo importante no mundo das embalagens personalizadas. 
-                                O papel Duplex é um material robusto, frequentemente utilizado para criar sacolas que não apenas têm uma 
-                                ótima aparência, mas também são capazes de suportar pesos relativamente altos."
+                                    O papel Duplex é um material robusto, frequentemente utilizado para criar sacolas que não apenas têm uma 
+                                    ótima aparência, mas também são capazes de suportar pesos relativamente altos."
                     applications={[
                         {
                             title: 'Lojas de Alto Padrão e Boutiques: ',
@@ -41,7 +41,8 @@ const BagDuplexPage: React.FC = () => {
                         }
                     ]}
                 />
-        </ProductPageComponent>
+            </ProductPageComponent>
+        </section>
     );
 }
 

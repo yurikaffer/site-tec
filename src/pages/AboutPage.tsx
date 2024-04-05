@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
         <SectionNavbar/>
         <SectionAbout page={true}/>
         <Footer/>
-        <WhatsappComponent />
+        <WhatsappComponent/>
     </>
   );
 }

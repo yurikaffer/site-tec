@@ -22,47 +22,49 @@ const SectionStepper: React.FC = () => {
     const isTabletOrLarger = useMediaQuery(theme.breakpoints.up(750));
 
     return (
-        <Box sx={{
-            bgcolor: '#FCFCFC',
-            paddingY: '7rem',
-            display: 'flex',
-            flexDirection: 'column',
-            alignContent: 'center'
-        }}>
-            <Box sx={aboutTexBox}>
-                <Typography
-                    component="h1"
-                    textAlign={'center'}
-                    fontSize={'2.4rem'}
-                    fontWeight={600}
-                    sx={{
-                        '@media (max-width: 1000px)': {
-                            fontSize: '1.8rem',
-                            fontWeight: '600'
-                        },
-                    }}
-                >
-                    Ainda não sabe como realizar um orçamento?
-                </Typography>
-                <Typography fontSize={'16px'} textAlign={'center'} component="p">
-                    Criamos um passo a passo para que você consiga se orientar e entender as informações necessárias para
-                    realizar um orçamento conosco, e lembre-se, qualquer dúvida, não hesite em nos chamar!
-                </Typography>
+        <section>
+            <Box sx={{
+                bgcolor: '#FCFCFC',
+                paddingY: '7rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignContent: 'center'
+            }}>
+                <Box sx={aboutTexBox}>
+                    <Typography
+                        component="h1"
+                        textAlign={'center'}
+                        fontSize={'2.4rem'}
+                        fontWeight={600}
+                        sx={{
+                            '@media (max-width: 1000px)': {
+                                fontSize: '1.8rem',
+                                fontWeight: '600'
+                            },
+                        }}
+                    >
+                        Ainda não sabe como realizar um orçamento?
+                    </Typography>
+                    <Typography fontSize={'16px'} textAlign={'center'} component="p">
+                        Criamos um passo a passo para que você consiga se orientar e entender as informações necessárias para
+                        realizar um orçamento conosco, e lembre-se, qualquer dúvida, não hesite em nos chamar!
+                    </Typography>
 
-                {isTabletOrLarger ? <Stepper /> : <StepperMobile />}
+                    {isTabletOrLarger ? <Stepper /> : <StepperMobile />}
 
-                <ButtonBase onClick={() => {whatsMessage()}} 
-                    sx={{
-                        bgcolor: '#FFC9C9',
-                        width: '25rem',
-                        boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
-                        borderRadius: '50rem'
-                    }}
-                >
-                    Realizar orçamento
-                </ButtonBase>
+                    <ButtonBase onClick={() => {whatsMessage()}} 
+                        sx={{
+                            bgcolor: '#FFC9C9',
+                            width: '25rem',
+                            boxShadow: '0 0px 6px 0 rgba(0, 0, 0, 0.1)',
+                            borderRadius: '50rem'
+                        }}
+                    >
+                        Realizar orçamento
+                    </ButtonBase>
+                </Box>
             </Box>
-        </Box>
+        </section>
     )
 }
 

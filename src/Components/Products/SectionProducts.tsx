@@ -60,47 +60,49 @@ const SectionProducts = () => {
     };
 
     return (
-        <Box sx={{ bgcolor: '#FCFCFC' }}>
-            <Box sx={aboutTexBox}>
-                <Typography component="h1" fontSize={'2.4rem'} fontWeight={700} sx={{ '@media (max-width: 1000px)': { fontSize: '1.8rem', fontWeight: '700' } }}>
-                    Conheça nossos produtos
-                </Typography>
-                <Typography component="p" fontSize={'16px'} textAlign={'center'}>
-                    Embalagens personalizadas influenciam significativamente a decisão de compra. Uma embalagem atraente pode não só chamar a atenção dos
-                    consumidores, mas também transmitir a qualidade do produto e os valores da marca, contribuindo para a
-                    decisão de compra. De acordo com algumas pesquisas, a embalagem pode influenciar a decisão de compra de
-                    até 70% dos consumidores em pontos de venda.
-                </Typography>
+        <section>
+            <Box sx={{ bgcolor: '#FCFCFC' }}>
+                <Box sx={aboutTexBox}>
+                    <Typography component="h1" fontSize={'2.4rem'} fontWeight={700} sx={{ '@media (max-width: 1000px)': { fontSize: '1.8rem', fontWeight: '700' } }}>
+                        Conheça nossos produtos
+                    </Typography>
+                    <Typography component="p" fontSize={'16px'} textAlign={'center'}>
+                        Embalagens personalizadas influenciam significativamente a decisão de compra. Uma embalagem atraente pode não só chamar a atenção dos
+                        consumidores, mas também transmitir a qualidade do produto e os valores da marca, contribuindo para a
+                        decisão de compra. De acordo com algumas pesquisas, a embalagem pode influenciar a decisão de compra de
+                        até 70% dos consumidores em pontos de venda.
+                    </Typography>
+                </Box>
+                <Box sx={gridStyle}>
+                    <Suspense fallback={<LoadingComponent />}>
+                        <ProductCard
+                            title='Sacolas de Papel'
+                            img='sacola-pape-modelo.webp'
+                            content={'Sacolas de papel personalizadas são perfeitas para embalar suas compras, presentes e lembrancinhas.'}
+                            onClick={() => handleNavigation('/Produtos')}
+                        />
+                        <ProductCard
+                            title='Sacolas de Plástico'
+                            img='sacola-tec.webp'
+                            content={'São extremamente comuns em uma variedade de estabelecimentos comerciais, desde supermercados até lojas de varejo e boutiques.'}
+                            onClick={() => handleNavigation('/Produtos')}
+                        />
+                        <ProductCard
+                            title='Cartões e Tags'
+                            img='cartoes-produto.webp'
+                            content={'Cartões e Tags são utilizadas em uma ampla gama de aplicações para adicionar valor, informação e identidade aos produtos e serviços.'}
+                            onClick={() => handleNavigation('/Produtos')}
+                        />
+                        <ProductCard
+                            title='Placas de PVC'
+                            img='placa-pvc.webp'
+                            content={'Usadas para sinalização, decoração e aplicações industriais, adaptando-se facilmente a necessidades específicas de projetos.'}
+                            onClick={() => handleNavigation('/Produtos')}
+                        />
+                    </Suspense>
+                </Box>
             </Box>
-            <Box sx={gridStyle}>
-                <Suspense fallback={<LoadingComponent/>}>
-                    <ProductCard
-                        title='Sacolas de Papel'
-                        img='sacola-pape-modelo.webp'
-                        content={'Sacolas de papel personalizadas são perfeitas para embalar suas compras, presentes e lembrancinhas.'}
-                        onClick={() => handleNavigation('/Produtos')}
-                    />
-                    <ProductCard
-                        title='Sacolas de Plástico'
-                        img='sacola-tec.webp'
-                        content={'São extremamente comuns em uma variedade de estabelecimentos comerciais, desde supermercados até lojas de varejo e boutiques.'}
-                        onClick={() => handleNavigation('/Produtos')}
-                    />
-                    <ProductCard
-                        title='Cartões e Tags'
-                        img='cartoes-produto.webp'
-                        content={'Cartões e Tags são utilizadas em uma ampla gama de aplicações para adicionar valor, informação e identidade aos produtos e serviços.'}
-                        onClick={() => handleNavigation('/Produtos')}
-                    />
-                    <ProductCard
-                        title='Placas de PVC'
-                        img='placa-pvc.webp'
-                        content={'Usadas para sinalização, decoração e aplicações industriais, adaptando-se facilmente a necessidades específicas de projetos.'}
-                        onClick={() => handleNavigation('/Produtos')}
-                    />
-                </Suspense>
-            </Box>
-        </Box>
+        </section>
     );
 }
 

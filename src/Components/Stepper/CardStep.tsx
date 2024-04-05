@@ -33,10 +33,10 @@ const CardStep: React.FC<CardStepProps> = ({title, content, icon, button, backgr
             <Box mb={'1rem'}>
                 <img src={icon} alt='icone' loading="lazy"/>
             </Box>
-                <Typography fontSize={'1.8rem'} fontWeight={600} mb={'1rem'}> 
+                <Typography component='p' fontSize={'1.8rem'} fontWeight={600} mb={'1rem'}> 
                     {title} 
                 </Typography>
-                <Typography fontSize={'14px'} textAlign={'center'} mb={'2rem'}> 
+                <Typography component='p' fontSize={'14px'} textAlign={'center'} mb={'2rem'}> 
                     {content}
                 </Typography>
                 { button && (

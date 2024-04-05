@@ -20,9 +20,9 @@ const StepperMobile: React.FC = () => {
                         <Ruler size={50} />
                     </Box>
                     <Box>
-                        <Typography fontSize={'18px'} fontWeight={600}>1. Tamanho</Typography>
+                        <Typography component="h3" fontSize={'18px'} fontWeight={600}>1. Tamanho</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
-                            <Typography sx={fontStyle}>
+                            <Typography component="p" sx={fontStyle}>
                                 A página do produto que você deseja em nosso site possui a tabela de medidas específica do produto,
                                 consulte a página para obter essas informações e defina a que melhor se encaixa às suas necessidades.
                             </Typography>
@@ -35,9 +35,9 @@ const StepperMobile: React.FC = () => {
                         <Bag size={50} />
                     </Box>
                     <Box>
-                        <Typography fontSize={'18px'} fontWeight={600}>2. Material</Typography>
+                        <Typography component="h4" fontSize={'18px'} fontWeight={600}>2. Material</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
-                            <Typography sx={fontStyle}>
+                            <Typography component="p" sx={fontStyle}>
                                 Você encontra as especificações do material da embalagem na página do produto escolhido, pode
                                 navegar entre as categorias de produtos para encontrar o que mais se encaixa às suas expectativas.
                                 Tenha em mãos essas informações na hora de realizar o orçamento.
@@ -51,9 +51,9 @@ const StepperMobile: React.FC = () => {
                         <Palette size={50} />
                     </Box>
                     <Box>
-                        <Typography fontSize={'18px'} fontWeight={600}>3. Cores</Typography>
+                        <Typography component="h5" fontSize={'18px'} fontWeight={600}>3. Cores</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
-                            <Typography sx={fontStyle}>
+                            <Typography component="p" sx={fontStyle}>
                                 O número de cores interfere diretamente no preço da embalagem e varia de 1 até 4 cores,
                                 que é o número de cores utilizados para impressão de fotos ou imagens complexas.
                                 As tinta utilizada pode ser padrão Pantone, que é uma codificação universal, ou Cromia
@@ -68,9 +68,9 @@ const StepperMobile: React.FC = () => {
                         <Question size={50} />
                     </Box>
                     <Box>
-                        <Typography fontSize={'18px'} fontWeight={600}>4. Ficou na dúvida?</Typography>
+                        <Typography component="h6" fontSize={'18px'} fontWeight={600}>4. Ficou na dúvida?</Typography>
                         <Box display={'flex'} justifyContent={'start'}>
-                            <Typography sx={fontStyle}>
+                            <Typography component="p" sx={fontStyle}>
                                 Se você ficar em dúvida, estamos aqui para ajudá-lo.Envie seu logotipo, foto ou design
                                 e nós vamos auxiliar você. Não tem um design? Fale com a gente. Ainda não sabe por onde
                                 começar? Entre em contato agora mesmo!

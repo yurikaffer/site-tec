@@ -74,65 +74,66 @@ const SwiperClients: React.FC = () => {
     }, []);
 
     return (
-        <Box sx={aboutTexBox}>
-            <Typography
-                component="h1"
-                fontSize={'2.4rem'}
-                fontWeight={600}
-                sx={{
-                    '@media (max-width: 1000px)': {
-                        fontSize: '1.8rem',
-                        fontWeight: '600'
+        <section>
+            <Box sx={aboutTexBox}>
+                <Typography
+                    component="h1"
+                    fontSize={'2.4rem'}
+                    fontWeight={600}
+                    sx={{
+                        '@media (max-width: 1000px)': {
+                            fontSize: '1.8rem',
+                            fontWeight: '600'
+                        },
+                    }}
+                >
+                    Alguns de nossos clientes
+                </Typography>
+
+                <Box sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    overflow: 'hidden',
+                    justifyContent: 'center',
+                    margin: '0 auto',
+                    width: '100%',
+                    '@media (max-width: 900px)': {
+                        width: '95%',
+                    },
+                    '@media (max-width: 460px)': {
+                        paddingLeft: '5px',
+                        paddingRight: '5px'
                     },
                 }}
-            >
-                Alguns de nossos clientes
-            </Typography>
-
-            <Box sx={{
-                display: 'flex',
-                alignItems: 'center',
-                overflow: 'hidden',
-                justifyContent: 'center',
-                margin: '0 auto',
-                width: '100%',
-                '@media (max-width: 900px)': {
-                    width: '95%',
-                },
-                '@media (max-width: 460px)': {
-                    paddingLeft: '5px',
-                    paddingRight: '5px'
-                },
-            }}
-            >
-                <Swiper
-                    slidesPerView={itemsToShow}
-                    spaceBetween={40}
-                    pagination={{ clickable: true }}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    modules={[Pagination, Autoplay]}
-                    loop={true}
-
                 >
-                    {images.map((image, index) => (
-                        <SwiperSlide key={index}>
-                            <Box sx={{
-                                width: '90%',
-                                height: '100px',
-                                '@media (max-width: 500px)': {
-                                    width: '100%',
-                                },
-                            }}>
-                                <img src={image} alt={`Slide ${index}`} loading="lazy" />
-                            </Box>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                    <Swiper
+                        slidesPerView={itemsToShow}
+                        spaceBetween={40}
+                        pagination={{ clickable: true }}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        modules={[Pagination, Autoplay]}
+                        loop={true}
+                    >
+                        {images.map((image, index) => (
+                            <SwiperSlide key={index}>
+                                <Box sx={{
+                                    width: '90%',
+                                    height: '100px',
+                                    '@media (max-width: 500px)': {
+                                        width: '100%',
+                                    },
+                                }}>
+                                    <img src={image} alt={`Slide ${index}`} loading="lazy" />
+                                </Box>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </Box>
             </Box>
-        </Box>
+        </section>
     );
 }
 

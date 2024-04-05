@@ -17,58 +17,60 @@ const cardStyle = {
 
 const FaixaVantagens: React.FC = () => {
     return (
-        <Box sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '5rem',
-            gap: '5rem',
-            bgcolor: '#F3F3F3',
-            boxShadow: `inset 0 1px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 3px 0 rgba(0, 0, 0, 0.1)`,
-            '@media (max-width: 715px)': {
-                flexDirection: 'column',
-                gap: '3rem',
-                paddingY: '5rem',
-                paddingX: '0',
-            },
-        }}>
+        <section>
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '5rem',
+                gap: '5rem',
+                bgcolor: '#F3F3F3',
+                boxShadow: `inset 0 1px 3px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 3px 0 rgba(0, 0, 0, 0.1)`,
+                '@media (max-width: 715px)': {
+                    flexDirection: 'column',
+                    gap: '3rem',
+                    paddingY: '5rem',
+                    paddingX: '0',
+                },
+            }}>
 
-            <Box sx={cardStyle}>
-                <CheckSquare size={34} />
-                <Typography component="h3" fontSize={'18px'} fontWeight={600}>Comece com pouco</Typography>
-                <Box>
-                    <Box display={'flex'} justifyContent={'start'}>
-                        <Typography component="p" sx={{ fontSize: '14px' }}>
-                            A quantidade mínima de pedido de embalagens impressas personalizadas é de 250 unidades no papel e 500 unidades no plástico.
-                        </Typography>
+                <Box sx={cardStyle}>
+                    <CheckSquare size={34} />
+                    <Typography component="h3" fontSize={'18px'} fontWeight={600}>Comece com pouco</Typography>
+                    <Box>
+                        <Box display={'flex'} justifyContent={'start'}>
+                            <Typography component="p" sx={{ fontSize: '14px' }}>
+                                A quantidade mínima de pedido de embalagens impressas personalizadas é de 250 unidades no papel e 500 unidades no plástico.
+                            </Typography>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box sx={cardStyle}>
+                    <Headset size={34} />
+                    <Typography component="h4" fontSize={'18px'} fontWeight={600}>Suporte de vendas</Typography>
+                    <Box>
+                        <Box display={'flex'} justifyContent={'start'}>
+                            <Typography component="p" sx={{ fontSize: '14px' }}>
+                                Suporte gratuito de especialistas em embalagens para você, desde material, design de arte e cotação.
+                            </Typography>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box sx={cardStyle}>
+                    <CurrencyCircleDollar size={34} />
+                    <Typography component="h5" fontSize={'18px'} fontWeight={600}>Qualidade e acessível</Typography>
+                    <Box>
+                        <Box display={'flex'} justifyContent={'start'}>
+                            <Typography component="p" sx={{ fontSize: '14px' }}>
+                                Produtos de alta qualidade e preço acessível diretamente do fabricante da embalagem.
+                            </Typography>
+                        </Box>
                     </Box>
                 </Box>
             </Box>
-
-            <Box sx={cardStyle}>
-                <Headset size={34} />
-                <Typography fontSize={'18px'} fontWeight={600}>Suporte de vendas</Typography>
-                <Box>
-                    <Box display={'flex'} justifyContent={'start'}>
-                        <Typography sx={{ fontSize: '14px' }}>
-                            Suporte gratuito de especialistas em embalagens para você, desde material, design de arte e cotação.
-                        </Typography>
-                    </Box>
-                </Box>
-            </Box>
-
-            <Box sx={cardStyle}>
-                <CurrencyCircleDollar size={34} />
-                <Typography fontSize={'18px'} fontWeight={600}>Qualidade e acessível</Typography>
-                <Box>
-                    <Box display={'flex'} justifyContent={'start'}>
-                        <Typography sx={{ fontSize: '14px' }}>
-                            Produtos de alta qualidade e preço acessível diretamente do fabricante da embalagem.
-                        </Typography>
-                    </Box>
-                </Box>
-            </Box>
-        </Box>
+        </section>
     )
 }
 

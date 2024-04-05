@@ -63,7 +63,7 @@ const ProductsCategory: React.FC = () => {
                 }
             }}>
                 <Typography 
-                    component="h3"
+                    component="h2"
                     fontSize={'18px'} 
                     fontWeight={500} 
                     pb={'1.5rem'} 

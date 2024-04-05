@@ -1,5 +1,5 @@
-import { Box, Paper } from '@mui/material';
-import React, { useState } from 'react';
+import { Box, Paper, Skeleton } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
 interface ComponentProp {
     img: string;
@@ -8,6 +8,16 @@ interface ComponentProp {
 const ImgZoom: React.FC<ComponentProp> = ({ img }) => {
     const [zoom, setZoom] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        const imageLoader = new Image();
+        imageLoader.src = img;
+        imageLoader.onload = () => {
+            setLoaded(true);
+        };
+    }, [img]);
+
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const target = e.target as HTMLElement;
@@ -37,6 +47,7 @@ const ImgZoom: React.FC<ComponentProp> = ({ img }) => {
                     alignItems: 'center',
                 }}
             >
+                {!loaded && <Skeleton variant="rounded" width={'100%'} height={'100%'} />}
                 <Box
                     component="img"
                     src={img}
@@ -49,6 +60,7 @@ const ImgZoom: React.FC<ComponentProp> = ({ img }) => {
                         transformOrigin: `${position.x}% ${position.y}%`,
                         transform: zoom ? 'scale(2)' : 'scale(1)',
                         objectFit: 'cover',
+                        display: loaded ? 'block' : 'none',
                         '@media (max-width: 500px)': {
                             width: '80%',
                             height: '80%',
@@ -57,7 +69,6 @@ const ImgZoom: React.FC<ComponentProp> = ({ img }) => {
                 />
             </Box>
         </Paper>
-
     )
 }
 

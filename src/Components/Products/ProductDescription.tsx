@@ -18,7 +18,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = ({ mainTitle, desc
             <Typography component="h1" fontSize={'24px'} fontWeight={600}>
                 {mainTitle}
             </Typography>
-            <Typography fontSize={'16px'} mb={'1rem'}>
+            <Typography component="p" fontSize={'16px'} mb={'1rem'}>
                 {description}
             </Typography>
             <Typography component="h2" fontSize={'18px'} fontWeight={600}>

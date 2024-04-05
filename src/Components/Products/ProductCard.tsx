@@ -1,5 +1,6 @@
-import { ButtonBase, Card, Typography } from '@mui/material';
-import React from 'react';
+import { ButtonBase, Card, Skeleton, Typography } from '@mui/material';
+import React, { Suspense, lazy } from 'react';
+import ImageProduct from './imgProduct';
 
 interface ProductCardProps {
     title: string;
@@ -29,7 +30,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, content, img, textButt
             },
             maxHeight: '50rem'
         }}>
-            <img src={img} alt="imagem produto" style={{ width: '100%',  objectFit: 'cover', maxHeight: '21rem', borderRadius: '.5rem' }} loading="lazy"/>
+            <ImageProduct img={img} />
 
             <Typography component="h3" fontSize={'18px'} fontWeight={600} mt={'1rem'}>{title}</Typography>
             <Typography component="p" fontSize={'15px'} textAlign={'center'}>{content}</Typography>
