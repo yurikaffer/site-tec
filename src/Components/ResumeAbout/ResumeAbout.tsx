@@ -24,19 +24,19 @@ const ResumoSobre: React.FC = () => {
             }}
         >
             <ResumeItem 
-              imgSrc="/almoco-foguete.png" 
+              imgSrc="/almoco-foguete.webp" 
               imgAlt="imagem foguete" 
               title="+28 anos" 
               description="no mercado" 
             />
             <ResumeItem 
-              imgSrc="/gema.png" 
+              imgSrc="/gema.webp" 
               imgAlt="imagem diamante" 
               title="Impressão" 
               description="alta qualidade" 
             />
             <ResumeItem 
-              imgSrc="/aperto-de-mao.png" 
+              imgSrc="/aperto-de-mao.webp" 
               imgAlt="imagem aperto de mão" 
               title="Profissionais" 
               description="qualificados" 

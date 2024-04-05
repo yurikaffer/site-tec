@@ -4,6 +4,7 @@ import React from 'react';
 interface ButtonNavbarProps {
     name: string;
     onClick: () => void;
+    fontSize: string;
 }
 
 const Style = {
@@ -25,7 +26,7 @@ const Style = {
     }
 }
 
-const ButtonNavbar: React.FC<ButtonNavbarProps> = ({ name, onClick }) => {
+const ButtonNavbar: React.FC<ButtonNavbarProps> = ({ name, onClick, fontSize }) => {
 
     const handleClick = () => {
         onClick();
@@ -35,7 +36,7 @@ const ButtonNavbar: React.FC<ButtonNavbarProps> = ({ name, onClick }) => {
     return (
         <ButtonBase disableRipple onClick={handleClick}>
             <Box sx={Style} >
-                <Typography fontSize={'18px'}>
+                <Typography fontSize={fontSize}>
                     {name}
                 </Typography>
             </Box>

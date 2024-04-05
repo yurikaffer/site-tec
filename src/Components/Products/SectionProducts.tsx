@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
-import { Box, Typography, CircularProgress } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import LoadingComponent from '../Loading/LoadingComponent';
 
 const ProductCard = lazy(() => import('./ProductCard'));
 
@@ -72,28 +73,28 @@ const SectionProducts = () => {
                 </Typography>
             </Box>
             <Box sx={gridStyle}>
-                <Suspense fallback={<CircularProgress />}>
+                <Suspense fallback={<LoadingComponent/>}>
                     <ProductCard
                         title='Sacolas de Papel'
-                        img='sacola-pape-modelo.png'
+                        img='sacola-pape-modelo.webp'
                         content={'Sacolas de papel personalizadas são perfeitas para embalar suas compras, presentes e lembrancinhas.'}
                         onClick={() => handleNavigation('/Produtos')}
                     />
                     <ProductCard
                         title='Sacolas de Plástico'
-                        img='sacola-tec.png'
+                        img='sacola-tec.webp'
                         content={'São extremamente comuns em uma variedade de estabelecimentos comerciais, desde supermercados até lojas de varejo e boutiques.'}
                         onClick={() => handleNavigation('/Produtos')}
                     />
                     <ProductCard
                         title='Cartões e Tags'
-                        img='cartoes-produto.png'
+                        img='cartoes-produto.webp'
                         content={'Cartões e Tags são utilizadas em uma ampla gama de aplicações para adicionar valor, informação e identidade aos produtos e serviços.'}
                         onClick={() => handleNavigation('/Produtos')}
                     />
                     <ProductCard
                         title='Placas de PVC'
-                        img='placa-pvc.png'
+                        img='placa-pvc.webp'
                         content={'Usadas para sinalização, decoração e aplicações industriais, adaptando-se facilmente a necessidades específicas de projetos.'}
                         onClick={() => handleNavigation('/Produtos')}
                     />

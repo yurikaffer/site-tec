@@ -1,15 +1,15 @@
 import WhatsappComponent from "../Components/Whats/Whatsapp";
-import Contacts from "../Components/Contact/Contacts";
 import { Box } from "@mui/material";
-import SubNavbar from "../Components/Navbar/SubNavbar";
 import Footer from "../Components/Footer/Footer";
+import SectionContacts from "../Components/SectionContacts/SectionContacts";
+import SectionNavbar from "../Components/Navbar/SectionNavbar/SectionNavbar";
 
 const ContactsPage: React.FC = () => {
   return (
     <>
-        <SubNavbar/>
-        <Box pt={'10rem'} pb={'5rem'}>
-            <Contacts/>
+        <SectionNavbar/>
+        <Box pt={'5rem'} >
+          <SectionContacts/>
         </Box>
         <Footer/>
         <WhatsappComponent />

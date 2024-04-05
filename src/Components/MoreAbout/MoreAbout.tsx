@@ -68,9 +68,7 @@ const FaixaVantagens: React.FC = () => {
                     </Box>
                 </Box>
             </Box>
-
         </Box>
-
     )
 }
 

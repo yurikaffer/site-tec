@@ -4,7 +4,7 @@ import { SizeTable } from "../SizeTable/SizeTable";
 import SectionStepper from "../Stepper/SectionStepper";
 import Rodape from "../Footer/Footer";
 import WhatsappComponent from "../Whats/Whatsapp";
-import SubNavbar from "../Navbar/SubNavbar";
+import SectionNavbar from "../Navbar/SectionNavbar/SectionNavbar";
 
 interface table {
     altura: string;
@@ -22,7 +22,7 @@ interface ProductPageComponentProps {
 const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, rows, titleTable, plasticBag }) => {
     return (
         <>
-            <SubNavbar/>
+            <SectionNavbar/>
             <Box sx={{ position: 'relative' }}>
                 <Box sx={{ 
                         display: 'flex', 
@@ -70,7 +70,7 @@ const ProductPageComponent: React.FC<ProductPageComponentProps> = ({ children, r
                             }}>
                             <Box
                                 component="img"
-                                src={plasticBag ? 'medidas-plastico.png' : 'medidas-sacolas.png'}
+                                src={plasticBag ? 'medidas-plastico.webp' : 'medidas-sacolas.webp'}
                                 alt='imagem produto'
                                 sx={{
                                     width: '50rem',

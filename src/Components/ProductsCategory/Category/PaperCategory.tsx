@@ -35,21 +35,21 @@ const PaperCategory: React.FC = () => {
             }}>
                 <ProductCard
                     title='Sacola de papel Duplex'
-                    img='sacola-pape-modelo.png'
+                    img='sacola-pape-modelo.webp'
                     content={'As sacolas de papel Duplex são perfeitas para embalar produtos de moda, joias, cosméticos e muito mais.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-duplex')}
                 />
                 <ProductCard
                     title='Sacola de papel Offset'
-                    img='sac offset.png'
+                    img='sac offset.webp'
                     content={'Para embalar produtos de maneira elegante, oferecendo aos clientes uma experiência de compra premium.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-offset')}
                 />
                 <ProductCard
                     title='Sacola de papel Kraft'
-                    img='KRAFT.png'
+                    img='KRAFT.webp'
                     content={'Perfeitas para embalar produtos alimentícios, devido à sua resistência e à percepção de naturalidade.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/sacolas-kraft')}

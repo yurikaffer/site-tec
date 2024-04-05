@@ -1,8 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { PhoneIncoming, EnvelopeSimple, MapPin } from "@phosphor-icons/react";
-import ContactsMobile from './ContactsMobile';
-import MapsComponent from '../Maps/MapsComponent';
 
 const fontStyle = {
     fontSize: '15px',
@@ -19,17 +17,6 @@ const cardStyle = {
 }
 
 const Contacts: React.FC = () => {
-
-    function EmailLink() {
-        return (
-            <Typography component="p" textAlign={'center'} sx={fontStyle}>
-                <a href="mailto:tecserigrafia@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    tecserigrafia@gmail.com
-                </a>
-            </Typography>
-        );
-    }
-
     return (
         <Box sx={{
             bgcolor: '#FCFCFC',
@@ -44,23 +31,17 @@ const Contacts: React.FC = () => {
                 fontSize={'2.4rem'}
                 fontWeight={600}
                 marginBottom={'4rem'}
-                sx={{
-                    '@media (max-width: 1000px)': {
-                        fontSize: '1.8rem',
-                        fontWeight: '700'
-                    },
-                }}
             >
                 Fale conosco!
             </Typography>
 
             <Box sx={{
-                display: 'flex',
-                paddingBottom: '5rem',
-                '@media (max-width:975px)': {
-                    display: 'none'
-                },
-            }}
+                    display: 'flex',
+                    paddingBottom: '5rem',
+                    '@media (max-width:975px)': {
+                        display: 'none'
+                    },
+                }}
             >
                 <Box sx={cardStyle}>
                     <PhoneIncoming size={50} />
@@ -81,7 +62,11 @@ const Contacts: React.FC = () => {
                     <EnvelopeSimple size={50} />
                     <Typography component="h2" fontSize={'18px'} fontWeight={600}>Envie um e-mail</Typography>
                     <Box display={'flex'} justifyContent={'start'}>
-                        {EmailLink()}
+                        <Typography component="p" textAlign={'center'} sx={fontStyle}>
+                            <a href="mailto:tecserigrafia@gmail.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                tecserigrafia@gmail.com
+                            </a>
+                        </Typography>
                     </Box>
                 </Box>
 
@@ -93,10 +78,6 @@ const Contacts: React.FC = () => {
                     </Box>
                 </Box>
             </Box>
-
-            <ContactsMobile />
-
-            <MapsComponent />
         </Box>
     )
 }

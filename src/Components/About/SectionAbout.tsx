@@ -1,8 +1,9 @@
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import React from 'react';
 
 const SectionAbout: React.FC<{ page?: boolean }> = ({ page }) => {
     const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down(1000));
 
     const aboutTextStyles = {
         display: 'flex',
@@ -23,9 +24,6 @@ const SectionAbout: React.FC<{ page?: boolean }> = ({ page }) => {
 
     const imgStyle = {
         width: '35rem',
-        [theme.breakpoints.down(1000)]: {
-            display: 'none',
-        },
     };
 
     return (
@@ -63,23 +61,24 @@ const SectionAbout: React.FC<{ page?: boolean }> = ({ page }) => {
                             engajem o consumidor e amplifiquem o impacto no ponto de venda.
                         </Typography>
                     </>
-                )
-                }
+                )}
+            </Box>
 
-            </Box>
-            <Box
-                display={'flex'}
-                marginLeft={'auto'}
-                alignItems={'center'}
-                gap={'2rem'}
-            >
-                <Box sx={{ width: '35rem', [theme.breakpoints.down(1660)]: { display: 'none' } }}>
-                    <img src="/arte-sobre.png" alt="imagem sacola" style={{ width: '100%' }} />
+            {!isMobile && (
+                <Box
+                    display={'flex'}
+                    marginLeft={'auto'}
+                    alignItems={'center'}
+                    gap={'2rem'}
+                >
+                    <Box sx={{ width: '35rem', [theme.breakpoints.down(1660)]: { display: 'none' } }}>
+                        <img src="/arte-sobre.webp" alt="imagem sacola" style={{ width: '100%' }} loading="lazy" />
+                    </Box>
+                    <Box sx={imgStyle}>
+                        <img src="/arte-sobre 1.webp" alt="imagem sacola" style={{ width: '100%' }} loading="lazy"/>
+                    </Box>
                 </Box>
-                <Box sx={imgStyle}>
-                    <img src="/arte-sobre 1.png" alt="imagem sacola" style={{ width: '100%' }} />
-                </Box>
-            </Box>
+            )}
         </Box>
     );
 }

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import ProductsCategory from "../Components/ProductsCategory/ProductsCategory";
-import SubNavbar from "../Components/Navbar/SubNavbar";
 import Footer from "../Components/Footer/Footer";
+import SectionNavbar from "../Components/Navbar/SectionNavbar/SectionNavbar";
 
 const ProductsPage: React.FC = () => {
     return (
@@ -10,7 +10,7 @@ const ProductsPage: React.FC = () => {
             flexDirection: 'column',
             position: 'relative'
         }}>
-            <SubNavbar/>
+            <SectionNavbar/>
             <Box sx={{paddingX: '10%', pt: '10rem', pb: '5rem'}}>
                 <Typography component="h3" fontSize={'14px'} fontWeight={500} pb={'0.5rem'}>
                     Dica: Sacola Instagramavel!

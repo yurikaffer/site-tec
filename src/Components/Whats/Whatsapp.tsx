@@ -26,7 +26,7 @@ const WhatsappComponent: React.FC = () => {
             }
         }}>
             <IconButton sx={{ padding: '1.5rem', width: '100%' }} onClick={() => {whatsMessage()}}>
-                <img src={'LogoWhatsApp.png'} alt="imagem Whatsapp" style={{ width: '100%' }} />
+                <img src={'LogoWhatsApp.webp'} alt="imagem Whatsapp" style={{ width: '100%' }} />
             </IconButton>
         </Box>
     );

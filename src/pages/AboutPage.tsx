@@ -1,12 +1,13 @@
 import SectionAbout from "../Components/About/SectionAbout";
 import WhatsappComponent from "../Components/Whats/Whatsapp";
-import SubNavbar from "../Components/Navbar/SubNavbar";
 import Footer from "../Components/Footer/Footer";
+import SectionNavbar from "../Components/Navbar/SectionNavbar/SectionNavbar";
 
 const AboutPage: React.FC = () => {
+
   return (
     <>
-        <SubNavbar/>
+        <SectionNavbar/>
         <SectionAbout page={true}/>
         <Footer/>
         <WhatsappComponent />

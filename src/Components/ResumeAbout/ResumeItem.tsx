@@ -36,7 +36,7 @@ const ResumeItem: React.FC<ResumeItemProps> = ({ imgSrc, imgAlt, title, descript
     return (
         <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
             <Box sx={imgStyle}>
-                <img src={imgSrc} alt={imgAlt} style={{ width: '100%' }} />
+                <img src={imgSrc} alt={imgAlt} style={{ width: '100%' }} loading="lazy"/>
             </Box>
             <Typography component="h3" sx={typographyBold}>{title}</Typography>
             <Typography component="p" sx={typography}>{description}</Typography>

@@ -9,14 +9,12 @@ const fontStyle = {
 const ContactsMobile: React.FC = () => {
     return (
         <Box sx={{
-            display: 'none',
-            '@media (max-width:975px)': {
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '1rem 1rem',
-                alignItems: 'center',
-                paddingBottom: '5rem'
-            },
+            bgcolor: '#FCFCFC',
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '1rem 1rem',
+            alignItems: 'center',
+            paddingBottom: '5rem'
         }}>
             <Box display={'flex'} flexDirection={'column'} gap={3}>
                 <Box display={'flex'} alignItems={'center'} gap={1}>

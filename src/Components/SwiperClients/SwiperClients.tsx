@@ -2,29 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/autoplay'; 
+import 'swiper/css/autoplay';
 import './styles.css';
-import { Pagination, Autoplay} from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import { Box, Typography } from '@mui/material';
 
-const images = [
-    'viqua.png',
-    'DB.png',
-    'delicada.png',
-    'casinha.png',
-    'fluxo.png',
-    'jana.png',
-    'prado.png',
-    'pri.png',
-    'star-case.png',
-    'zhana.png',
-    'toninho.png',
-    'inplave.png',
-    'fave.png',
-    'divina.png',
-    'denk.png',
-    'I Love Joias.png',
-    'BV.png'
+const images: string[] = [
+    'viqua.webp',
+    'DB.webp',
+    'delicada.webp',
+    'casinha.webp',
+    'fluxo.webp',
+    'jana.webp',
+    'prado.webp',
+    'pri.webp',
+    'star-case.webp',
+    'zhana.webp',
+    'toninho.webp',
+    'inplave.webp',
+    'fave.webp',
+    'divina.webp',
+    'denk.webp',
+    'I Love Joias.webp',
+    'BV.webp'
 ];
 
 const aboutTexBox = {
@@ -42,13 +42,21 @@ const aboutTexBox = {
     },
 }
 
+// Função de debounce para otimizar a performance durante o resize
+function debounce(fn: (...args: any[]) => void, ms: number = 250): (...args: any[]) => void {
+    let timeoutId: ReturnType<typeof setTimeout>;
+    return function (...args: any[]) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => fn(...args), ms);
+    };
+}
+
+
 const SwiperClients: React.FC = () => {
-    const [itemsToShow, setItemsToShow] = useState(5);
+    const [itemsToShow, setItemsToShow] = useState<number>(5);
 
-    // Função para calcular e ajustar o número de itens com base no tamanho da janela
-    const updateItemsToShow = () => {
+    const updateItemsToShow = (): void => {
         const screenWidth = window.innerWidth;
-
         if (screenWidth <= 600) {
             setItemsToShow(3);
         } else if (screenWidth <= 1225) {
@@ -59,11 +67,10 @@ const SwiperClients: React.FC = () => {
     };
 
     useEffect(() => {
-        updateItemsToShow();
-        // Adiciona o listener para mudanças de tamanho de tela
-        window.addEventListener('resize', updateItemsToShow);
-        // Limpa o listener quando o componente é desmontado
-        return () => window.removeEventListener('resize', updateItemsToShow);
+        const debouncedHandleResize = debounce(updateItemsToShow);
+        debouncedHandleResize();
+        window.addEventListener('resize', debouncedHandleResize);
+        return () => window.removeEventListener('resize', debouncedHandleResize);
     }, []);
 
     return (
@@ -104,10 +111,9 @@ const SwiperClients: React.FC = () => {
                     pagination={{ clickable: true }}
                     autoplay={{
                         delay: 2500,
-                        disableOnInteraction: false, 
+                        disableOnInteraction: false,
                     }}
                     modules={[Pagination, Autoplay]}
-                    freeMode={true}
                     loop={true}
 
                 >
@@ -120,7 +126,7 @@ const SwiperClients: React.FC = () => {
                                     width: '100%',
                                 },
                             }}>
-                                <img src={image} alt={`Slide ${index}`} />
+                                <img src={image} alt={`Slide ${index}`} loading="lazy" />
                             </Box>
                         </SwiperSlide>
                     ))}

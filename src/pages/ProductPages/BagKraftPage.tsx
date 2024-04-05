@@ -18,7 +18,7 @@ const rows = [
 const BagKraftPage: React.FC = () => {
     return (
         <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola papel Kraft'}>
-            <ImgZoom img="kraft FCFCFC.png" />
+            <ImgZoom img="kraft FCFCFC.webp" />
 
             <ProductDescription
                 mainTitle="Sacola de papel Kraft"

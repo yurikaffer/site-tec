@@ -27,7 +27,7 @@ const ProductModelCard: React.FC<ProductCardProps> = ({ title, content, img }) =
             },
         }}>
 
-            <img src={img} alt="imagem produto" style={{ width: '100%', objectFit: 'cover', borderRadius: '.5rem' }} />
+            <img src={img} alt="imagem produto" style={{ width: '100%', objectFit: 'cover', borderRadius: '.5rem' }} loading="lazy"/>
             <Typography fontSize={'18px'} fontWeight={600}>{title}</Typography>
             <Typography fontSize={'15px'} textAlign={'center'}>{content}</Typography>
         </Card>

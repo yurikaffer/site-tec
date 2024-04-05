@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                                 display: 'none'
                             },
                         }}>
-                        <img src='tec-logo-cut.png' alt="Logo Tec"
+                        <img src='tec-logo-cut.webp' alt="Logo Tec" loading="lazy"
                             style={{ width: '100%', objectFit: 'cover', height: 'auto' }} />
                     </Box>
 

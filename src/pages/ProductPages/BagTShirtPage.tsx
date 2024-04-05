@@ -15,7 +15,7 @@ const rows = [
 const BagTShirtPage: React.FC = () => {
     return (
         <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de plástico com alça camiseta'} plasticBag={true}>
-            <ImgZoom img="sacola plástico cam sf.png" />
+            <ImgZoom img="sacola plástico cam sf.webp" />
 
             <ProductDescription
                 mainTitle="Sacola de Plástico Alça Camiseta"

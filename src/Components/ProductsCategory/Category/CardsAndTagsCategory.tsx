@@ -32,14 +32,14 @@ const CardsAndTagsCategory: React.FC = () => {
             }}>
                 <ProductCard
                     title='Cartões de visita'
-                    img='cartoes-produto.png'
+                    img='cartoes-produto.webp'
                     content={'Os cartões de visita são ferramentas poderosas de comunicação que facilitam o networking, reforçam a marca, e demonstram profissionalismo.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/cartoes')}
                 />
                 <ProductCard
                     title='Tags personalizadas'
-                    img='tags.png'
+                    img='tags.webp'
                     content={'As Tags são utilizadas em uma ampla gama de aplicações para adicionar valor, informação e identidade visual aos produtos ou serviços.'}
                     textButton='Mais detalhes ➜'
                     onClick={() => handleNavigation('/tags')}

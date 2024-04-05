@@ -5,7 +5,7 @@ import ProductPageComponent from "../../Components/Products/ProductPageComponent
 const BusinessCardPage: React.FC = () => {
     return (
         <ProductPageComponent >
-            <ImgZoom img="cartoes-sf.png" />
+            <ImgZoom img="cartoes-sf.webp" />
 
             <ProductDescription
                 mainTitle="Cartões de visita"

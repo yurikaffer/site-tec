@@ -3,17 +3,17 @@
   "name": "Sacolas Personalizadas Joinville",
   "icons": [
     {
-      "src": "shopping-bag.png",
+      "src": "shopping-bag.webp",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "Tec logo 2024.png",
+      "src": "Tec logo 2024.webp",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "Tec logo 2024.png",
+      "src": "Tec logo 2024.webp",
       "type": "image/png",
       "sizes": "512x512"
     }

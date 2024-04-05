@@ -18,7 +18,7 @@ const rows = [
 const BagOffsetPage: React.FC = () => {
     return (
         <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola papel Offset'}>
-            <ImgZoom img="offset sem fundo.png" />
+            <ImgZoom img="offset sem fundo.webp" />
 
             <ProductDescription
                 mainTitle="Sacola de papel Offset"

@@ -27,7 +27,7 @@ const MapsComponent: React.FC = () => {
     });
 
     if (!isLoaded) {
-        return <div>Loading...</div>;
+        return <div style={{textAlign: 'center'}}>Carregando...</div>;
     }
     
     return (

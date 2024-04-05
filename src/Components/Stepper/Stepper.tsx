@@ -8,7 +8,7 @@ const steps = [
         content: `A página do produto que você deseja em nosso site possui a tabela de medidas específica do produto, 
                 consulte a página para obter essas informações e defina a que melhor se encaixa às suas necessidades.`,
         icon: 'ruler.svg',
-        background: '/blob-scene-haikei (5).png'
+        background: '/blob-scene-haikei (5).webp'
     },
     {
         title: '2. Material',
@@ -16,19 +16,19 @@ const steps = [
                 navegar entre as categorias de produtos para encontrar o que mais se encaixa às suas expectativas. 
                 Tenha em mãos essas informações na hora de realizar o orçamento.`,
         icon: 'bag.svg',
-        background: 'blob-scene-haikei (8).png'
+        background: 'blob-scene-haikei (8).webp'
     },
     {
         title: '3. Cores',
         content: 'O número de cores interfere diretamente no preço da embalagem e varia de 1 até 4 cores, que é o número de cores utilizados para impressão. As tintas utilizadas podem ser padrão Pantone, que é uma codificação universal, ou Cromia com a combinação da cores Ciano, Magenta, Amarelo e Preto.',
         icon: 'palette.svg',
-        background: 'blob-scene-haikei (7).png'
+        background: 'blob-scene-haikei (7).webp'
     },
     {
         title: '4. Ficou na dúvida?',
         content: 'Se você ficar em dúvida, estamos aqui para ajudá-lo. Envie seu logotipo, foto ou design e nós vamos auxiliar você. Não tem um design? Fale com a gente. Ainda não sabe por onde começar? Entre em contato agora mesmo!',
         icon: 'question.svg',
-        background: 'blob-scene-haikei (6).png',
+        background: 'blob-scene-haikei (6).webp',
         button: true
     },
 ]
@@ -125,7 +125,7 @@ const Stepper = () => {
         >
             <IconButton onClick={() => scrollBy(-width)} sx={{ ml: 'auto', padding: 0 }} >
                 <Box width={'5rem'}>
-                    <img src='caret-left.svg' alt='seta esquerda' width={'100%'} />
+                    <img src='caret-left.svg' alt='seta esquerda' width={'100%'} loading="lazy"/>
                 </Box>
             </IconButton>
 
@@ -168,7 +168,7 @@ const Stepper = () => {
 
             <IconButton onClick={() => scrollBy(width)} sx={{ mr: 'auto', padding: 0 }}>
                 <Box width={'5rem'}>
-                    <img src='caret-right.svg' alt='seta direita' width={'100%'} />
+                    <img src='caret-right.svg' alt='seta direita' width={'100%'} loading="lazy"/>
                 </Box>
             </IconButton>
         </Box>

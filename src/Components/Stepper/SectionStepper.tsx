@@ -1,8 +1,9 @@
 import React from 'react';
 import StepperMobile from './StepperMobile';
 import Stepper from './Stepper';
-import { Box, ButtonBase, Typography } from '@mui/material';
+import { Box, ButtonBase, Typography, useMediaQuery } from '@mui/material';
 import { whatsMessage } from '../../utils';
+import { useTheme } from '@mui/material/styles';
 
 const aboutTexBox = {
     display: 'flex',
@@ -13,11 +14,13 @@ const aboutTexBox = {
     alignItems: 'center',
     '@media (max-width: 715px)': {
         padding: '1rem',
-
     },
 }
 
 const SectionStepper: React.FC = () => {
+    const theme = useTheme();
+    const isTabletOrLarger = useMediaQuery(theme.breakpoints.up(750));
+
     return (
         <Box sx={{
             bgcolor: '#FCFCFC',
@@ -45,8 +48,9 @@ const SectionStepper: React.FC = () => {
                     Criamos um passo a passo para que você consiga se orientar e entender as informações necessárias para
                     realizar um orçamento conosco, e lembre-se, qualquer dúvida, não hesite em nos chamar!
                 </Typography>
-                <Stepper />
-                <StepperMobile />
+
+                {isTabletOrLarger ? <Stepper /> : <StepperMobile />}
+
                 <ButtonBase onClick={() => {whatsMessage()}} 
                     sx={{
                         bgcolor: '#FFC9C9',

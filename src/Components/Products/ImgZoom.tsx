@@ -41,6 +41,7 @@ const ImgZoom: React.FC<ComponentProp> = ({ img }) => {
                     component="img"
                     src={img}
                     alt='imagem produto'
+                    loading='lazy'
                     sx={{
                         width: '100%',
                         height: '100%',

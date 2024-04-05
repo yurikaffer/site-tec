@@ -12,7 +12,7 @@ const rows = [
 const BagPlasticTape: React.FC = () => {
     return (
         <ProductPageComponent rows={rows} titleTable={'Tabela de medidas sacola de plástico com alça fita'} plasticBag={true}>
-            <ImgZoom img="sacola-tec-semfundo.png" />
+            <ImgZoom img="sacola-tec-semfundo.webp" />
 
             <ProductDescription
                 mainTitle="Sacola de Plástico com Alça Fita"
