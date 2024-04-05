@@ -33,14 +33,14 @@ const SectionAbout: React.FC<{ page?: boolean }> = ({ page }) => {
                     Sobre nós?
                 </Typography>
 
-                <Typography component="p" sx={textStyle('1.8rem', 400)}>
+                <Typography component="p" sx={textStyle('1.8rem', 400)} textAlign={'justify'}>
                     Com mais de 28 anos, a Traço e Cor nasceu a partir da crescente necessidade do mercado por
                     embalagens de alta qualidade e ótimo custo benefício. Desde então, temos nos dedicado a inovar e
                     aprimorar nossos processos e produtos, oferecendo soluções personalizadas que não apenas atendem,
                     mas superam as expectativas de nossos clientes.
                 </Typography>
 
-                <Typography component="p" sx={textStyle('1.8rem', 400)}>
+                <Typography component="p" sx={textStyle('1.8rem', 400)} textAlign={'justify'}>
                     Aqui na Tec, acreditamos que uma embalagem vai muito além de um simples recipiente; ela é uma
                     extensão da marca e uma ferramenta poderosa de comunicação. É por isso que trabalhamos lado a lado
                     com nossos clientes para criar embalagens que contam sua história e conectam-se emocionalmente com
