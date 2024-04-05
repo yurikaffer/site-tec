@@ -31,8 +31,8 @@ const gridStyle = {
         gridTemplateColumns: 'repeat(4, 30rem)',
     },
     '@media (max-width: 1460px)': {
-        gridTemplateColumns: 'repeat(3, 30rem)',
-        gridTemplateRows: 'repeat(2, 42rem)',
+        gridTemplateColumns: 'repeat(3, 35rem)',
+        gridTemplateRows: 'repeat(2, 45rem)',
     },
     '@media (max-width: 1100px)': {
         gridTemplateColumns: 'repeat(2, 30rem)',
@@ -43,7 +43,7 @@ const gridStyle = {
     },
     '@media (max-width: 680px)': {
         gridTemplateColumns: 'repeat(1, 30rem)',
-        gridTemplateRows: 'repeat(4, 42rem)',
+        gridTemplateRows: 'repeat(4, 45rem)',
         paddingBottom: '5rem',
     },
     '@media (max-width: 340px)': {
