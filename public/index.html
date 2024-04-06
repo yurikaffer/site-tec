@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/shopping-bag.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-
   <meta name="description" content="Tec Sacolas Personalizadas Joinville" />
-
+  
   <meta property="og:title" content="Tec Sacolas Personalizadas Joinville" />
   <meta property="og:description" content="Encontre as melhores sacolas personalizadas em Joinville." />
   <meta property="og:image" content="%PUBLIC_URL%/shopping-bag.webp" />
@@ -20,11 +14,14 @@
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/shopping-bag.webp" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>Tec Sacolas Personalizadas</title>
-</head>
 
+  <!-- Otimizações para o carregamento da fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet"></noscript>
+</head>
 <body>
   <noscript>Você precisa habilitar JavaScript para visualizar este site</noscript>
   <div id="root"></div>
 </body>
-
 </html>
