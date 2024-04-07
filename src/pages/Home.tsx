@@ -22,9 +22,7 @@ const Home: React.FC = () => {
   return (
     <> 
       {isMobile ? <HomeMobileNavbar/> : <HomeDesktopNavbar/>}
-
       <Banner />
-
       <Suspense fallback={<LoadingComponent/>}>
         <SectionAbout />
         <ResumoSobre />

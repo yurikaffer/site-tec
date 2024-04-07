@@ -43,14 +43,15 @@ const aboutTexBox = {
 }
 
 // Função de debounce para otimizar a performance durante o resize
-function debounce(fn: (...args: any[]) => void, ms: number = 250): (...args: any[]) => void {
-    let timeoutId: ReturnType<typeof setTimeout>;
-    return function (...args: any[]) {
-        clearTimeout(timeoutId);
+function debounce<T extends (...args: any[]) => any>(fn: T, ms: number = 250): (...args: Parameters<T>) => void {
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
+    return function (...args: Parameters<T>) {
+        if (timeoutId !== null) {
+            clearTimeout(timeoutId);
+        }
         timeoutId = setTimeout(() => fn(...args), ms);
     };
 }
-
 
 const SwiperClients: React.FC = () => {
     const [itemsToShow, setItemsToShow] = useState<number>(5);

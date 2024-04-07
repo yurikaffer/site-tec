@@ -1,5 +1,5 @@
-import { ButtonBase, Card, Skeleton, Typography } from '@mui/material';
-import React, { Suspense, lazy } from 'react';
+import { ButtonBase, Card, Typography } from '@mui/material';
+import React from 'react';
 import ImageProduct from './imgProduct';
 
 interface ProductCardProps {

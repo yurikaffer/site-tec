@@ -66,7 +66,7 @@ const Stepper = () => {
             const totalWidthPerCard = width + 30;
 
             // Calcula qual card deve estar visível baseado na posição atual de rolagem
-            let cardToShow = Math.round(currentScroll / totalWidthPerCard);
+            const cardToShow = Math.round(currentScroll / totalWidthPerCard);
 
             // Calcula a nova posição de rolagem para ajustar o card visível
             let newScrollPosition = cardToShow * totalWidthPerCard;
