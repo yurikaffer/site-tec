@@ -5,9 +5,9 @@ import theme from './Theme/Theme';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import LoadingPage from './Components/Loading/LoadingPage';
 import { MediaQueryProvider } from './Context/MediaQueryContext';
-import Home from './pages/Home';
 
 // Lazy loading das páginas
+const Home = lazy(() => import('./pages/Home'));
 const ProductsPage = lazy(() => import('./pages/ProductsPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage'));
@@ -27,12 +27,12 @@ function App() {
       <SpeedInsights />
       <MediaQueryProvider>
         <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Suspense fallback={<LoadingPage />}>
+          <Suspense fallback={<LoadingPage/>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/Produtos" element={<ProductsPage />} />
               <Route path="/Sobre" element={<AboutPage />} />
-              <Route path="/Contatos" element={<ContactsPage />} />
+              <Route path="/Contatos" element={<ContactsPage />} /> 
               <Route path="/sacolas-offset" element={<BagOffsetPage />} />
               <Route path="/sacolas-duplex" element={<BagDuplexPage />} />
               <Route path="/sacolas-Kraft" element={<BagKraftPage />} />
@@ -42,8 +42,8 @@ function App() {
               <Route path="/cartoes" element={<BusinessCardPage />} />
               <Route path="/tags" element={<TagPage />} />
               <Route path="/pvc" element={<PvcBoardPage />} />
-            </Suspense>
-          </Routes>
+            </Routes>
+          </Suspense>
         </Router>
       </MediaQueryProvider>
     </ThemeProvider>
