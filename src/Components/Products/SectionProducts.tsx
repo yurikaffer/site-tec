@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import LoadingComponent from '../Loading/LoadingComponent';
+import { useCategory, Category } from '../../Context/CategoryContext';
 
 const ProductCard = lazy(() => import('./ProductCard'));
 
@@ -52,9 +53,11 @@ const gridStyle = {
 };
 
 const SectionProducts = () => {
+    const { handleSelectCategory } = useCategory();
     const navigate = useNavigate();
 
-    const handleNavigation = (path: string) => {
+    const handleNavigation = (path: string, category: Category) => {
+        handleSelectCategory(category)
         navigate(path);
         window.scrollTo(0, 0);
     };
@@ -79,25 +82,25 @@ const SectionProducts = () => {
                             title='Sacolas de Papel'
                             img='sacola-pape-modelo.webp'
                             content={'Sacolas de papel personalizadas são perfeitas para embalar suas compras, presentes e lembrancinhas.'}
-                            onClick={() => handleNavigation('/Produtos')}
+                            onClick={() => handleNavigation('/Produtos', Category.Paper)}
                         />
                         <ProductCard
                             title='Sacolas de Plástico'
                             img='sacola-tec.webp'
                             content={'São extremamente comuns em uma variedade de estabelecimentos comerciais, desde supermercados até lojas de varejo e boutiques.'}
-                            onClick={() => handleNavigation('/Produtos')}
+                            onClick={() => handleNavigation('/Produtos', Category.Plastic)}
                         />
                         <ProductCard
                             title='Cartões e Tags'
                             img='cartoes-produto.webp'
                             content={'Cartões e Tags são utilizadas em uma ampla gama de aplicações para adicionar valor, informação e identidade aos produtos e serviços.'}
-                            onClick={() => handleNavigation('/Produtos')}
+                            onClick={() => handleNavigation('/Produtos', Category.CardsAndTags)}
                         />
                         <ProductCard
                             title='Placas de PVC'
                             img='placa-pvc.webp'
                             content={'Usadas para sinalização, decoração e aplicações industriais, adaptando-se facilmente a necessidades específicas de projetos.'}
-                            onClick={() => handleNavigation('/Produtos')}
+                            onClick={() => handleNavigation('/Produtos', Category.PVC)}
                         />
                     </Suspense>
                 </Box>

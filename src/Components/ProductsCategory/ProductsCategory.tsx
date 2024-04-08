@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box, Card, Typography } from '@mui/material';
 import PaperCategory from './Category/PaperCategory';
 import PlasticCategory from './Category/PlasticCategory';
 import CardsAndTagsCategory from './Category/CardsAndTagsCategory';
 import PvcCategory from './Category/PvcCategory';
+import { useCategory, Category } from '../../Context/CategoryContext';
 
 const ProductsCategory: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const { selectedCategory, handleSelectCategory } = useCategory();
 
-    const handleSelectCategory = (category: string) => {
-        setSelectedCategory(category);
-    };
-
-    const buttonStyle = (category: string) => ({
+    const buttonStyle = (category: Category) => ({
         bgcolor: selectedCategory === category ? '#FFC9C9' : '#FFF',
         width: '100%',
         borderRadius: '0.5rem',
@@ -73,19 +70,19 @@ const ProductsCategory: React.FC = () => {
                     Categorias dos produtos
                 </Typography>
 
-                <Box component={'button'} sx={buttonStyle('')} onClick={() => handleSelectCategory('')}>
+                <Box component={'button'} sx={buttonStyle(Category.All)} onClick={() => handleSelectCategory(Category.All)}>
                     <Typography component="p" sx={textStyle}>Todos</Typography>
                 </Box>
-                <Box component={'button'} sx={buttonStyle('Paper')} onClick={() => handleSelectCategory('Paper')}>
+                <Box component={'button'} sx={buttonStyle(Category.Paper)} onClick={() => handleSelectCategory(Category.Paper)}>
                     <Typography component="p" sx={textStyle}>Sacolas de Papel</Typography>
                 </Box>
-                <Box component={'button'} sx={buttonStyle('Plastic')} onClick={() => handleSelectCategory('Plastic')}>
+                <Box component={'button'} sx={buttonStyle(Category.Plastic)} onClick={() => handleSelectCategory(Category.Plastic)}>
                     <Typography component="p" sx={textStyle}>Sacolas de Plástico</Typography>
                 </Box>
-                <Box component={'button'} sx={buttonStyle('CardsAndTags')} onClick={() => handleSelectCategory('CardsAndTags')}>
+                <Box component={'button'} sx={buttonStyle(Category.CardsAndTags)} onClick={() => handleSelectCategory(Category.CardsAndTags)}>
                     <Typography component="p" sx={textStyle}>Cartões e Tags</Typography>
                 </Box>
-                <Box component={'button'} sx={buttonStyle('PVC')} onClick={() => handleSelectCategory('PVC')}>
+                <Box component={'button'} sx={buttonStyle(Category.PVC)} onClick={() => handleSelectCategory(Category.PVC)}>
                     <Typography component="p"sx={textStyle}>Placas de PVC</Typography>
                 </Box>
             </Card>
@@ -96,7 +93,7 @@ const ProductsCategory: React.FC = () => {
                 gap={'3rem'} pb={'20rem'} 
                 width={'100%'}
             >
-                {selectedCategory === '' &&
+                {selectedCategory === Category.All &&
                     <>
                         <PaperCategory />
                         <PlasticCategory />
@@ -104,10 +101,10 @@ const ProductsCategory: React.FC = () => {
                         <PvcCategory />
                     </>
                 }
-                {selectedCategory === 'Paper' && <PaperCategory />}
-                {selectedCategory === 'Plastic' && <PlasticCategory />}
-                {selectedCategory === 'CardsAndTags' && <CardsAndTagsCategory />}
-                {selectedCategory === 'PVC' && <PvcCategory />}
+                {selectedCategory === Category.Paper && <PaperCategory />}
+                {selectedCategory === Category.Plastic && <PlasticCategory />}
+                {selectedCategory === Category.CardsAndTags && <CardsAndTagsCategory />}
+                {selectedCategory === Category.PVC && <PvcCategory />}
             </Box>
         </Box>
     );
