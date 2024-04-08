@@ -6,6 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import LoadingPage from './Components/Loading/LoadingPage';
 import { MediaQueryProvider } from './Context/MediaQueryContext';
 import { CategoryProvider } from './Context/CategoryContext';
+import { Analytics } from "@vercel/analytics/react"
 
 // Lazy loading das páginas
 const Home = lazy(() => import('./pages/Home'));
@@ -26,6 +27,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <SpeedInsights />
+      <Analytics/>
       <MediaQueryProvider>
       <CategoryProvider>
         <Router>
